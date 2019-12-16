@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/12/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Jordan型求法</title>
+    <url>/2019/12/16/Jordan%E5%9E%8B%E6%B1%82%E6%B3%95/</url>
+    <content><![CDATA[<center>学数学就是学套路</center>
+
+<a id="more"></a>
+
+<h1 id="若尔当型求法"><a href="#若尔当型求法" class="headerlink" title="若尔当型求法:"></a>若尔当型求法:</h1><p><font size=1 color="purple">&emsp;&emsp;在网上看了很多求法,大致分为两类:<br>&emsp;　一种用初等因子的,没学过高代的我并不知道什么是初等因子.<br>&emsp;　另一种就是利用秩来处理的,<br>&emsp;　当然他们的表述总是很奇怪,并且在某些地方不明不白,也许是我的问题,总之我没看懂<br>于是乎,我比较了多个例题,直接从题目的规律搞出这套易懂的做法,但原理什么的就不是我关心的,我不是数学系的<br></font></p>
+<hr>
+<h2 id="一-套路"><a href="#一-套路" class="headerlink" title="一.套路:"></a>一.套路:</h2><ul>
+<li>1.求特征值</li>
+<li>2.求特征值的特征向量的个数(自由变量个数或者高级一点就是维数减去秩)</li>
+<li>3.某个特征值对应的若尔当块个数就是其特征变量的个数,然后直接写若尔当型</li>
+<li>4.一般三阶到这就可以了,但高阶的含多个特征向量时有多种若尔当型,需要检验,利用r(λE-A)和对应若尔当块一样来检验</li>
+</ul>
+<hr>
+<h2 id="二-需要"><a href="#二-需要" class="headerlink" title="二.需要:"></a>二.需要:</h2><ul>
+<li>特征值求法</li>
+<li>特征向量求法</li>
+<li>若尔当型概念(要是这个都不知道也就没有这个问题了)</li>
+</ul>
+<hr>
+<h2 id="三-实例虐矩阵"><a href="#三-实例虐矩阵" class="headerlink" title="三.实例虐矩阵:"></a>三.实例虐矩阵:</h2><blockquote>
+<p>题目:<br/><br><img src="/images/172433.png" alt="alt"><br/></p>
+<blockquote>
+<p>第一步:求特征值<br/></p>
+<blockquote>
+<p><code>|λE-A|=(λ+3)(($\lambda$)-1)^2</code><br/><br>$\Rightrow$<br/><br>特征值:-3,1,1<br/></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>第二步:求特征向量个数<br/></p>
+<blockquote>
+<p>由于-3一定对应一个特征向量也就只有一个若尔当块:<br/><br><img src="/images/2.png" alt="alt"><br/><br>只要求1对应的若尔当块数量:<br/><br>rank(E-A)=2,所以维数3-秩2=1;<br/><br>所以只有一个若尔当块:<br/><br><img src="/images/3.png" alt="alt"><br/></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>第三步:<br/><br>合并<br/><br><img src="/images/4.png" alt="alt"></p>
+</blockquote>
+</blockquote>
+<hr>
+<center> 上帝说让数学变简单吧,如是我诞生了
+
+]]></content>
+      <categories>
+        <category>线代</category>
+      </categories>
+      <tags>
+        <tag>summary</tag>
+        <tag>完结</tag>
+        <tag>王氏数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2019/12/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<center>开心</center>
+
+<a id="more"></a>
+<h2 id="一-原料"><a href="#一-原料" class="headerlink" title="一.原料:"></a>一.原料:</h2><pre><code>git github账户 nodejs</code></pre><hr>
+<h2 id="二-耐心"><a href="#二-耐心" class="headerlink" title="二.耐心:"></a>二.耐心:</h2><hr>
+<h2 id="三-终极一步"><a href="#三-终极一步" class="headerlink" title="三.终极一步:"></a>三.终极一步:</h2><pre><code>vs2019上配置markdown插件,一切就完美了</code></pre><hr>
+<h5 id="凡所求的去寻-所寻的就寻见"><a href="#凡所求的去寻-所寻的就寻见" class="headerlink" title="凡所求的去寻,所寻的就寻见"></a>凡所求的去寻,所寻的就寻见</h5>]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>完结</tag>
+        <tag>原创</tag>
+      </tags>
+  </entry>
+</search>
