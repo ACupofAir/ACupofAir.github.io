@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Schmidt正交化</title>
+    <url>/2019/12/17/Schmidt%E6%AD%A3%E4%BA%A4%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化:"></a>施密特正交化:</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h2><blockquote>
+<p>施密特正交化是二次型和实对称矩阵里的基础</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="一-套路操作"><a href="#一-套路操作" class="headerlink" title="一.套路操作:"></a>一.套路操作:<br/></h2><ol>
+<li>题设条件:<br/><br>给定:a_1,a_2,a_3;<br/><br>求:正交化后结果<br/></li>
+</ol>
+<p>2.操作:</p>
+<ul>
+<li>第一步:b_1=a_1;</li>
+<li>第二步:b_2=a_2-&lt;a_2,b_1&gt;/&lt;b_1,b_1&gt;;</li>
+<li>第三步:b_3=a_3-&lt;a_3,b_2&gt;/&lt;b_2,b_2&gt;-&lt;a_3,b_1&gt;/&lt;b_1,b_1&gt;;</li>
+<li>b_1,b_2,b_3就是正交化的结果<br/></li>
+</ul>
+<p>3.注意:<br/></p>
+<ul>
+<li>更高阶的依次类推;</li>
+<li>分子的a_n不变,b从b_n-1开始递减;</li>
+<li>分母一定是分子上b的模.</li>
+</ul>
+<h2 id="二-图片说明"><a href="#二-图片说明" class="headerlink" title="二. 图片说明:"></a>二. 图片说明:<br/></h2><ul>
+<li>内积公式:<br/><br><img src="/images/neiji.png" alt="内积图片"></li>
+<li>施密特正交化图片<br/><br><img src="/images/schmidt.png" alt="schmidt"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>线代</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+        <tag>summary</tag>
+        <tag>finished</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2019/12/16/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
