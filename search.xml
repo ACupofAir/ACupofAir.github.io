@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>伴随矩阵秩的性质</title>
+    <url>/2019/12/18/%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E7%A7%A9%E7%9A%84%E6%80%A7%E8%B4%A8/</url>
+    <content><![CDATA[<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h1><p>本文介绍了伴随矩阵的秩和原矩阵的秩的对应关系和证明,并且有独门的记忆秘诀,这种关系在抽象的线代题里经常考察.</p>
+</blockquote>
+<a id="more"></a>
+
+<hr>
+<h1 id="一-结论"><a href="#一-结论" class="headerlink" title="一.结论:                              "></a>一.结论:                              <br/></h1><ul>
+<li>r(A)=n  &nbsp; &nbsp;&gt;&gt;r(A*)=n;        <br/></li>
+<li>r(A)=n-1 &gt;&gt;r(A*)=1;                  <br/></li>
+<li>r(A)&lt;n-1&nbsp;&gt;&gt;r(A*)=0;              <br/></li>
+</ul>
+<p>—                                    <br/></p>
+<h1 id="二-证明"><a href="#二-证明" class="headerlink" title="二.证明:"></a>二.证明:</h1><p>1.A的秩为n,所以所有n阶子式都不是零,所有代数余子式都不是零,所有A*的秩自然为n;<br/></p>
+<p>2.A的秩为n-1,所有存在n-1阶子式不为零,所有A的伴随矩阵阶至少是一,而<br/></p>
+<blockquote>
+<p>r(A)+r(A<em>)&lt;=r(AA</em>)+n=0+n;(这是因为r(A)&lt;n,所以AA<em>=|A|E=0)<br/><br>r&lt;A)=n-1;<br/><br>所以:r(A</em>)&lt;=1;<br/><br>所以:r(A*)=1.</p>
+</blockquote>
+<h1 id="三-巧计"><a href="#三-巧计" class="headerlink" title="三.巧计:"></a>三.巧计:</h1><p>很简单:利用单位阵来记就行了.</p>
+<h1 id="四-草图"><a href="#四-草图" class="headerlink" title="四.草图:"></a>四.草图:</h1><img src="/2019/12/18/%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E7%A7%A9%E7%9A%84%E6%80%A7%E8%B4%A8/%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E7%A7%A9.png" class="">
+]]></content>
+      <categories>
+        <category>线代</category>
+      </categories>
+      <tags>
+        <tag>原创</tag>
+        <tag>王氏数学</tag>
+        <tag>精品</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>线性方程组总结</title>
     <url>/2019/12/17/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<img src="/2019/12/17/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E6%80%BB%E7%BB%93/%E7%BA%BF%E6%96%B91.png" class="" title="This is an">]]></content>
