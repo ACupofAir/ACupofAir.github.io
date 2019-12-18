@@ -3,7 +3,110 @@
   <entry>
     <title>第五章:特征值与特征向量</title>
     <url>/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E5%B0%81%E9%9D%A2.png" class="">
+<p><font size =4 color ="pink"><br/><br>没有人规定你每天要睡八小时还是六小时<br/><br>如果你愿意你也可以二十四小时不睡的</font></p>
+<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h1><p>完整的特征值与特征向量的介绍,包括个人不知正确与否的理解<br/></p>
+</blockquote>
+<a id="more"></a>
+
+<hr>
+<h1 id="一-纲要图"><a href="#一-纲要图" class="headerlink" title="一.纲要图:"></a>一.纲要图:</h1><img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E7%BA%B2%E8%A6%81%E5%9B%BE.png" class="">
+
+<hr>
+<h1 id="二-套路总括"><a href="#二-套路总括" class="headerlink" title="二.套路总括:                                                       "></a>二.套路总括:                                                       <br/></h1><h2 id="1-求数字型矩阵的特征值和特征向量的流程"><a href="#1-求数字型矩阵的特征值和特征向量的流程" class="headerlink" title="1.求数字型矩阵的特征值和特征向量的流程:                             "></a>1.求数字型矩阵的特征值和特征向量的流程:                             <br/></h2><ul>
+<li>step1:&nbsp;求特征值:|λE-A|=0的解                                  <br/></li>
+<li>step2:&nbsp;求对应特征值的特征向量:齐次方程(λi-E)x=0的解向量         <br/></li>
+</ul>
+<h2 id="2-求抽象性特征值与特征向量"><a href="#2-求抽象性特征值与特征向量" class="headerlink" title="2.求抽象性特征值与特征向量:                                       "></a>2.求抽象性特征值与特征向量:                                       <br/></h2><ul>
+<li>用意识去解题:                                                     <br/><blockquote>
+<p>A&lt;=&gt;系数(矩阵)                                                          <br/><br>α&lt;=&gt;向量                                                               <br/><br>λ&lt;=&gt;常数                                                               <br/></p>
+</blockquote>
+</li>
+<li>利用定义解题:                                                     <br/><blockquote>
+<p>Aα=λα;则λ为特征值,α为特征向量                                      <br/></p>
+</blockquote>
+</li>
+<li>具体例子如给定第一行,给定某一行见下文                               <br/></li>
+</ul>
+<h2 id="3-A-n或者-A-E-n"><a href="#3-A-n或者-A-E-n" class="headerlink" title="3.A^n或者(A+E)^n:                                              "></a>3.A^n或者(A+E)^n:                                              <br/></h2><ul>
+<li>对角化                                                          <br/></li>
+</ul>
+<h2 id="4-相似求参"><a href="#4-相似求参" class="headerlink" title="4.相似求参:                                                    "></a>4.相似求参:                                                    <br/></h2><ul>
+<li>tr(A)=tr(B)                                                    <br/></li>
+<li>|a|=|B|                                                        <br/></li>
+<li>特征值相等                                                      <br/></li>
+<li>注意:以上只是必要条件反过来不成立                                 <br/></li>
+</ul>
+<h2 id="5-P-1AP-Λ中求P"><a href="#5-P-1AP-Λ中求P" class="headerlink" title="5.P^-1AP=Λ中求P:                                           "></a>5.P^-1AP=Λ中求P:                                           <br/></h2><ul>
+<li>特征值                                                       <br/></li>
+<li>特征向量                                                     <br/></li>
+<li>特征向量组成的矩阵就是P                                       <br/></li>
+<li>原理介绍:                                                    <br/><img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86.png" class="">                                   <br/>
+
+</li>
+</ul>
+<h2 id="6-实对称矩阵对角化的Q"><a href="#6-实对称矩阵对角化的Q" class="headerlink" title="6.实对称矩阵对角化的Q;                                      "></a>6.实对称矩阵对角化的Q;                                      <br/></h2><ul>
+<li>特征值                                                      <br/></li>
+<li>特征向量                                                    <br/></li>
+<li>正交化                                                      <br/></li>
+<li>单位化                                                      <br/></li>
+<li>合并                                                        <br/></li>
+</ul>
+<hr>
+<h1 id="三-题型"><a href="#三-题型" class="headerlink" title="三.题型:"></a>三.题型:</h1><h2 id="1-A-B-n求法"><a href="#1-A-B-n求法" class="headerlink" title="1.(A+B)^n求法:                                           "></a>1.(A+B)^n求法:                                           <br/></h2><blockquote>
+<p>(1)思路:                                                         <br/></p>
+</blockquote>
+                                        <br/>
+<blockquote>
+<pre><code>&lt;br/&gt;</code></pre><p>(2)例子:                                                         <br/></p>
+<blockquote>
+<p>见下一题                                                        <br/></p>
+</blockquote>
+</blockquote>
+<h2 id="2-告诉A的某行来求参"><a href="#2-告诉A的某行来求参" class="headerlink" title="2.告诉A的某行来求参                                       "></a>2.告诉A的某行来求参                                       <br/></h2><blockquote>
+<p>(1) 用特征值特征向量定义结合方程思想(就像MC连击一样)             <br/><br>(2)结合了两题例子:                                               <br/></p>
+</blockquote>
+<img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/n%E6%AC%A1%E6%96%B9.png" class="">                                         <br/>
+
+<h2 id="3-正交性质题"><a href="#3-正交性质题" class="headerlink" title="3.正交性质题:                                           "></a>3.正交性质题:                                           <br/></h2><blockquote>
+<p>(1)思路:由于三阶实对称矩阵的特征向量正交,这是一个隐藏条件;     <br/></p>
+<blockquote>
+<p>知二求一                                                      <br/><br>知道单根的那个可以实现知一求二                                <br/><br>(2)例子:                                                       <br/></p>
+</blockquote>
+</blockquote>
+<img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E9%9A%90%E8%97%8F%E7%9A%84%E6%AD%A3%E4%BA%A4.png" class="">                                  <br/>
+
+<h2 id="4-相似"><a href="#4-相似" class="headerlink" title="4.相似:                                                              "></a>4.相似:                                                              <br/></h2><blockquote>
+<p>(1)充要条件:                                                                  <br/></p>
+<blockquote>
+<ul>
+<li>A与B可对角化则两者相似于同一个Λ就行了(其实是相似于一种特殊的若尔当型)     <br/></li>
+<li>A与B不能相似对角化则相似于同一若尔当型                                     <br/><br>(2)例题:                                                                      <br/></li>
+</ul>
+</blockquote>
+</blockquote>
+<img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E7%9B%B8%E4%BC%BC.png" class="">
+
+<hr>
+<h1 id="四-独门绝技"><a href="#四-独门绝技" class="headerlink" title="四.独门绝技:                                                     "></a>四.独门绝技:                                                     <br/></h1><h2 id="1-秒杀求特征值"><a href="#1-秒杀求特征值" class="headerlink" title="1.秒杀求特征值:"></a>1.秒杀求特征值:<br/></h2><img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E7%A7%92%E6%9D%80%E7%89%B9%E5%BE%81%E5%80%BC.png" class=""><br/>
+
+<h2 id="3-分解一类矩阵求特征值"><a href="#3-分解一类矩阵求特征值" class="headerlink" title="3.分解一类矩阵求特征值:"></a>3.分解一类矩阵求特征值:<br/></h2><img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/classic.png" class=""><br/>
+
+<hr>
+<blockquote>
+<p>P.S:<br/><br><font color =pink size=4>Now is 3:00 a.m<br/></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>线代</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+        <tag>finished</tag>
+        <tag>王氏数学</tag>
+        <tag>原创</tag>
+      </tags>
   </entry>
   <entry>
     <title>伴随矩阵秩的性质</title>
@@ -106,9 +209,9 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
+        <tag>王氏数学</tag>
         <tag>精品</tag>
       </tags>
   </entry>
@@ -145,8 +248,8 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>summary</tag>
         <tag>math</tag>
+        <tag>summary</tag>
         <tag>finished</tag>
       </tags>
   </entry>
