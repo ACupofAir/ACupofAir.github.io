@@ -3,7 +3,7 @@
   <entry>
     <title>第五章-定积分</title>
     <url>/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
-    <content><![CDATA[<p><font size=5 color=66FFFF><center>从遇见你开始<br/><br>凛冬散尽<br/><br>星河常明</center></p>
+    <content><![CDATA[<p><font size=5 color=66FFFF><center>从遇见你开始<br/><br>凛冬散尽<br/><br>星河常明</center></font></p>
 <img src="/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/cover.png" class="">
 <blockquote>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h1><p>此章涉及变上下限积分求导,积分求法.反常积分判别</p>
@@ -11,7 +11,43 @@
 <a id="more"></a>
 
 <hr>
-<h1 id="第四节-反常积分"><a href="#第四节-反常积分" class="headerlink" title="第四节:反常积分"></a>第四节:反常积分</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+<h1 id="第四节-反常积分求法"><a href="#第四节-反常积分求法" class="headerlink" title="第四节:反常积分求法"></a>第四节:反常积分求法</h1><hr>
+<h2 id="第一类-无穷积分-定义域无穷大"><a href="#第一类-无穷积分-定义域无穷大" class="headerlink" title="第一类:无穷积分(定义域无穷大)"></a>第一类:无穷积分(定义域无穷大)</h2><h3 id="一-求法程序"><a href="#一-求法程序" class="headerlink" title="一.求法程序:"></a>一.求法程序:</h3><ul>
+<li>用常义积分的积分法求出原函数</li>
+<li>带入上下限进行极限运算</li>
+</ul>
+<h3 id="二-例子"><a href="#二-例子" class="headerlink" title="二.例子:"></a>二.例子:</h3><img src="/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/%E6%97%A0%E7%A9%B7%E7%A7%AF%E5%88%86.png" class="">
+
+<hr>
+<h2 id="第二类-无界积分-含瑕点的"><a href="#第二类-无界积分-含瑕点的" class="headerlink" title="第二类:无界积分(含瑕点的)"></a>第二类:无界积分(含瑕点的)</h2><h3 id="一-求法程序-1"><a href="#一-求法程序-1" class="headerlink" title="一.求法程序:"></a>一.求法程序:</h3><ul>
+<li>先确定瑕点并分割</li>
+<li>求原函数</li>
+<li>求极限</li>
+</ul>
+<h3 id="二-例子-1"><a href="#二-例子-1" class="headerlink" title="二.例子:"></a>二.例子:</h3><img src="/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/%E6%97%A0%E7%95%8C%E7%A7%AF%E5%88%86.png" class="">
+
+<hr>
+<h1 id="第五节-反常积分的审敛法"><a href="#第五节-反常积分的审敛法" class="headerlink" title="第五节:反常积分的审敛法"></a>第五节:反常积分的审敛法</h1><h2 id="第一类-无穷积分审敛法"><a href="#第一类-无穷积分审敛法" class="headerlink" title="第一类:无穷积分审敛法"></a>第一类:无穷积分审敛法</h2><h3 id="一-计算法"><a href="#一-计算法" class="headerlink" title="一.计算法:"></a>一.计算法:</h3><p>计算得出的反常积分存在(即不是无穷大),则收敛</p>
+<h3 id="二-比较收敛法"><a href="#二-比较收敛法" class="headerlink" title="二.比较收敛法:"></a>二.比较收敛法:</h3><ul>
+<li>(1)放缩比较法:放缩至另一个收敛性易判断的进行比较判断</li>
+<li>(2)阶比较法:恒正的趋于正无穷的f(x)阶小于-1则收敛,大于等于-1则发散</li>
+<li>(3)绝对收敛准则:|f(x)|在(0,inf)上收敛,则f(x)在这个区间上也收敛</li>
+</ul>
+<h3 id="三-例子"><a href="#三-例子" class="headerlink" title="三.例子:"></a>三.例子:</h3>
+
+<hr>
+<h2 id="第二类-无限积分审敛法"><a href="#第二类-无限积分审敛法" class="headerlink" title="第二类:无限积分审敛法"></a>第二类:无限积分审敛法</h2><h3 id="一-计算法-1"><a href="#一-计算法-1" class="headerlink" title="一.计算法:"></a>一.计算法:</h3><p>###二.比较收敛法:</p>
+<ul>
+<li>(1)放缩法</li>
+<li>(2)阶比较法</li>
+<li>(3)绝对收敛法</li>
+</ul>
+<h3 id="三-例子-1"><a href="#三-例子-1" class="headerlink" title="三.例子:"></a>三.例子:</h3><img src="/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/%E6%94%BE%E7%BC%A9%E6%B3%95.png" class="">
+<img src="/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/%E7%BB%9D%E5%AF%B9%E6%94%B6%E6%95%9B%E6%B3%95.png" class="">
+
+<hr>
+<p><code>waiting...</code></p>
+]]></content>
       <categories>
         <category>高数</category>
       </categories>
@@ -180,10 +216,10 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>王氏数学</tag>
-        <tag>原创</tag>
         <tag>math</tag>
         <tag>finished</tag>
+        <tag>王氏数学</tag>
+        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -214,8 +250,8 @@
       </categories>
       <tags>
         <tag>王氏数学</tag>
-        <tag>精品</tag>
         <tag>原创</tag>
+        <tag>精品</tag>
       </tags>
   </entry>
   <entry>
@@ -287,10 +323,10 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>王氏数学</tag>
-        <tag>精品</tag>
         <tag>math</tag>
         <tag>finished</tag>
+        <tag>王氏数学</tag>
+        <tag>精品</tag>
       </tags>
   </entry>
   <entry>
@@ -326,8 +362,8 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>summary</tag>
         <tag>math</tag>
+        <tag>summary</tag>
         <tag>finished</tag>
       </tags>
   </entry>
