@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>第七章:微分方程</title>
+    <url>/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/cover.png" class="">
+<p><font size =4 color=9999FF><center>陪完你走完这段路,我将会变成你走过的路<br/><br>从此<br/><br>人山人海不再回来</center></font></p>
+<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h1><p>本章总结微分方程的解法</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E7%BA%B2%E8%A6%81%E5%9B%BE.png" class="">
+
+<hr>
+<h1 id="第一节-基本概念"><a href="#第一节-基本概念" class="headerlink" title="第一节:基本概念"></a>第一节:基本概念</h1><ul>
+<li>微分方程: 含未知函数导数的方程</li>
+<li>常微分方程: 方程中未知函数是自变量的<font color="red">一元</font>函数</li>
+<li>阶: 未知函数导数的最高阶数</li>
+<li>通解: 解里含有取任意值常数,且这种常数的个数等于方程的阶数</li>
+<li>特解: 由于初始条件限制,直至解里不含任意常数,则为特解</li>
+</ul>
+<hr>
+<h1 id="第二节-可分离变量的一阶微分方程"><a href="#第二节-可分离变量的一阶微分方程" class="headerlink" title="第二节:可分离变量的一阶微分方程"></a>第二节:可分离变量的一阶微分方程</h1><h4 id="一-形式-y’-f-x-g-y"><a href="#一-形式-y’-f-x-g-y" class="headerlink" title="一.形式: y’=f(x)g(y)"></a>一.形式: y’=f(x)g(y)</h4><h4 id="二-注意-在除过来时记得讨论y是否为零-不用讨论x-作为自变量其默认取使方程有意义的值"><a href="#二-注意-在除过来时记得讨论y是否为零-不用讨论x-作为自变量其默认取使方程有意义的值" class="headerlink" title="二.注意:在除过来时记得讨论y是否为零(不用讨论x,作为自变量其默认取使方程有意义的值)"></a>二.注意:在除过来时记得讨论y是否为零(不用讨论x,作为自变量其默认取使方程有意义的值)</h4><hr>
+<p>#</p>
+]]></content>
+      <categories>
+        <category>高数</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+        <tag>unfinishing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第五章:特征值与特征向量</title>
     <url>/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
     <content><![CDATA[<img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E5%B0%81%E9%9D%A2.png" class="">
