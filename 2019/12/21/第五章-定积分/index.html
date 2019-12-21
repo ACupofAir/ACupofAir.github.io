@@ -48,25 +48,23 @@
   };
 </script>
 
-  <meta name="description" content="施密特正交化:前言: 施密特正交化是二次型和实对称矩阵里的基础">
+  <meta name="description" content="从遇见你开始凛冬散尽星河常明   前言:此章涉及变上下限积分求导,积分求法.反常积分判别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Schmidt正交化">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;17&#x2F;Schmidt%E6%AD%A3%E4%BA%A4%E5%8C%96&#x2F;index.html">
+<meta property="og:title" content="第五章-定积分">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;21&#x2F;%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86&#x2F;index.html">
 <meta property="og:site_name" content="AIR">
-<meta property="og:description" content="施密特正交化:前言: 施密特正交化是二次型和实对称矩阵里的基础">
+<meta property="og:description" content="从遇见你开始凛冬散尽星河常明   前言:此章涉及变上下限积分求导,积分求法.反常积分判别">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;neiji.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;schmidt.png">
-<meta property="article:published_time" content="2019-12-17T08:50:55.000Z">
-<meta property="article:modified_time" content="2019-12-17T09:26:40.565Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;21&#x2F;%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86&#x2F;cover.png">
+<meta property="article:published_time" content="2019-12-21T15:47:19.000Z">
+<meta property="article:modified_time" content="2019-12-21T16:06:03.408Z">
 <meta property="article:author" content="A Cup of Air">
-<meta property="article:tag" content="summary">
 <meta property="article:tag" content="math">
-<meta property="article:tag" content="finished">
+<meta property="article:tag" content="unfinishing">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;neiji.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;21&#x2F;%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86&#x2F;cover.png">
 
-<link rel="canonical" href="http://yoursite.com/2019/12/17/Schmidt%E6%AD%A3%E4%BA%A4%E5%8C%96/">
+<link rel="canonical" href="http://yoursite.com/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/">
 
 
 <script id="page-configurations">
@@ -78,7 +76,7 @@
   };
 </script>
 
-  <title>Schmidt正交化 | AIR</title>
+  <title>第五章-定积分 | AIR</title>
   
 
 
@@ -218,7 +216,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/17/Schmidt%E6%AD%A3%E4%BA%A4%E5%8C%96/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -231,7 +229,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Schmidt正交化
+          第五章-定积分
         </h1>
 
         <div class="post-meta">
@@ -240,18 +238,24 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-17 16:50:55 / 修改时间：17:26:40" itemprop="dateCreated datePublished" datetime="2019-12-17T16:50:55+08:00">2019-12-17</time>
+              <time title="创建时间：2019-12-21 23:47:19" itemprop="dateCreated datePublished" datetime="2019-12-21T23:47:19+08:00">2019-12-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-22 00:06:03" itemprop="dateModified" datetime="2019-12-22T00:06:03+08:00">2019-12-22</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E4%BB%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">线代</span>
+                  <a href="/categories/%E9%AB%98%E6%95%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">高数</span>
                   </a>
                 </span>
             </span>
@@ -274,32 +278,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化:"></a>施密特正交化:</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h2><blockquote>
-<p>施密特正交化是二次型和实对称矩阵里的基础</p>
+        <p><font size=5 color=66FFFF><center>从遇见你开始<br/><br>凛冬散尽<br/><br>星河常明</center></p>
+<img src="/2019/12/21/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AE%9A%E7%A7%AF%E5%88%86/cover.png" class="">
+<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h1><p>此章涉及变上下限积分求导,积分求法.反常积分判别</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="一-套路操作"><a href="#一-套路操作" class="headerlink" title="一.套路操作:"></a>一.套路操作:<br/></h2><ol>
-<li>题设条件:<br/><br>给定:a_1,a_2,a_3;<br/><br>求:正交化后结果<br/></li>
-</ol>
-<p>2.操作:</p>
-<ul>
-<li>第一步:b_1=a_1;</li>
-<li>第二步:b_2=a_2-&lt;a_2,b_1&gt;/&lt;b_1,b_1&gt;;</li>
-<li>第三步:b_3=a_3-&lt;a_3,b_2&gt;/&lt;b_2,b_2&gt;-&lt;a_3,b_1&gt;/&lt;b_1,b_1&gt;;</li>
-<li>b_1,b_2,b_3就是正交化的结果<br/></li>
-</ul>
-<p>3.注意:<br/></p>
-<ul>
-<li>更高阶的依次类推;</li>
-<li>分子的a_n不变,b从b_n-1开始递减;</li>
-<li>分母一定是分子上b的模.</li>
-</ul>
-<h2 id="二-图片说明"><a href="#二-图片说明" class="headerlink" title="二. 图片说明:"></a>二. 图片说明:<br/></h2><ul>
-<li>内积公式:<br/><br><img src="/images/neiji.png" alt="内积图片"></li>
-<li>施密特正交化图片<br/><br><img src="/images/schmidt.png" alt="schmidt"></li>
-</ul>
-
+<hr>
+<h1 id="第四节-反常积分"><a href="#第四节-反常积分" class="headerlink" title="第四节:反常积分"></a>第四节:反常积分</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2>
     </div>
 
     
@@ -308,9 +295,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/summary/" rel="tag"><i class="fa fa-tag"></i> summary</a>
               <a href="/tags/math/" rel="tag"><i class="fa fa-tag"></i> math</a>
-              <a href="/tags/finished/" rel="tag"><i class="fa fa-tag"></i> finished</a>
+              <a href="/tags/unfinishing/" rel="tag"><i class="fa fa-tag"></i> unfinishing</a>
           </div>
 
         
@@ -319,13 +305,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/12/16/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
+    <a href="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="prev" title="第七章:微分方程">
+      <i class="fa fa-chevron-left"></i> 第七章:微分方程
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/12/17/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E6%80%BB%E7%BB%93/" rel="next" title="线性方程组总结">
-      线性方程组总结 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -386,7 +369,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#施密特正交化"><span class="nav-number">1.</span> <span class="nav-text">施密特正交化:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-套路操作"><span class="nav-number">1.2.</span> <span class="nav-text">一.套路操作:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-图片说明"><span class="nav-number">1.3.</span> <span class="nav-text">二. 图片说明:</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四节-反常积分"><span class="nav-number">2.</span> <span class="nav-text">第四节:反常积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -561,7 +544,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo: 'gitalkComment',
       owner: 'ACupofAir',
       admin: ['ACupofAir'],
-      id: '325b87dad8a6d43a24f8f1e7a4cc9ccc',
+      id: '12b984c83e1b87df806732991c094fa8',
         language: '',
       distractionFreeMode: 'true'
     });
