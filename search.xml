@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>重载运算符</title>
+    <url>/2019/12/23/%E9%87%8D%E8%BD%BD%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<img src="/2019/12/23/%E9%87%8D%E8%BD%BD%E8%BF%90%E7%AE%97%E7%AC%A6/cover.png" class="">
+<p><font size =5 color ="purple"><center><br>你错过的,别人才会得到<br/><br>正如你得到的都是别人错过的<br/></p>
+<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p>本文介绍c++运算符重载,并提供一个日期类的转化实例</p>
+</blockquote>
+<a id="more"></a>
+
+<hr>
+<h1 id="c-运算符重载"><a href="#c-运算符重载" class="headerlink" title="c++运算符重载"></a>c++运算符重载</h1><h2 id="一"><a href="#一" class="headerlink" title="一."></a>一.</h2>]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>unfinishing</tag>
+        <tag>c++</tag>
+        <tag>摸路</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第六章-二次型</title>
     <url>/2019/12/22/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
     <content><![CDATA[<img src="/2019/12/22/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E4%BA%8C%E6%AC%A1%E5%9E%8B/cover.png" class="">
