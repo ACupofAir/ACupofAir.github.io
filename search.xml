@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>类与对象</title>
+    <url>/2019/12/23/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<img src="/2019/12/23/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/cover.jpg" class="">
+
+<p><font size =4 color =3366cc><center><br>聚是一团火<br/><br>散是漫天星</font></center></p>
+<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h1><p>类和对象是C++的核心特性:<br/></p>
+<ul>
+<li>类相当于数据类型<br/></li>
+<li>对象则是相当于变量<br/></li>
+</ul>
+</blockquote>
+<a id="more"></a>
+
+<hr>
+<h1 id="一-类"><a href="#一-类" class="headerlink" title="一.类:"></a>一.类:</h1><h2 id="1-类"><a href="#1-类" class="headerlink" title="1.类:"></a>1.类:<br/></h2><p>就是对象的形式,包含了数据表示法和用于处理数据的方法.</p>
+<h2 id="2-类的成员-类中的数据和方法-函数etc"><a href="#2-类的成员-类中的数据和方法-函数etc" class="headerlink" title="2.类的成员: 类中的数据和方法(函数etc)"></a>2.类的成员: 类中的数据和方法(函数etc)</h2><h2 id="3-定义一个类"><a href="#3-定义一个类" class="headerlink" title="3.定义一个类:"></a>3.定义一个类:<br/></h2><p>定义了一个新的数据类型的蓝图<br/><br>如:<br/></p>
+<ul>
+<li>数据类型的名称</li>
+<li>类成员(包含的元素及其操作函数)</li>
+</ul>
+<h2 id="4-代码"><a href="#4-代码" class="headerlink" title="4.代码:"></a>4.代码:<br/></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Box&#x2F;&#x2F;定义了一个叫Box的数据类型(类)</span><br><span class="line">&#123;</span><br><span class="line">public:&#x2F;&#x2F;确定成员的访问属性,公共的意味着类外也可以访问这些成员</span><br><span class="line"> double l;&#x2F;&#x2F;成员1叫l是double类型</span><br><span class="line"> double w;&#x2F;&#x2F;成员2叫w</span><br><span class="line"> double h;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="二-对象"><a href="#二-对象" class="headerlink" title="二.对象:"></a>二.对象:</h1><h2 id="1-对象"><a href="#1-对象" class="headerlink" title="1.对象:"></a>1.对象:</h2><p>对象是根据类创建的变量</p>
+<h2 id="2-定义一个对象代码"><a href="#2-定义一个对象代码" class="headerlink" title="2.定义一个对象代码:"></a>2.定义一个对象代码:</h2><p>` Box box1;//创建了一个叫box1的Box类<br>  Box box2;</p>
+<hr>
+<h1 id="三-访问数据成员"><a href="#三-访问数据成员" class="headerlink" title="三.访问数据成员:"></a>三.访问数据成员:</h1><h2 id="1-成员访问运算符"><a href="#1-成员访问运算符" class="headerlink" title="1.成员访问运算符:"></a>1.成员访问运算符:</h2><p><font size =5 color="red"> .</font>(这里有个点点,它就是成员访问运算符)</p>
+<h2 id="2-代码"><a href="#2-代码" class="headerlink" title="2.代码:"></a>2.代码:</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">box1.l&#x3D;3;&#x2F;&#x2F;box1这个变量的l是3;</span><br><span class="line">box1.w&#x3D;2;</span><br><span class="line">box2.h&#x3D;3;&#x2F;&#x2F;box2的h是3;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h5 id="waiting…-I-need-sleep"><a href="#waiting…-I-need-sleep" class="headerlink" title="waiting… I need sleep"></a>waiting… I need sleep</h5>]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>unfinished</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重载运算符</title>
     <url>/2019/12/23/%E9%87%8D%E8%BD%BD%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
     <content><![CDATA[<img src="/2019/12/23/%E9%87%8D%E8%BD%BD%E8%BF%90%E7%AE%97%E7%AC%A6/cover.png" class="">
-<p><font size =5 color ="purple"><center><br>你错过的,别人才会得到<br/><br>正如你得到的都是别人错过的<br/></p>
+<p><font size =5 color ="purple"><center><br>你错过的,别人才会得到<br/><br>正如你得到的都是别人错过的<br/></font></center></p>
 <blockquote>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p>本文介绍c++运算符重载,并提供一个日期类的转化实例</p>
 </blockquote>
@@ -16,8 +56,8 @@
         <category>c++</category>
       </categories>
       <tags>
-        <tag>unfinishing</tag>
         <tag>c++</tag>
+        <tag>unfinished</tag>
         <tag>摸路</tag>
       </tags>
   </entry>
