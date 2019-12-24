@@ -36,8 +36,8 @@
         <category>c++</category>
       </categories>
       <tags>
-        <tag>c++</tag>
         <tag>unfinished</tag>
+        <tag>c++</tag>
       </tags>
   </entry>
   <entry>
@@ -56,8 +56,8 @@
         <category>c++</category>
       </categories>
       <tags>
-        <tag>c++</tag>
         <tag>unfinished</tag>
+        <tag>c++</tag>
         <tag>摸路</tag>
       </tags>
   </entry>
@@ -111,8 +111,8 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>math</tag>
         <tag>原创</tag>
+        <tag>math</tag>
         <tag>unfinished</tag>
       </tags>
   </entry>
@@ -216,6 +216,8 @@
 </ul>
 <h3 id="三-例子"><a href="#三-例子" class="headerlink" title="三.例子:"></a>三.例子:</h3><img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E4%B8%80%E9%98%B6%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E4%BE%8B%E5%AD%90.png" class="">
 
+<h3 id="注意-全新解法"><a href="#注意-全新解法" class="headerlink" title=" 注意 :全新解法"></a><font color=red> <strong>注意</strong> :全新解法</font></h3>
+
 <h2 id="第二类-伯努利方程"><a href="#第二类-伯努利方程" class="headerlink" title="第二类:伯努利方程"></a>第二类:伯努利方程</h2><h3 id="一-定义-1"><a href="#一-定义-1" class="headerlink" title="一.定义:"></a>一.定义:</h3><p><code>形如:y&#39;+P(x)y=Q(x)y^n</code></p>
 <h3 id="二-解法-2"><a href="#二-解法-2" class="headerlink" title="二.解法:"></a>二.解法:</h3><ul>
 <li>标准化</li>
@@ -224,9 +226,36 @@
 <h3 id="三-例子-1"><a href="#三-例子-1" class="headerlink" title="三.例子:"></a>三.例子:</h3><img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E4%BC%AF%E5%8A%AA%E5%88%A9%E6%96%B9%E7%A8%8B.png" class="">
 
 <hr>
-<h1 id="第五节-可降阶的高阶微分方程"><a href="#第五节-可降阶的高阶微分方程" class="headerlink" title="第五节:可降阶的高阶微分方程"></a>第五节:可降阶的高阶微分方程</h1><!--waiting-->
+<h1 id="第五节-可降阶的高阶微分方程"><a href="#第五节-可降阶的高阶微分方程" class="headerlink" title="第五节:可降阶的高阶微分方程"></a>第五节:可降阶的高阶微分方程</h1><blockquote>
+<p>前言:<br>一般高阶微分方程无通用解法,基本思路是降阶,这里举出三类常见的</p>
+</blockquote>
+<h2 id="第一类"><a href="#第一类" class="headerlink" title="第一类:"></a>第一类:</h2><h3 id="一-形式-1"><a href="#一-形式-1" class="headerlink" title="一.形式:"></a>一.形式:</h3><p><code>y^(n)=f(x)</code></p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法:"></a>解法:</h3><p>多次积分即可</p>
+<h2 id="第二类-可降阶的二阶微分方程"><a href="#第二类-可降阶的二阶微分方程" class="headerlink" title="第二类:可降阶的二阶微分方程"></a>第二类:可降阶的二阶微分方程</h2><p><font color=blue><code>F(x,,y,y&#39;,y&#39;&#39;)=0</code>中缺x或y项</font></p>
+<h3 id="一-第一种-不显含x"><a href="#一-第一种-不显含x" class="headerlink" title="一.第一种:不显含x"></a>一.第一种:不显含x</h3><h4 id="1-形式"><a href="#1-形式" class="headerlink" title="1.形式:"></a>1.形式:</h4><p><code>F(y,y&#39;,y&#39;&#39;)=0</code>缺x项(不显含x)</p>
+<h4 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法:"></a>2.解法:</h4><ul>
+<li>视y为自变量</li>
+<li>令y’=p(y)</li>
+<li>y’’=dp/dx=(dp/dy)*(dy/dx)=P(y)(dp/dy)</li>
+<li>带入即是一阶的了</li>
+</ul>
+<h4 id="3-例子"><a href="#3-例子" class="headerlink" title="3.例子:"></a>3.例子:</h4>
 
-]]></content>
+<h3 id="二-第二种-不显含y"><a href="#二-第二种-不显含y" class="headerlink" title="二.第二种:不显含y"></a>二.第二种:不显含y</h3><h4 id="1-形式-1"><a href="#1-形式-1" class="headerlink" title="1.形式:"></a>1.形式:</h4><p><code>F(x,y&#39;,y&#39;&#39;)=0</code>缺y项(不显含y)</p>
+<h4 id="2-解法-1"><a href="#2-解法-1" class="headerlink" title="2,解法:"></a>2,解法:</h4><ul>
+<li>视y’=p(x)为一个新变量</li>
+<li>视y’’=p’</li>
+<li>此时变成了一阶方程了<h4 id="3-例子-1"><a href="#3-例子-1" class="headerlink" title="3.例子:"></a>3.例子:</h4>
+
+</li>
+</ul>
+<h2 id="第三类-y-n-f-y-n-2"><a href="#第三类-y-n-f-y-n-2" class="headerlink" title="第三类:`y^(n)=f(y^(n-2))"></a>第三类:`y^(n)=f(y^(n-2))</h2><h3 id="一-形式-如上"><a href="#一-形式-如上" class="headerlink" title="一.形式:如上"></a>一.形式:如上</h3><h3 id="二-解法-3"><a href="#二-解法-3" class="headerlink" title="二.解法:"></a>二.解法:</h3><ul>
+<li>令z=y^(n-2)则z”=f(z)</li>
+<li>两边同乘z’得<br><code>z&#39;z&quot;=z&#39;f(z)</code></li>
+<li>两边积分即可</li>
+</ul>
+<hr>
+<h1 id="第六节-高阶线性微分方程"><a href="#第六节-高阶线性微分方程" class="headerlink" title="第六节:高阶线性微分方程"></a>第六节:高阶线性微分方程</h1>]]></content>
       <categories>
         <category>高数</category>
       </categories>
@@ -338,9 +367,9 @@
       </categories>
       <tags>
         <tag>王氏数学</tag>
+        <tag>原创</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -371,8 +400,8 @@
       </categories>
       <tags>
         <tag>王氏数学</tag>
-        <tag>原创</tag>
         <tag>精品</tag>
+        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -445,9 +474,9 @@
       </categories>
       <tags>
         <tag>王氏数学</tag>
+        <tag>精品</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>精品</tag>
       </tags>
   </entry>
   <entry>
