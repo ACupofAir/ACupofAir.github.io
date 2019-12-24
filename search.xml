@@ -216,7 +216,7 @@
 </ul>
 <h3 id="三-例子"><a href="#三-例子" class="headerlink" title="三.例子:"></a>三.例子:</h3><img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E4%B8%80%E9%98%B6%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E4%BE%8B%E5%AD%90.png" class="">
 
-<h3 id="注意-全新解法"><a href="#注意-全新解法" class="headerlink" title=" 注意 :全新解法"></a><font color=red> <strong>注意</strong> :全新解法</font></h3>
+<h3 id="注意-全新解法"><a href="#注意-全新解法" class="headerlink" title=" 注意 :全新解法"></a><font color=red> <strong>注意</strong> :全新解法</font></h3><img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E5%85%A8%E6%96%B0%E8%A7%A3%E6%B3%95.png" class="">
 
 <h2 id="第二类-伯努利方程"><a href="#第二类-伯努利方程" class="headerlink" title="第二类:伯努利方程"></a>第二类:伯努利方程</h2><h3 id="一-定义-1"><a href="#一-定义-1" class="headerlink" title="一.定义:"></a>一.定义:</h3><p><code>形如:y&#39;+P(x)y=Q(x)y^n</code></p>
 <h3 id="二-解法-2"><a href="#二-解法-2" class="headerlink" title="二.解法:"></a>二.解法:</h3><ul>
@@ -239,13 +239,13 @@
 <li>y’’=dp/dx=(dp/dy)*(dy/dx)=P(y)(dp/dy)</li>
 <li>带入即是一阶的了</li>
 </ul>
-<h4 id="3-例子"><a href="#3-例子" class="headerlink" title="3.例子:"></a>3.例子:</h4>
+<h4 id="3-例子"><a href="#3-例子" class="headerlink" title="3.例子:"></a>3.例子:</h4><img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E4%B8%8D%E6%98%BE%E5%90%ABx.png" class="">
 
 <h3 id="二-第二种-不显含y"><a href="#二-第二种-不显含y" class="headerlink" title="二.第二种:不显含y"></a>二.第二种:不显含y</h3><h4 id="1-形式-1"><a href="#1-形式-1" class="headerlink" title="1.形式:"></a>1.形式:</h4><p><code>F(x,y&#39;,y&#39;&#39;)=0</code>缺y项(不显含y)</p>
 <h4 id="2-解法-1"><a href="#2-解法-1" class="headerlink" title="2,解法:"></a>2,解法:</h4><ul>
 <li>视y’=p(x)为一个新变量</li>
 <li>视y’’=p’</li>
-<li>此时变成了一阶方程了<h4 id="3-例子-1"><a href="#3-例子-1" class="headerlink" title="3.例子:"></a>3.例子:</h4>
+<li>此时变成了一阶方程了<h4 id="3-例子-1"><a href="#3-例子-1" class="headerlink" title="3.例子:"></a>3.例子:</h4><img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E4%B8%8D%E6%98%BE%E5%90%ABy.png" class="">
 
 </li>
 </ul>
@@ -254,6 +254,10 @@
 <li>两边同乘z’得<br><code>z&#39;z&quot;=z&#39;f(z)</code></li>
 <li>两边积分即可</li>
 </ul>
+<h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下:"></a><font color=7789ae>总结一下:</h2><p>一般只考二阶,套路就上面几类<Br/><br>套路之外:<strong>构造思想</strong></p>
+<p>例如:<br/></font></p>
+<img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E6%9E%84%E9%80%A0%E6%80%9D%E6%83%B3.png" class="">
+
 <hr>
 <h1 id="第六节-高阶线性微分方程"><a href="#第六节-高阶线性微分方程" class="headerlink" title="第六节:高阶线性微分方程"></a>第六节:高阶线性微分方程</h1>]]></content>
       <categories>
