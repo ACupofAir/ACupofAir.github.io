@@ -24,7 +24,7 @@
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:<br/></h1><p>类和对象是C++的核心特性:<br/></p>
 <ul>
 <li>类相当于数据类型<br/></li>
-<li>对象则是相当于变量<br/></li>
+<li>一个对象则是相当于某个变量<br/></li>
 </ul>
 </blockquote>
 <a id="more"></a>
