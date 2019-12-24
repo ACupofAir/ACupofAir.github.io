@@ -104,8 +104,35 @@
 <h3 id="2-例子-1"><a href="#2-例子-1" class="headerlink" title="2.例子:"></a>2.例子:</h3><img src="/2019/12/22/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E4%BA%8C%E6%AC%A1%E5%9E%8B/%E9%85%8D%E6%96%B9%E6%B3%95.png" class="">
 
 <h3 id="3-注意-1"><a href="#3-注意-1" class="headerlink" title="3.注意:"></a>3.注意:</h3><p><font size =5 color="red"><strong>所有</strong></font>二次型都可以通过配方法化为标准型</p>
+<h2 id="三-增广矩阵法"><a href="#三-增广矩阵法" class="headerlink" title="三.增广矩阵法:"></a>三.增广矩阵法:</h2><h3 id="1-程序-2"><a href="#1-程序-2" class="headerlink" title="1.程序:"></a>1.程序:</h3><ul>
+<li>增广出一个同阶单位阵</li>
+<li>每次做一次初等行变换也要做对应的列变换以保持其对称</li>
+<li>直到化为对角阵则有边的单位阵化为变换矩阵Q,对角阵就是变换后的二次项系数</li>
+</ul>
+<h3 id="2-例子-2"><a href="#2-例子-2" class="headerlink" title="2.例子:"></a>2.例子:</h3><img src="/2019/12/22/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E4%BA%8C%E6%AC%A1%E5%9E%8B/%E5%A2%9E%E5%B9%BF%E7%9F%A9%E9%98%B5%E6%B3%95.png" class="">
+
+<p><font color=65C1BE size=4>sum:先上拉格朗日配方法,不行上正交法</font></p>
 <hr>
-<p><code>waiting...</code></p>
+<h1 id="第二节-正定二次型"><a href="#第二节-正定二次型" class="headerlink" title="第二节:正定二次型"></a>第二节:正定二次型</h1><blockquote>
+<h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言:"></a>前言:<br/></h2><p>上一节中介绍了三种化为标准型的方法,但其实每种算法算出的标准型是不同的<br/><br>为此此章来介绍<font color=c1badd size =4>事物变换中不变的那部分</font></p>
+</blockquote>
+<h2 id="一-惯性定律"><a href="#一-惯性定律" class="headerlink" title="一.惯性定律"></a>一.惯性定律</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义:"></a>1.定义:<br/></h3><ul>
+<li>标准型二次式的矩阵的秩r显然等于平方项系数非零的个数;</li>
+<li>平方项系数为正的个数称为正惯性指数(p);</li>
+<li>平方项系数为负的个数称为正惯性指数(q);</li>
+<li>显然p+q=r;</li>
+</ul>
+<h3 id="2-化标准型为规范型"><a href="#2-化标准型为规范型" class="headerlink" title="2.化标准型为规范型:"></a>2.化标准型为规范型:</h3><p>把平方项系数化为+-1或0</p>
+<img src="/2019/12/22/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E4%BA%8C%E6%AC%A1%E5%9E%8B/%E5%8C%96%E6%A0%87%E5%87%86%E5%9E%8B%E4%B8%BA%E8%A7%84%E8%8C%83%E5%9E%8B.png" class="">
+
+<h3 id="3-合同的判定"><a href="#3-合同的判定" class="headerlink" title="3.合同的判定:"></a>3.合同的判定:</h3><ul>
+<li>AB都实对称,则A与B合同&lt;==&gt;A和B有相同的规范型</li>
+<li>AB都不对称,则按定义验证,没有特殊技巧</li>
+<li>AB一个对称一个不对称,则一定不合同<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">证明:</span><br><span class="line">设:A^T&#x3D;A,B^T!&#x3D;B(1)</span><br><span class="line">假设合同则P^TAP&#x3D;B(2)</span><br><span class="line">而B^T&#x3D;(P^TAP)^T&#x3D;P^TAP&#x3D;B与题设设(1)矛盾</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><code>waiting...</code><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br>end</p>
 ]]></content>
       <categories>
         <category>线代</category>
