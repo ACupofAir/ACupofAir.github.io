@@ -319,7 +319,99 @@
 <img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E6%9E%84%E9%80%A0%E6%80%9D%E6%83%B3.png" class="">
 
 <hr>
-<h1 id="第六节-高阶线性微分方程"><a href="#第六节-高阶线性微分方程" class="headerlink" title="第六节:高阶线性微分方程"></a>第六节:高阶线性微分方程</h1>]]></content>
+<h1 id="第六节-高阶线性微分方程"><a href="#第六节-高阶线性微分方程" class="headerlink" title="第六节:高阶线性微分方程"></a>第六节:高阶线性微分方程</h1><p><font color=9999ff size=4><strong>齐次指各阶导数次数都是1</strong></font></p>
+<h2 id="一-高阶齐次方程通解的结构"><a href="#一-高阶齐次方程通解的结构" class="headerlink" title="一.高阶齐次方程通解的结构"></a>一.高阶齐次方程通解的结构</h2><p>n个线性无关的解的线性组合(<font color=red>一定含n个任意常数项,不会多也不会少)</font><br/></p>
+<h2 id="二-高阶非齐次方程通解的结构"><a href="#二-高阶非齐次方程通解的结构" class="headerlink" title="二.高阶非齐次方程通解的结构"></a>二.高阶非齐次方程通解的结构<br/></h2><p>其对应的齐次方程的通解+自身一个特解<br/></p>
+<h2 id="三-判定线性无关"><a href="#三-判定线性无关" class="headerlink" title="三.判定线性无关"></a>三.判定线性无关</h2><h3 id="1-个人主观"><a href="#1-个人主观" class="headerlink" title="1.个人主观:"></a>1.个人主观:</h3><p>就是不同类型的代数式(阶不同,教材上说是某个区间上比例是常数)</p>
+<h3 id="2-严谨的数学定理-Wronski行列式判别法"><a href="#2-严谨的数学定理-Wronski行列式判别法" class="headerlink" title="2.严谨的数学定理:Wronski行列式判别法"></a>2.严谨的数学定理:Wronski行列式判别法</h3>
+
+<hr>
+<h1 id="第七节-常系数齐次线性微分方程"><a href="#第七节-常系数齐次线性微分方程" class="headerlink" title="第七节:常系数齐次线性微分方程"></a>第七节:常系数齐次线性微分方程</h1><p><font size=1 color=ff9999>不得不说人类太弱小了,需要常系数,齐次,线性这么多条件限制才能搞出一点结论</font></p>
+<h2 id="第一类-齐次的"><a href="#第一类-齐次的" class="headerlink" title="第一类:齐次的"></a>第一类:齐次的</h2><p>1.特征根法求得根</p>
+<p>2.不同特征根对应的方程的解<br/></p>
+<table>
+<thead>
+<tr>
+<th align="center"><font color=999fff> 根的类型 </font></th>
+<th align="center"><font color=999fff> 对应的通解中的项</font></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">单实根λ</td>
+<td align="center">Ce<sup>λt</sup></td>
+</tr>
+<tr>
+<td align="center">k重实根</td>
+<td align="center">e<sup>λt</sup>(C<del>1</del>+C<del>2</del>t+C<del>3</del>t^2^+…+C<del>k</del>t^k-1^)</td>
+</tr>
+<tr>
+<td align="center">一对共轭单复根λ<del>1,2</del>=a+-ib</td>
+<td align="center">e^at^(C<del>1</del>cosbt+C<del>2</del>sinbt)</td>
+</tr>
+<tr>
+<td align="center">一对k重共轭复根a+-ib</td>
+<td align="center">e^at^((C<del>11</del>+C<del>12</del>t+C<del>13</del>t^2^+…+C<del>1k</del>t^k-1^)cosbt+(C<del>21</del>+C<del>22</del>t+C<del>23</del>t^2^+…+C<del>2k</del>t^k-1^)sinbt)</td>
+</tr>
+</tbody></table>
+<p>3.注:其实复根的形式和实根是一模一样的,只是通过欧拉公式经过化简及代换后变成如上形式</p>
+<p>4.例子:<br>见非齐次的,反正解非齐次的也要解齐次的,不如一例两命,省时省力</p>
+<h2 id="第二类-非齐次的"><a href="#第二类-非齐次的" class="headerlink" title="第二类:非齐次的"></a>第二类:非齐次的</h2><p>1.解法:</p>
+<ul>
+<li>先求其对应的齐次的通解</li>
+<li>求自身的一个特解</li>
+<li>两解组合就是自身通解</li>
+</ul>
+<p>2.自身特解的找法:</p>
+<ul>
+<li>先化为一般式(一般题目直接给的就是一般式)</li>
+<li>通过一般式的屁股来看应该怎么解</li>
+</ul>
+<p>3.常见的屁股及对应处理方法:(Z<del>i</del>(t)均为与特征方程同次数的多项式)</p>
+<table>
+<thead>
+<tr>
+<th align="center">屁股的类型</th>
+<th align="center">特征值类型</th>
+<th align="left">应设置的特解x<del>0</del>(t)的形式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">m次多项式φ(x)</td>
+<td align="center">0不是特征值</td>
+<td align="left">x<del>0</del>=Z(t)</td>
+</tr>
+<tr>
+<td align="center">m次多项式φ(x)</td>
+<td align="center">0是k重特征值</td>
+<td align="left">x<del>0</del>=t^k^Z(t)</td>
+</tr>
+<tr>
+<td align="center">φ(x)e^μt^</td>
+<td align="center">μ不是特征值</td>
+<td align="left">x<del>0</del>=Z(t)e^μt^</td>
+</tr>
+<tr>
+<td align="center">φ(x)e^μt^</td>
+<td align="center">μ是k重特征值</td>
+<td align="left">x<del>0</del>=t^k^Z(t)e^μt^</td>
+</tr>
+<tr>
+<td align="center"><nbsp>φ(x)e^μt^ costυt<br/>或φ(x)e^μt^ sinυt</td>
+<td align="center">μ+iυ不是特征值</td>
+<td align="left">x<del>0</del>=e^μt^[Z<del>1</del>(t)costυt<br/>+Z<del>2</del>(t)sinυt</td>
+</tr>
+<tr>
+<td align="center"><nbsp>φ(x)e^μt^ costυt<br/>或φ(x)e^μt^ sinυt</td>
+<td align="center">μ+iυ是k特征值(这个应该不会考吧)</td>
+<td align="left">x<del>0</del>=t^k^e^μt^[Z<del>1</del>(t)costυt<br/>+Z<del>2</del>(t)sinυt</td>
+</tr>
+</tbody></table>
+<p>4.例子:</p>
+<img src="/2019/12/21/%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/%E9%9D%9E%E9%BD%90%E6%AC%A1.png" class="">
+
+<hr>
+<p><font color=999fff size=6><center>The first team is end…</font></center><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/></p>
+]]></content>
       <categories>
         <category>高数</category>
       </categories>
