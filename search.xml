@@ -386,7 +386,7 @@
 <li>先化为一般式(一般题目直接给的就是一般式)</li>
 <li>通过一般式的屁股来看应该怎么解</li>
 </ul>
-<p>3.常见的屁股及对应处理方法:(Z<del>i</del>(t)均为与特征方程同次数的多项式)</p>
+<p>3.常见的屁股及对应处理方法:(Z<del>i</del>(t)均为与屁股的φ(x)同次数的多项式)</p>
 <table>
 <thead>
 <tr>
@@ -413,7 +413,7 @@
 <tr>
 <td align="center">φ(x)e^μt^</td>
 <td align="center">μ是k重特征值</td>
-<td align="left">x<del>0</del>=t^k^Z(t)e^μt^</td>
+<td align="left">x<del>0</del>=t<sup>k</sup>Z(t)e^μt^</td>
 </tr>
 <tr>
 <td align="center"><nbsp>φ(x)e^μt^ costυt<br/>或φ(x)e^μt^ sinυt</td>
@@ -542,9 +542,9 @@
         <category>线代</category>
       </categories>
       <tags>
+        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>王氏数学</tag>
         <tag>原创</tag>
       </tags>
   </entry>
@@ -576,8 +576,8 @@
       </categories>
       <tags>
         <tag>王氏数学</tag>
-        <tag>原创</tag>
         <tag>精品</tag>
+        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -649,9 +649,9 @@
         <category>线代</category>
       </categories>
       <tags>
+        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>王氏数学</tag>
         <tag>精品</tag>
       </tags>
   </entry>
@@ -688,8 +688,8 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>math</tag>
         <tag>summary</tag>
+        <tag>math</tag>
         <tag>finished</tag>
       </tags>
   </entry>
