@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>积分求导法则</title>
+    <url>/2019/12/30/%E7%A7%AF%E5%88%86%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/</url>
+    <content><![CDATA[<p><font color=ecddee size=4><center>Hello</font></center></p>
+<img src="/2019/12/30/%E7%A7%AF%E5%88%86%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/cover.png" class="">
+
+<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p>中国一般的高等本科院校不会介绍这个公式,我们老师介绍了一半,可能鉴于我们尚未学习偏导知识而没传授完整的部分,知识的不完整性就像程序的bug,在某天我遇到一个积分求导问题其中积分符号里有x项,这导致了之前的方法失效了,而老师用换元来避开这个问题却对问什么只字不提,这样的疑惑折磨了我很久,今天碰巧有所发现</p>
+</blockquote>
+<hr>
+<a id="more"></a>
+
+<hr>
+<p>一.结论:</p>
+<img src="/2019/12/30/%E7%A7%AF%E5%88%86%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E7%A7%AF%E5%88%86%E6%B3%95%E5%88%99.png" class="">
+
+<hr>
+<p>二.more details:</p>
+<div class="pdf" target="莱布尼茨求导法则.pdf" height=""></div>
+]]></content>
+      <categories>
+        <category>高数</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+        <tag>finished</tag>
+        <tag>whim</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>time</title>
     <url>/2019/12/28/time/</url>
     <content><![CDATA[<img src="/2019/12/28/time/%E6%98%8E%E9%87%8C.png" class="">
@@ -542,9 +571,9 @@
         <category>线代</category>
       </categories>
       <tags>
+        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>王氏数学</tag>
         <tag>原创</tag>
       </tags>
   </entry>
@@ -649,9 +678,9 @@
         <category>线代</category>
       </categories>
       <tags>
+        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>王氏数学</tag>
         <tag>精品</tag>
       </tags>
   </entry>
@@ -688,8 +717,8 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>math</tag>
         <tag>summary</tag>
+        <tag>math</tag>
         <tag>finished</tag>
       </tags>
   </entry>
@@ -762,8 +791,8 @@
       </categories>
       <tags>
         <tag>summary</tag>
-        <tag>王氏数学</tag>
         <tag>完结</tag>
+        <tag>王氏数学</tag>
       </tags>
   </entry>
   <entry>
@@ -780,8 +809,8 @@
         <category>life</category>
       </categories>
       <tags>
-        <tag>原创</tag>
         <tag>完结</tag>
+        <tag>原创</tag>
       </tags>
   </entry>
 </search>
