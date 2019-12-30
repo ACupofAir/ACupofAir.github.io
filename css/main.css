@@ -838,6 +838,12 @@ pre .javascript .function {
   content: "\f056";
   color: #d9534f;
 }
+.pdfobject-container {
+  height: 500px;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
 .pagination .prev,
 .pagination .next,
 .pagination .page-number,
@@ -1193,7 +1199,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffff1a;
+  background: #719fff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
