@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2020</title>
+    <url>/2020/01/01/2020/</url>
+    <content><![CDATA[<img src="/2020/01/01/2020/cover.png" class="">
+<p>&lt;font size=5,color=999fff&gt;<center>2020</font></center><br>&lt;font color=c4dbf2,size=3&gt;To the human,the Earth:</br></p>
+<center>Happy New Year</center></font>
+<font size=1>1370</font>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+        <tag>vip</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>c++dev_skills</title>
     <url>/2019/12/31/c-dev-skills/</url>
     <content><![CDATA[<img src="/2019/12/31/c-dev-skills/cover.png" class="">
@@ -593,9 +609,9 @@
         <category>线代</category>
       </categories>
       <tags>
+        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>王氏数学</tag>
         <tag>原创</tag>
       </tags>
   </entry>
@@ -700,9 +716,9 @@
         <category>线代</category>
       </categories>
       <tags>
+        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>王氏数学</tag>
         <tag>精品</tag>
       </tags>
   </entry>
@@ -739,8 +755,8 @@
         <category>线代</category>
       </categories>
       <tags>
-        <tag>math</tag>
         <tag>summary</tag>
+        <tag>math</tag>
         <tag>finished</tag>
       </tags>
   </entry>
