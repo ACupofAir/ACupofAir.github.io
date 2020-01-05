@@ -212,7 +212,7 @@ ENDLINE</font>
 <h1 id="第一节-二次型及其矩阵表示"><a href="#第一节-二次型及其矩阵表示" class="headerlink" title="第一节: 二次型及其矩阵表示"></a>第一节: 二次型及其矩阵表示</h1><h2 id="一-相关定义"><a href="#一-相关定义" class="headerlink" title="一.相关定义:"></a>一.相关定义:</h2><h3 id="1-二次型定义"><a href="#1-二次型定义" class="headerlink" title="1.二次型定义:"></a>1.二次型定义:</h3><p>n个变量组成的二次实<font color="red" size=5>齐次</font>多项式</p>
 <h3 id="2-二次型的矩阵"><a href="#2-二次型的矩阵" class="headerlink" title="2.二次型的矩阵:"></a>2.二次型的矩阵:</h3>
 
-<h3 id="3-矩阵的合同"><a href="#3-矩阵的合同" class="headerlink" title="3.矩阵的合同:"></a>3.矩阵的合同:</h3><p>存在n阶可逆矩阵P使P^T<em>A</em>P=B,则称A和B合同</p>
+<h3 id="3-矩阵的合同"><a href="#3-矩阵的合同" class="headerlink" title="3.矩阵的合同:"></a>3.矩阵的合同:</h3><p>存在n阶可逆矩阵P使P<sup>T</sup>AP=B,则称A和B合同</p>
 <h2 id="二-合同性质"><a href="#二-合同性质" class="headerlink" title="二.合同性质:"></a>二.合同性质:</h2><ul>
 <li>实对称矩阵一定合同于对角阵(由于矩阵的相似对角化定理可知)</li>
 <li>合同具有传递性(因为变换矩阵是可逆阵,这将允许它进行不断地乘除变换)</li>
@@ -259,28 +259,28 @@ ENDLINE</font>
 <h3 id="3-合同的判定"><a href="#3-合同的判定" class="headerlink" title="3.合同的判定:"></a>3.合同的判定:</h3><ul>
 <li>AB都实对称,则A与B合同&lt;==&gt;A和B有相同的规范型</li>
 <li>AB都不对称,则按定义验证,没有特殊技巧</li>
-<li>AB一个对称一个不对称,则一定不合同<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">证明:</span><br><span class="line">设:A^T&#x3D;A,B^T!&#x3D;B(1)</span><br><span class="line">假设合同则P^TAP&#x3D;B(2)</span><br><span class="line">而B^T&#x3D;(P^TAP)^T&#x3D;P^TAP&#x3D;B与题设设(1)矛盾</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>AB一个对称一个不对称,则一定不合同</li>
 </ul>
+<p>证明:<br>设:A<sup>T</sup>=A,B<sup>T</sup>!=B    (1)         <br/><br>假设合同则P<sup>T</sup>AP=B                    <br/><br>而B<sup>T</sup>=(P<sup>T</sup>AP)<sup>T</sup>=P<sup>T</sup>AP=B与题设设(1)矛盾   <br/><br>                                        <br/></p>
 <h2 id="二-正定二次型"><a href="#二-正定二次型" class="headerlink" title="二.正定二次型:"></a>二.正定二次型:</h2><h3 id="1-定义-1"><a href="#1-定义-1" class="headerlink" title="1.定义:"></a>1.定义:</h3><ul>
-<li>对任意向量x,总有f(x1,x2,x3….)=x^TAx&gt;0恒成立则为正定(也就是规范型的系数全为1)</li>
+<li>对任意向量x,总有f(x1,x2,x3….)=x<sup>T</sup>Ax&gt;0恒成立则为正定(也就是规范型的系数全为1)</li>
 <li>………………………………&lt;0恒成立,则为负定(…………..全为-1)</li>
 <li>………………………………&gt;=0恒成立,则为半正定(……….全为0和1)</li>
 </ul>
 <h3 id="2-性质"><a href="#2-性质" class="headerlink" title="2.性质:"></a>2.性质:</h3><ol>
 <li>A,B正定=&gt;A+B正定;</li>
-<li>A正定,P可逆=&gt;P^TAP正定;</li>
+<li>A正定,P可逆=&gt;P<sup>T</sup>AP正定;</li>
 </ol>
 <h3 id="3-判定"><a href="#3-判定" class="headerlink" title="3.判定,"></a>3.判定,</h3><h4 id="1-下面五个命题等价"><a href="#1-下面五个命题等价" class="headerlink" title="(1)下面五个命题等价:"></a>(1)下面五个命题等价:</h4><ul>
 <li>A正定</li>
 <li>A的正惯性指数=n;</li>
 <li>A的特征值全部大于0;</li>
 <li>A合同于E;</li>
-<li>存在可逆P使A=P^TP.<h4 id="2-Sylvester定理"><a href="#2-Sylvester定理" class="headerlink" title="(2)Sylvester定理:"></a>(2)Sylvester定理:</h4>A正定&lt;=&gt;A的各阶顺序主子式均大于零<img src="/2019/12/22/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E4%BA%8C%E6%AC%A1%E5%9E%8B/%E4%B8%BB%E5%AD%90%E5%BC%8F.png" class="">
-
-</li>
+<li>存在可逆P使A=P<sup>T</sup>P.</li>
 </ul>
+<h4 id="2-Sylvester定理"><a href="#2-Sylvester定理" class="headerlink" title="(2)Sylvester定理:"></a>(2)Sylvester定理:</h4><p>A正定&lt;=&gt;A的各阶顺序主子式均大于零</p>
+<img src="/2019/12/22/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E4%BA%8C%E6%AC%A1%E5%9E%8B/%E4%B8%BB%E5%AD%90%E5%BC%8F.png" class="">
+
 <hr>
 <p><font size = 3 color=c1baff>all ends</p>
 ]]></content>
@@ -553,7 +553,7 @@ ENDLINE</font>
 <hr>
 <h1 id="二-套路总括"><a href="#二-套路总括" class="headerlink" title="二.套路总括:                                                       "></a>二.套路总括:                                                       <br/></h1><h2 id="1-求数字型矩阵的特征值和特征向量的流程"><a href="#1-求数字型矩阵的特征值和特征向量的流程" class="headerlink" title="1.求数字型矩阵的特征值和特征向量的流程:                             "></a>1.求数字型矩阵的特征值和特征向量的流程:                             <br/></h2><ul>
 <li>step1:&nbsp;求特征值:|λE-A|=0的解                                  <br/></li>
-<li>step2:&nbsp;求对应特征值的特征向量:齐次方程(λi-E)x=0的解向量         <br/></li>
+<li>step2:&nbsp;求对应特征值的特征向量:齐次方程(λ<sub>i</sub>-E)x=0的解向量         <br/></li>
 </ul>
 <h2 id="2-求抽象性特征值与特征向量"><a href="#2-求抽象性特征值与特征向量" class="headerlink" title="2.求抽象性特征值与特征向量:                                       "></a>2.求抽象性特征值与特征向量:                                       <br/></h2><ul>
 <li>用意识去解题:                                                     <br/><blockquote>
@@ -566,7 +566,7 @@ ENDLINE</font>
 </li>
 <li>具体例子如给定第一行,给定某一行见下文                               <br/></li>
 </ul>
-<h2 id="3-A-n或者-A-E-n"><a href="#3-A-n或者-A-E-n" class="headerlink" title="3.A^n或者(A+E)^n:                                              "></a>3.A^n或者(A+E)^n:                                              <br/></h2><ul>
+<h2 id="3-An或者-A-E-n"><a href="#3-An或者-A-E-n" class="headerlink" title="3.An或者(A+E)n:                                              "></a>3.A<sup>n</sup>或者(A+E)<sup>n</sup>:                                              <br/></h2><ul>
 <li>对角化                                                          <br/></li>
 </ul>
 <h2 id="4-相似求参"><a href="#4-相似求参" class="headerlink" title="4.相似求参:                                                    "></a>4.相似求参:                                                    <br/></h2><ul>
@@ -575,7 +575,7 @@ ENDLINE</font>
 <li>特征值相等                                                      <br/></li>
 <li>注意:以上只是必要条件反过来不成立                                 <br/></li>
 </ul>
-<h2 id="5-P-1AP-Λ中求P"><a href="#5-P-1AP-Λ中求P" class="headerlink" title="5.P^-1AP=Λ中求P:                                           "></a>5.P^-1AP=Λ中求P:                                           <br/></h2><ul>
+<h2 id="5-P-1AP-Λ中求P"><a href="#5-P-1AP-Λ中求P" class="headerlink" title="5.P-1AP=Λ中求P:                                           "></a>5.P<sup>-1</sup>AP=Λ中求P:                                           <br/></h2><ul>
 <li>特征值                                                       <br/></li>
 <li>特征向量                                                     <br/></li>
 <li>特征向量组成的矩阵就是P                                       <br/></li>
@@ -591,10 +591,10 @@ ENDLINE</font>
 <li>合并                                                        <br/></li>
 </ul>
 <hr>
-<h1 id="三-题型"><a href="#三-题型" class="headerlink" title="三.题型:"></a>三.题型:</h1><h2 id="1-A-B-n求法"><a href="#1-A-B-n求法" class="headerlink" title="1.(A+B)^n求法:                                           "></a>1.(A+B)^n求法:                                           <br/></h2><blockquote>
-<p>(1)思路:                                                         <br/></p>
+<h1 id="三-题型"><a href="#三-题型" class="headerlink" title="三.题型:"></a>三.题型:</h1><h2 id="1-A-B-n求法"><a href="#1-A-B-n求法" class="headerlink" title="1.(A+B)n求法:                                           "></a>1.(A+B)<sup>n</sup>求法:                                           <br/></h2><blockquote>
+<p>(1)思路:                                                         </p>
 </blockquote>
-                                        <br/>
+<img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E9%A2%98%E5%9E%8B%E4%B8%80.png" class="">                                        <br/>
 <blockquote>
 <pre><code>&lt;br/&gt;</code></pre><p>(2)例子:                                                         <br/></p>
 <blockquote>
@@ -609,7 +609,7 @@ ENDLINE</font>
 <h2 id="3-正交性质题"><a href="#3-正交性质题" class="headerlink" title="3.正交性质题:                                           "></a>3.正交性质题:                                           <br/></h2><blockquote>
 <p>(1)思路:由于三阶实对称矩阵的特征向量正交,这是一个隐藏条件;     <br/></p>
 <blockquote>
-<p>知二求一                                                      <br/><br>知道单根的那个可以实现知一求二                                <br/><br>(2)例子:                                                       <br/></p>
+<p>知二求一                                                      <br/><br>知道单根的那个可以实现知一求二<br>                             <br/><br>(2)例子:                                                       <br/></p>
 </blockquote>
 </blockquote>
 <img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E9%9A%90%E8%97%8F%E7%9A%84%E6%AD%A3%E4%BA%A4.png" class="">                                  <br/>
@@ -619,9 +619,10 @@ ENDLINE</font>
 <blockquote>
 <ul>
 <li>A与B可对角化则两者相似于同一个Λ就行了(其实是相似于一种特殊的若尔当型)     <br/></li>
-<li>A与B不能相似对角化则相似于同一若尔当型                                     <br/><br>(2)例题:                                                                      <br/></li>
+<li>A与B不能相似对角化则相似于同一若尔当型  </li>
 </ul>
 </blockquote>
+<p>(2)例题:                                                                      <br/></p>
 </blockquote>
 <img src="/2019/12/19/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/%E7%9B%B8%E4%BC%BC.png" class="">
 
@@ -761,19 +762,19 @@ ENDLINE</font>
 <a id="more"></a>
 
 <h2 id="一-套路操作"><a href="#一-套路操作" class="headerlink" title="一.套路操作:"></a>一.套路操作:<br/></h2><ol>
-<li>题设条件:<br/><br>给定:a_1,a_2,a_3;<br/><br>求:正交化后结果<br/></li>
+<li>题设条件:<br/><br>给定:a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>;<br/><br>求:正交化后结果<br/></li>
 </ol>
 <p>2.操作:</p>
 <ul>
-<li>第一步:b_1=a_1;</li>
-<li>第二步:b_2=a_2-&lt;a_2,b_1&gt;/&lt;b_1,b_1&gt;;</li>
-<li>第三步:b_3=a_3-&lt;a_3,b_2&gt;/&lt;b_2,b_2&gt;-&lt;a_3,b_1&gt;/&lt;b_1,b_1&gt;;</li>
-<li>b_1,b_2,b_3就是正交化的结果<br/></li>
+<li>第一步:b<sub>1</sub>=a<sub>1</sub>;</li>
+<li>第二步:b<sub>2</sub>=a<sub>2</sub>-&lt;a<sub>2</sub>,b<sub>1</sub>&gt;/&lt;b<sub>1</sub>,b<sub>1</sub>&gt;;</li>
+<li>第三步:b<sub>3</sub>=a<sub>3</sub>-&lt;a<sub>3</sub>,b<sub>2</sub>&gt;/&lt;b<sub>2</sub>,b<sub>2</sub>&gt;-&lt;a<sub>3</sub>,b<sub>1</sub>&gt;/&lt;b<sub>1</sub>,b<sub>1</sub>&gt;;</li>
+<li>b<sub>1</sub>,b<sub>2</sub>,b<sub>3</sub>就是正交化的结果<br/></li>
 </ul>
 <p>3.注意:<br/></p>
 <ul>
 <li>更高阶的依次类推;</li>
-<li>分子的a_n不变,b从b_n-1开始递减;</li>
+<li>分子的a<sub>n</sub>不变,b从b<sub>n-1</sub>开始递减;</li>
 <li>分母一定是分子上b的模.</li>
 </ul>
 <h2 id="二-图片说明"><a href="#二-图片说明" class="headerlink" title="二. 图片说明:"></a>二. 图片说明:<br/></h2><ul>
