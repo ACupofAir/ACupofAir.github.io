@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>最小二乘解</title>
+    <url>/2020/01/05/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E8%A7%A3/</url>
+    <content><![CDATA[<font color=999fff size=6>
+ENDLINE</font>
+
+<img src="/2020/01/05/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E8%A7%A3/cover.png" class="">
+
+<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p>这是最后一篇线代内容了,明天期末考试后就再也没线代课了,线代的难题应该是证明题,文末会附上证明题资源</p>
+</blockquote>
+<hr>
+<a id="more"></a>
+
+<hr>
+<h1 id="一-最小二乘解"><a href="#一-最小二乘解" class="headerlink" title="一.最小二乘解:"></a>一.最小二乘解:</h1><h2 id="1-套路"><a href="#1-套路" class="headerlink" title="1.套路:"></a>1.套路:</h2><p>求Ax=b的最小二乘解&lt;==&gt;求A<sup>T</sup>Ax=A<sup>T</sup>b的解</p>
+<h2 id="2-实例"><a href="#2-实例" class="headerlink" title="2.实例:"></a>2.实例:</h2><img src="/2020/01/05/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E8%A7%A3/eg.png" class="">
+
+<hr>
+<h1 id="二-线代证明题资源"><a href="#二-线代证明题资源" class="headerlink" title="二.线代证明题资源:"></a>二.线代证明题资源:</h1><div class="pdf" target="线代证明题.pdf" height=""></div>
+]]></content>
+      <categories>
+        <category>线代</category>
+      </categories>
+      <tags>
+        <tag>finished</tag>
+        <tag>线代</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2020</title>
     <url>/2020/01/01/2020/</url>
     <content><![CDATA[<img src="/2020/01/01/2020/cover.png" class="">
@@ -18,7 +47,10 @@
     <title>c++dev_skills</title>
     <url>/2019/12/31/c-dev-skills/</url>
     <content><![CDATA[<img src="/2019/12/31/c-dev-skills/cover.png" class="">
-<p><font size=4 color=999fff><center><br>19年的最后一天<br/><br>小时候听人说:<br/><br>哈雷彗星每七十多年才能看见一次,所以一定要抓紧去看一眼.长大后终于明白,其实人生的每一个生日,甚至每一个普普通通的日子,都比哈雷彗星的出现还要神奇和难得,<br/><br>因为一旦过去<br/><br>永不再来<br/></font></center><br><font size=2 color=black>–芮成钢</font></p>
+<p><font size=4 color=999fff><center><br>19年的最后一天<br/></center><br>小时候听人说:<br/><br>哈雷彗星每七十多年才能看见一次,所以一定要抓紧去看一眼.长大后终于明白,其实人生的每一个生日,甚至每一个普普通通的日子,都比哈雷彗星的出现还要神奇和难得,<br/></font></p>
+<center><font size=5 color=pink>因为一旦过去<br/>
+永不再来<br/></font></center>
+<font size=1 color=black>--芮成钢</font>
 <a id="more"></a>
 
 <hr>
@@ -641,8 +673,8 @@
       </categories>
       <tags>
         <tag>王氏数学</tag>
-        <tag>原创</tag>
         <tag>精品</tag>
+        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
