@@ -3,17 +3,17 @@
   <entry>
     <title>Years</title>
     <url>/2020/01/12/Years/</url>
-    <content><![CDATA[<hr>
-<p>layout: three<br>title: Years<br>date: 2020-01-12 09:38:51<br>tags:</p>
-<ul>
-<li>life</li>
-<li>About someone<br>categories: life</li>
-</ul>
-<p>–</p>
-<p><font size =3 color =fdeff4><center>The Same DAy<br/><br>The Same One</center></font></p>
+    <content><![CDATA[<p><font size =3 color =fdeff4><center>The Same DAy<br/><br>The Same One</center></font></p>
 <img src="/2020/01/12/Years/cover.png" class="">
 <p>-</p>
 ]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+        <tag>About someone</tag>
+      </tags>
   </entry>
   <entry>
     <title>最小二乘解</title>
