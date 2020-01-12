@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Years</title>
+    <url>/2020/01/12/Years/</url>
+    <content><![CDATA[<hr>
+<p>layout: three<br>title: Years<br>date: 2020-01-12 09:38:51<br>tags:</p>
+<ul>
+<li>life</li>
+<li>About someone<br>categories: life</li>
+<li>-</li>
+</ul>
+<p><font size =3 color =fdeff4><center>The Same DAy<br/><br>The Same One</center></font></p>
+<img src="/2020/01/12/Years/cover.png" class="">
+<p>-</p>
+]]></content>
+  </entry>
+  <entry>
     <title>最小二乘解</title>
     <url>/2020/01/05/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E8%A7%A3/</url>
     <content><![CDATA[<font color=999fff size=6>
@@ -640,9 +655,9 @@ ENDLINE</font>
         <category>线代</category>
       </categories>
       <tags>
+        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>王氏数学</tag>
         <tag>原创</tag>
       </tags>
   </entry>
@@ -674,8 +689,8 @@ ENDLINE</font>
       </categories>
       <tags>
         <tag>王氏数学</tag>
-        <tag>原创</tag>
         <tag>精品</tag>
+        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -747,9 +762,9 @@ ENDLINE</font>
         <category>线代</category>
       </categories>
       <tags>
+        <tag>王氏数学</tag>
         <tag>math</tag>
         <tag>finished</tag>
-        <tag>王氏数学</tag>
         <tag>精品</tag>
       </tags>
   </entry>
@@ -786,8 +801,8 @@ ENDLINE</font>
         <category>线代</category>
       </categories>
       <tags>
-        <tag>math</tag>
         <tag>summary</tag>
+        <tag>math</tag>
         <tag>finished</tag>
       </tags>
   </entry>
