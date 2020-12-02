@@ -59,10 +59,6 @@
   </url>
   
   <url>
-    <loc>http://www.acupofair.github.io/snippets/first/</loc>
-  </url>
-  
-  <url>
     <loc>http://www.acupofair.github.io/</loc>
     <xhtml:link
                 rel="alternate"
@@ -74,6 +70,10 @@
                 hreflang="en"
                 href="http://www.acupofair.github.io/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/snippets/first/</loc>
   </url>
   
   <url>
