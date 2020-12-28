@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <sitemap>
-    <loc>http://www.acupofair.github.io/en/sitemap.xml</loc>
-    
-  </sitemap>
+  <url>
+    <loc>http://www.acupofair.github.io/</loc>
+    <lastmod>2020-12-28T20:48:53+08:00</lastmod>
+  </url>
   
-  <sitemap>
-    <loc>http://www.acupofair.github.io/pt-br/sitemap.xml</loc>
-    
-  </sitemap>
+  <url>
+    <loc>http://www.acupofair.github.io/post/post-first/</loc>
+    <lastmod>2020-12-28T20:48:53+08:00</lastmod>
+  </url>
   
-</sitemapindex>
+  <url>
+    <loc>http://www.acupofair.github.io/post/</loc>
+    <lastmod>2020-12-28T20:48:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/snippets/first/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/snippets/second/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/series/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/snippets/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.acupofair.github.io/tags/</loc>
+  </url>
+  
+</urlset>
