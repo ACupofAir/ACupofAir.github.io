@@ -16,5 +16,14 @@
       <description>Fuck:wq $$ f(x) = \sin(x) \alpha $$ $$ f(x) = \sin(x) $$</description>
     </item>
     
+    <item>
+      <title>Post Second</title>
+      <link>http://www.acupofair.github.io/post/post-second/second/</link>
+      <pubDate>Mon, 28 Dec 2020 20:48:53 +0800</pubDate>
+      
+      <guid>http://www.acupofair.github.io/post/post-second/second/</guid>
+      <description>I believe $$ \alpha = \sin(\beta) \alpha $$ </description>
+    </item>
+    
   </channel>
 </rss>
