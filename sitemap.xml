@@ -3,15 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://www.acupofair.github.io/</loc>
-    <lastmod>2020-12-28T20:48:53+08:00</lastmod>
+    <lastmod>2021-11-25T04:13:10+08:00</lastmod>
+  </url><url>
+    <loc>http://www.acupofair.github.io/post/</loc>
+    <lastmod>2021-11-25T04:13:10+08:00</lastmod>
+  </url><url>
+    <loc>http://www.acupofair.github.io/post/test/</loc>
+    <lastmod>2021-11-25T04:13:10+08:00</lastmod>
+  </url><url>
+    <loc>http://www.acupofair.github.io/todo/todo/</loc>
+    <lastmod>2021-11-25T04:10:16+08:00</lastmod>
+  </url><url>
+    <loc>http://www.acupofair.github.io/todo/</loc>
+    <lastmod>2021-11-25T04:10:16+08:00</lastmod>
   </url><url>
     <loc>http://www.acupofair.github.io/post/post-first/</loc>
     <lastmod>2020-12-28T20:48:53+08:00</lastmod>
   </url><url>
     <loc>http://www.acupofair.github.io/post/post-second/second/</loc>
-    <lastmod>2020-12-28T20:48:53+08:00</lastmod>
-  </url><url>
-    <loc>http://www.acupofair.github.io/post/</loc>
     <lastmod>2020-12-28T20:48:53+08:00</lastmod>
   </url><url>
     <loc>http://www.acupofair.github.io/about/</loc>

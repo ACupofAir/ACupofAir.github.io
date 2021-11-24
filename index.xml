@@ -6,14 +6,34 @@
     <description>Recent content on Cup Air</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Dec 2020 20:48:53 +0800</lastBuildDate><atom:link href="http://www.acupofair.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Nov 2021 04:13:10 +0800</lastBuildDate><atom:link href="http://www.acupofair.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>http://www.acupofair.github.io/post/test/</link>
+      <pubDate>Thu, 25 Nov 2021 04:13:10 +0800</pubDate>
+      
+      <guid>http://www.acupofair.github.io/post/test/</guid>
+      <description>#fuck May be
+ [*] smile  </description>
+    </item>
+    
+    <item>
+      <title>Todo</title>
+      <link>http://www.acupofair.github.io/todo/todo/</link>
+      <pubDate>Thu, 25 Nov 2021 04:10:16 +0800</pubDate>
+      
+      <guid>http://www.acupofair.github.io/todo/todo/</guid>
+      <description> [*] sleep [] die  </description>
+    </item>
+    
     <item>
       <title>Post First</title>
       <link>http://www.acupofair.github.io/post/post-first/</link>
       <pubDate>Mon, 28 Dec 2020 20:48:53 +0800</pubDate>
       
       <guid>http://www.acupofair.github.io/post/post-first/</guid>
-      <description>Fuck:wq $$ f(x) = \sin(x) \alpha $$ $$ f(x) = \sin(x) $$</description>
+      <description>Fuck:wq    $$ f(x) = \sin(x) \alpha $$ $$ f(x) = \sin(x) $$
+Today is a fucking day    </description>
     </item>
     
     <item>
@@ -22,7 +42,7 @@
       <pubDate>Mon, 28 Dec 2020 20:48:53 +0800</pubDate>
       
       <guid>http://www.acupofair.github.io/post/post-second/second/</guid>
-      <description>I believe fuck
+      <description>I believe    fuck
 hello
 $$ \alpha = \sin(\beta) \alpha $$ </description>
     </item>
@@ -33,11 +53,7 @@ $$ \alpha = \sin(\beta) \alpha $$ </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.acupofair.github.io/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
-Setup Some fun facts about Hugo:
- Built in Go Loosely inspired by Jekyll Primarily developed by spf13 on the train while commuting to and from Manhattan. Coded in Vim using spf13-vim  Have questions or suggestions?</description>
+      <description>I&amp;rsquo;m kind of a kind man.</description>
     </item>
     
     <item>
@@ -46,7 +62,7 @@ Setup Some fun facts about Hugo:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.acupofair.github.io/contact/</guid>
-      <description>Follow me, @johndoe.</description>
+      <description>mail me: thoughts.times@gmail.com</description>
     </item>
     
     <item>
@@ -65,7 +81,7 @@ pwd </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.acupofair.github.io/projects/</guid>
-      <description>Nothing to see here&amp;hellip; Move along!</description>
+      <description> zhishe chemistry calulate maybe a blog theme  </description>
     </item>
     
     <item>
