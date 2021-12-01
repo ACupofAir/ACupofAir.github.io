@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Cup Air">
+    <meta name="description" content="archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
+ 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim 当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到 只需简单的
+export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  cp temp.vim ~/.vimrc 然后可以把temp.vim删掉了
+下面介绍一下这套基础配置带来的一些关键功能:
+ 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.重复上述操作就可以执行让一个操作，也就是改变下一个匹配的单词为上一个你改成的单词,说人话就是匹配修改相同单词变量，按.修改下一个，不解释自行体会   &lt;leader&gt; m 写了个无聊的函数用于控制是否允许鼠标操作，应该是当时老误触写的，后来用发现kde有个打字时自动禁用触摸板的设置，就没怎么用过     还有一些小功能，比如窗口调整大小，用到这地步自己看看代码也就明白了，不解释。  高级配置    等有空写写">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="vim配置(linux)"/>
+<meta name="twitter:description" content="archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
+ 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim 当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到 只需简单的
+export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  cp temp.vim ~/.vimrc 然后可以把temp.vim删掉了
+下面介绍一下这套基础配置带来的一些关键功能:
+ 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.重复上述操作就可以执行让一个操作，也就是改变下一个匹配的单词为上一个你改成的单词,说人话就是匹配修改相同单词变量，按.修改下一个，不解释自行体会   &lt;leader&gt; m 写了个无聊的函数用于控制是否允许鼠标操作，应该是当时老误触写的，后来用发现kde有个打字时自动禁用触摸板的设置，就没怎么用过     还有一些小功能，比如窗口调整大小，用到这地步自己看看代码也就明白了，不解释。  高级配置    等有空写写"/>
+
+    <meta property="og:title" content="vim配置(linux)" />
+<meta property="og:description" content="archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
+ 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim 当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到 只需简单的
+export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  cp temp.vim ~/.vimrc 然后可以把temp.vim删掉了
+下面介绍一下这套基础配置带来的一些关键功能:
+ 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.重复上述操作就可以执行让一个操作，也就是改变下一个匹配的单词为上一个你改成的单词,说人话就是匹配修改相同单词变量，按.修改下一个，不解释自行体会   &lt;leader&gt; m 写了个无聊的函数用于控制是否允许鼠标操作，应该是当时老误触写的，后来用发现kde有个打字时自动禁用触摸板的设置，就没怎么用过     还有一些小功能，比如窗口调整大小，用到这地步自己看看代码也就明白了，不解释。  高级配置    等有空写写" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.acupofair.github.io/post/vim/init/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-30T23:03:11+08:00" />
+<meta property="article:modified_time" content="2021-11-30T23:03:11+08:00" />
+
+
+
+    <title>
+  vim配置(linux) · Cup Air
+</title>
+
+    
+      <link rel="canonical" href="http://www.acupofair.github.io/post/vim/init/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.ccbbada2e264e4fdbf9b2181cccc2cdb289a63dc9520a1e96ac2b9a45778df29.css" integrity="sha256-zLutouJk5P2/myGBzMws2yiaY9yVIKHpasK5pFd43yk=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.89.4" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Cup Air
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/post/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://www.acupofair.github.io/post/vim/init/">
+          vim配置(linux)
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="archlinux中vim的配置">
+  archlinux中vim的配置
+  <a class="heading-link" href="#archlinux%e4%b8%advim%e7%9a%84%e9%85%8d%e7%bd%ae">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h2 id="基础配置">
+  基础配置
+  <a class="heading-link" href="#%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：</p>
+<ol>
+<li>拉下我的代码,curl是linux下net-tools包里的,arch下<code>sudo pacman -S net-tools</code>即可安装. <code>-o</code>参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到<code>~/.vimrc</code>下,因为我没试过，and此时此刻<strong>懒得</strong>试。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim
+</code></pre></div><p>当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到
+<img src="res/2021-12-01-21-50-01.png" alt="">
+只需简单的</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#fff;font-weight:bold">export</span> http_proxy=your_proxy_ip:port; <span style="color:#fff;font-weight:bold">export</span> https_proxy=your_proxy_ip:port
+</code></pre></div><ol start="2">
+<li>然后把这个<code>temp.vim</code>文件拷贝到你的个人根目录的<code>.vimrc</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp temp.vim ~/.vimrc
+</code></pre></div><p>然后可以把<code>temp.vim</code>删掉了</p>
+<p>下面介绍一下这套基础配置带来的一些关键功能:</p>
+<ul>
+<li><strong>相对行号</strong>  这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错</li>
+<li><strong>语法高亮</strong>  默认情况下在tty中貌似不开的，得手动开</li>
+<li><strong>智能搜索</strong> 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感</li>
+<li><strong>配置了一些常用快捷键</strong> 首先把<!-- raw HTML omitted -->配置为空格键</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;leader&gt; e</code></td>
+<td style="text-align:left">打开vim自带的文件树</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;leader&gt; nh</code></td>
+<td style="text-align:left"><code>:nohl</code>快速取消高亮</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;leader&gt; q</code></td>
+<td style="text-align:left">不保存退出文件(因为人类的手指真的很不适合连按<code>q</code>和<code>！</code>)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;leader&gt; rn</code></td>
+<td style="text-align:left"><code>*Ncgn</code>,这个很体现vim的牛皮之处，<code>*</code>选中当前单词的所有匹配项，并将光标移到下一个匹配项，<code>N</code>则反向跳转到上一个匹配项，也就是你一开始按<code>*</code>的位置，然后<code>cgn</code>改变这个单词，然后下面按<code>.</code>重复上述操作就可以执行让一个操作，也就是改变下一个匹配的单词为上一个你改成的单词,说人话就是匹配修改相同单词变量，按<code>.</code>修改下一个，不解释自行体会</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;leader&gt; m</code></td>
+<td style="text-align:left">写了个无聊的函数用于控制是否允许鼠标操作，应该是当时老误触写的，后来用发现kde有个打字时自动禁用触摸板的设置，就没怎么用过</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>还有一些小功能，比如窗口调整大小，用到这地步自己看看代码也就明白了，不解释。</li>
+</ul>
+<h2 id="高级配置">
+  高级配置
+  <a class="heading-link" href="#%e9%ab%98%e7%ba%a7%e9%85%8d%e7%bd%ae">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>等有空写写</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      <script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
+    
+
+    
+
+    
+  </body>
+
+</html>

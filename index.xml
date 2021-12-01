@@ -6,45 +6,18 @@
     <description>Recent content on Cup Air</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Nov 2021 04:13:10 +0800</lastBuildDate><atom:link href="http://www.acupofair.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 23:03:11 +0800</lastBuildDate><atom:link href="http://www.acupofair.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>http://www.acupofair.github.io/post/test/</link>
-      <pubDate>Thu, 25 Nov 2021 04:13:10 +0800</pubDate>
+      <title>vim配置(linux)</title>
+      <link>http://www.acupofair.github.io/post/vim/init/</link>
+      <pubDate>Tue, 30 Nov 2021 23:03:11 +0800</pubDate>
       
-      <guid>http://www.acupofair.github.io/post/test/</guid>
-      <description>#fuck May be
- [*] smile  </description>
-    </item>
-    
-    <item>
-      <title>Todo</title>
-      <link>http://www.acupofair.github.io/todo/todo/</link>
-      <pubDate>Thu, 25 Nov 2021 04:10:16 +0800</pubDate>
-      
-      <guid>http://www.acupofair.github.io/todo/todo/</guid>
-      <description> [*] sleep [] die  </description>
-    </item>
-    
-    <item>
-      <title>Post First</title>
-      <link>http://www.acupofair.github.io/post/post-first/</link>
-      <pubDate>Mon, 28 Dec 2020 20:48:53 +0800</pubDate>
-      
-      <guid>http://www.acupofair.github.io/post/post-first/</guid>
-      <description>Fuck:wq    $$ f(x) = \sin(x) \alpha $$ $$ f(x) = \sin(x) $$
-Today is a fucking day    </description>
-    </item>
-    
-    <item>
-      <title>Post Second</title>
-      <link>http://www.acupofair.github.io/post/post-second/second/</link>
-      <pubDate>Mon, 28 Dec 2020 20:48:53 +0800</pubDate>
-      
-      <guid>http://www.acupofair.github.io/post/post-second/second/</guid>
-      <description>I believe    fuck
-hello
-$$ \alpha = \sin(\beta) \alpha $$ </description>
+      <guid>http://www.acupofair.github.io/post/vim/init/</guid>
+      <description>archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
+ 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim 当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到 只需简单的
+export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  cp temp.vim ~/.vimrc 然后可以把temp.vim删掉了
+下面介绍一下这套基础配置带来的一些关键功能:
+ 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &amp;lt;leader&amp;gt; e 打开vim自带的文件树   &amp;lt;leader&amp;gt; nh :nohl快速取消高亮   &amp;lt;leader&amp;gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &amp;lt;leader&amp;gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.重复上述操作就可以执行让一个操作，也就是改变下一个匹配的单词为上一个你改成的单词,说人话就是匹配修改相同单词变量，按.修改下一个，不解释自行体会   &amp;lt;leader&amp;gt; m 写了个无聊的函数用于控制是否允许鼠标操作，应该是当时老误触写的，后来用发现kde有个打字时自动禁用触摸板的设置，就没怎么用过     还有一些小功能，比如窗口调整大小，用到这地步自己看看代码也就明白了，不解释。  高级配置    等有空写写</description>
     </item>
     
     <item>
@@ -66,32 +39,12 @@ $$ \alpha = \sin(\beta) \alpha $$ </description>
     </item>
     
     <item>
-      <title>First snippet</title>
-      <link>http://www.acupofair.github.io/snippets/first/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.acupofair.github.io/snippets/first/</guid>
-      <description>This content is in snippets/first/index.md
-pwd </description>
-    </item>
-    
-    <item>
       <title>Projects</title>
       <link>http://www.acupofair.github.io/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.acupofair.github.io/projects/</guid>
       <description> zhishe chemistry calulate maybe a blog theme  </description>
-    </item>
-    
-    <item>
-      <title>Second snippet</title>
-      <link>http://www.acupofair.github.io/snippets/second/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.acupofair.github.io/snippets/second/</guid>
-      <description>This content is in snippets/second/index.md
-ls -la </description>
     </item>
     
   </channel>
