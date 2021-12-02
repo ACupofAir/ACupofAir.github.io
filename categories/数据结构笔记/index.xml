@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据结构笔记 on Cup Air</title>
+    <link>http://www.acupofair.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 数据结构笔记 on Cup Air</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Dec 2021 11:04:51 +0800</lastBuildDate><atom:link href="http://www.acupofair.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Stuctrue Tutor1</title>
+      <link>http://www.acupofair.github.io/posts/data_structure/chp1/</link>
+      <pubDate>Thu, 02 Dec 2021 11:04:51 +0800</pubDate>
+      
+      <guid>http://www.acupofair.github.io/posts/data_structure/chp1/</guid>
+      <description>There will be the datastucture tutor</description>
+    </item>
+    
+  </channel>
+</rss>
