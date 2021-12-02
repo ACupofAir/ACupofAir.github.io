@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cup Air</title>
-    <link>http://www.acupofair.github.io/</link>
+    <link>http://acupofair.github.io/</link>
     <description>Recent content on Cup Air</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Dec 2021 11:15:58 +0800</lastBuildDate><atom:link href="http://www.acupofair.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Dec 2021 11:15:58 +0800</lastBuildDate><atom:link href="http://acupofair.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fuck</title>
-      <link>http://www.acupofair.github.io/posts/fuck/</link>
+      <link>http://acupofair.github.io/posts/fuck/</link>
       <pubDate>Thu, 02 Dec 2021 11:15:58 +0800</pubDate>
       
-      <guid>http://www.acupofair.github.io/posts/fuck/</guid>
+      <guid>http://acupofair.github.io/posts/fuck/</guid>
       <description>Just Test</description>
     </item>
     
     <item>
       <title>Data Stuctrue Tutor1</title>
-      <link>http://www.acupofair.github.io/posts/data_structure/chp1/</link>
+      <link>http://acupofair.github.io/posts/data_structure/chp1/</link>
       <pubDate>Thu, 02 Dec 2021 11:04:51 +0800</pubDate>
       
-      <guid>http://www.acupofair.github.io/posts/data_structure/chp1/</guid>
+      <guid>http://acupofair.github.io/posts/data_structure/chp1/</guid>
       <description>There will be the datastucture tutor</description>
     </item>
     
     <item>
       <title>vim配置(linux)</title>
-      <link>http://www.acupofair.github.io/posts/vim/init/</link>
+      <link>http://acupofair.github.io/posts/vim/init/</link>
       <pubDate>Tue, 30 Nov 2021 23:03:11 +0800</pubDate>
       
-      <guid>http://www.acupofair.github.io/posts/vim/init/</guid>
+      <guid>http://acupofair.github.io/posts/vim/init/</guid>
       <description>archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
  拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim 当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到 只需简单的
 export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  cp temp.vim ~/.vimrc 然后可以把temp.vim删掉了
@@ -40,28 +40,28 @@ export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然�
     
     <item>
       <title>About Hugo</title>
-      <link>http://www.acupofair.github.io/about/</link>
+      <link>http://acupofair.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.acupofair.github.io/about/</guid>
+      <guid>http://acupofair.github.io/about/</guid>
       <description>I&amp;rsquo;m kind of a kind man.</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>http://www.acupofair.github.io/contact/</link>
+      <link>http://acupofair.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.acupofair.github.io/contact/</guid>
+      <guid>http://acupofair.github.io/contact/</guid>
       <description>mail me: thoughts.times@gmail.com</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>http://www.acupofair.github.io/projects/</link>
+      <link>http://acupofair.github.io/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.acupofair.github.io/projects/</guid>
+      <guid>http://acupofair.github.io/projects/</guid>
       <description> zhishe chemistry calulate maybe a blog theme  </description>
     </item>
     
