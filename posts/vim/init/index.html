@@ -11,29 +11,29 @@
 
     <meta name="author" content="Cup Air">
     <meta name="description" content="archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
- 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim 当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到
+ 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  1  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim   当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到
 只需简单的
-export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  cp temp.vim ~/.vimrc 然后可以把temp.vim删掉了
+1  export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port   然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  1  cp temp.vim ~/.vimrc   然后可以把temp.vim删掉了
 下面介绍一下这套基础配置带来的一些关键功能:
- 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.重复上述操作就可以执行让一个操作，也就是改变下一个匹配的单词为上一个你改成的单词,说人话就是匹配修改相同单词变量，按.修改下一个，不解释自行体会   &lt;leader&gt; m 写了个无聊的函数用于控制是否允许鼠标操作，应该是当时老误触写的，后来用发现kde有个打字时自动禁用触摸板的设置，就没怎么用过     还有一些小功能，比如窗口调整大小，用到这地步自己看看代码也就明白了，不解释。  高级配置    等有空写写,比如13月32号">
+ 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.">
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="vim配置(linux)"/>
 <meta name="twitter:description" content="archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
- 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim 当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到
+ 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  1  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim   当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到
 只需简单的
-export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  cp temp.vim ~/.vimrc 然后可以把temp.vim删掉了
+1  export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port   然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  1  cp temp.vim ~/.vimrc   然后可以把temp.vim删掉了
 下面介绍一下这套基础配置带来的一些关键功能:
- 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.重复上述操作就可以执行让一个操作，也就是改变下一个匹配的单词为上一个你改成的单词,说人话就是匹配修改相同单词变量，按.修改下一个，不解释自行体会   &lt;leader&gt; m 写了个无聊的函数用于控制是否允许鼠标操作，应该是当时老误触写的，后来用发现kde有个打字时自动禁用触摸板的设置，就没怎么用过     还有一些小功能，比如窗口调整大小，用到这地步自己看看代码也就明白了，不解释。  高级配置    等有空写写,比如13月32号"/>
+ 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按."/>
 
     <meta property="og:title" content="vim配置(linux)" />
 <meta property="og:description" content="archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
- 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim 当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到
+ 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  1  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim   当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到
 只需简单的
-export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  cp temp.vim ~/.vimrc 然后可以把temp.vim删掉了
+1  export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port   然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  1  cp temp.vim ~/.vimrc   然后可以把temp.vim删掉了
 下面介绍一下这套基础配置带来的一些关键功能:
- 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.重复上述操作就可以执行让一个操作，也就是改变下一个匹配的单词为上一个你改成的单词,说人话就是匹配修改相同单词变量，按.修改下一个，不解释自行体会   &lt;leader&gt; m 写了个无聊的函数用于控制是否允许鼠标操作，应该是当时老误触写的，后来用发现kde有个打字时自动禁用触摸板的设置，就没怎么用过     还有一些小功能，比如窗口调整大小，用到这地步自己看看代码也就明白了，不解释。  高级配置    等有空写写,比如13月32号" />
+ 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &lt;leader&gt; e 打开vim自带的文件树   &lt;leader&gt; nh :nohl快速取消高亮   &lt;leader&gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &lt;leader&gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://acupofair.github.io/posts/vim/init/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-11-30T23:03:11+08:00" />
@@ -42,7 +42,7 @@ export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然�
 
 
     <title>
-  vim配置(linux) · Cup Air
+vim配置(linux) · Cup Air
 </title>
 
     
@@ -137,45 +137,59 @@ export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然�
 
       <div class="content">
         
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="http://acupofair.github.io/posts/vim/init/">
-              vim配置(linux)
-            </a>
-          </h1>
+<section class="container post">
+  <article>
+    <header>
+      <div class="post-title">
+        <h1 class="title">
+          <a class="title-link" href="http://acupofair.github.io/posts/vim/init/">
+            vim配置(linux)
+          </a>
+        </h1>
+      </div>
+      <div class="post-meta">
+        <div class="date">
+          <span class="posted-on">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <time datetime='2021-11-30T23:03:11&#43;08:00'>
+              November 30, 2021
+            </time>
+          </span>
+          <span class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            One-minute read
+          </span>
         </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime='2021-11-30T23:03:11&#43;08:00'>
-                November 30, 2021
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              One-minute read
-            </span>
-          </div>
-          
-          
-          <div class="tags">
+
+        
+        
+        <div class="tags">
   <i class="fa fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/vim/">vim</a>
     </span></div>
 
-        </div>
-      </header>
 
-      <div>
-        
-          <img src='../res/2021-12-02-15-16-56.png' alt="Featured image"/>
-        
-        <h1 id="archlinux中vim的配置">
+      </div>
+    </header>
+
+    <div>
+      
+      <img src='../res/2021-12-02-15-16-56.png' alt="Featured image" />
+      
+        <aside>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#archlinux中vim的配置">archlinux中vim的配置</a>
+      <ul>
+        <li><a href="#基础配置">基础配置</a></li>
+        <li><a href="#高级配置">高级配置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+      <h1 id="archlinux中vim的配置">
   archlinux中vim的配置
   <a class="heading-link" href="#archlinux%e4%b8%advim%e7%9a%84%e9%85%8d%e7%bd%ae">
     <i class="fa fa-link" aria-hidden="true"></i>
@@ -191,16 +205,37 @@ export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然�
 <ol>
 <li>拉下我的代码,curl是linux下net-tools包里的,arch下<code>sudo pacman -S net-tools</code>即可安装. <code>-o</code>参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到<code>~/.vimrc</code>下,因为我没试过，and此时此刻<strong>懒得</strong>试。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim
-</code></pre></div><p>当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim
+</code></pre></td></tr></table>
+</div>
+</div><p>当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到</p>
 <p><img src="../res/2021-12-01-21-50-01.png" alt=""></p>
 <p>只需简单的</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#fff;font-weight:bold">export</span> http_proxy=your_proxy_ip:port; <span style="color:#fff;font-weight:bold">export</span> https_proxy=your_proxy_ip:port
-</code></pre></div><ol start="2">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">http_proxy</span><span style="color:#ff79c6">=</span>your_proxy_ip:port; <span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">https_proxy</span><span style="color:#ff79c6">=</span>your_proxy_ip:port
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
 <li>然后把这个<code>temp.vim</code>文件拷贝到你的个人根目录的<code>.vimrc</code></li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp temp.vim ~/.vimrc
-</code></pre></div><p>然后可以把<code>temp.vim</code>删掉了</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp temp.vim ~/.vimrc
+</code></pre></td></tr></table>
+</div>
+</div><p>然后可以把<code>temp.vim</code>删掉了</p>
 <p>下面介绍一下这套基础配置带来的一些关键功能:</p>
 <ul>
 <li><strong>相对行号</strong>  这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错</li>
@@ -248,15 +283,68 @@ export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然�
   </a>
 </h2>
 <p>等有空写写,比如13月32号</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">fuck_hugo</span>():
+  <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello, Hugo!&#34;</span>)
+  <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[markup]
+  [markup.highlight]
+    anchorLineNos = <span style="color:#ff79c6">false</span>
+    codeFences = <span style="color:#ff79c6">true</span>
+    guessSyntax = <span style="color:#ff79c6">false</span>
+    hl_Lines = <span style="color:#f1fa8c">&#39;&#39;</span>
+    lineAnchors = <span style="color:#f1fa8c">&#39;&#39;</span>
+    lineNoStart = <span style="color:#bd93f9">1</span>
+    lineNos = <span style="color:#ff79c6">true</span>
+    lineNumbersInTable = <span style="color:#ff79c6">true</span>
+    noClasses = <span style="color:#ff79c6">true</span>
+    <span style="color:#6272a4"># style = &#39;dracula&#39;</span>
+    <span style="color:#6272a4"># style = &#39;fruity&#39;</span>
+    <span style="color:#6272a4"># style = &#39;native&#39;</span>
+    <span style="color:#6272a4"># style = &#39;vim&#39;</span>
+    style = <span style="color:#f1fa8c">&#39;solarized-dark256&#39;</span>
+    tabWidth = <span style="color:#bd93f9">4</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
 
-      </div>
 
 
-      <footer>
-        
+    <footer>
+      
 
 
-        <div id="gitalk-container"></div>
+      <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script>
@@ -277,13 +365,13 @@ export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port 然�
     gitalk.render('gitalk-container');
   })();
 </script>
-        
-        
-      </footer>
-    </article>
+      
+      
+    </footer>
+  </article>
 
-    
-  </section>
+  
+</section>
 
       </div>
 
