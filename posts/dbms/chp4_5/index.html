@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Cup Air">
+    <meta name="description" content="第四章 数据库管理系统引论    4.1 DBMS的核心组件     从上而下的解释：
+ 用户写的应用程序经过接口转为基础的数据库语言（SQL等） SQL经过词法及语法分析产生语法树 之后检查用户是否有权访问语法树涉及的数据对象，若通过则继续执行，否则拒绝执行 授权检查通过后，进行语义分析与处理，对四种语言分别做不同处理（通常统称为查询处理），其中QL最复杂也最基本，存在多种存取路径选择问题（查询优化） 后就形成SQL语句执行  DLL： 存放SQL的动态链接库 并发控制： SQL语句执行过程都有并发控制以防止多用户并发访问数据引起数据不一致 恢复机制：发生故障时，能使数据库恢复到最近的一致状态或先前的某个一致状态 DBMS是操作系统之上的软件系统，是操作系统的用户,它对系统资源的调用需要请求操作系统为其服务，通过系统调用来实现    补充&ndash;事务概念    事务是DBMS的执行单位，由有限的数据库操作序列组成，满足ACID准则 ACID准则：
+ 执行的原子性不允许事务部分地完成 更新操作的保持一致性事务应使数组库从一个一致状态转到另一个一致状态。如一个帐号收支之差应等于余额，若对这个帐号只拨款，不改余额，则数据库就不一致了。（一致状态也就是数据要满足完整性约束） 彼此的隔离性若多个事务并发执行，则应像各个事务独立执行一样 作用的持久性事务对数据库的影响是持久的，即使数据库因故障受到破坏，DBMS应该也能使其恢复  4.2 DBMS的进程结构    单进程结构    一个应用程序经过DBMS编译后作为一个单独的可执行文件，以一个单独进程进行执行。DBMS core作为这个可执行文件的一个函数 多进程结构      一个应用程序进程对应一个DBMS core进程   只有一个DBMS core进程，每个应用程序进程对应一个DBMS线程   4.3 数据库访问管理    访问类型     查询一个文件的全部或大部分记录(&gt;15%) 查询某一条特定记录 查询某些记录(&lt;15%) 范围查询 记录的更新  文件管理    文件的基本类型     堆文件记录按插入顺序存放，就像堆货物一样。物理地址不一定连续，逻辑地址连续。插入容易，查找难，只能顺序搜索，删除麻烦，一般不在物理上删除，只是打删除标志，以免引起大量记录转移。 直接文件将记录某一属性（一般为主键）用散列函数映射成记录的地址。按散列键访问快，但不同散列键可能映射同一地址，且只对散列键到记录的访问有效，键映射空间固定，不变处理变长记录，用得少 索引文件 索引&#43;堆文件/簇集 在记录的某一属性（组）上建立索引，索引项由索引键的值及其对应的记录的地址货地址集组成。 提高查询效率，增加索引维护开销，付出储存空间代价    动态索引     静态索引是多分树，动态索引是平衡多分树(B-Tree),常用的是B&#43;树   B-Tree和B&#43;-Tree区别  动态散列(应该不考)    栅格结构文件(考吧)    ">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DBMS-Chp4&amp;5"/>
+<meta name="twitter:description" content="第四章 数据库管理系统引论    4.1 DBMS的核心组件     从上而下的解释：
+ 用户写的应用程序经过接口转为基础的数据库语言（SQL等） SQL经过词法及语法分析产生语法树 之后检查用户是否有权访问语法树涉及的数据对象，若通过则继续执行，否则拒绝执行 授权检查通过后，进行语义分析与处理，对四种语言分别做不同处理（通常统称为查询处理），其中QL最复杂也最基本，存在多种存取路径选择问题（查询优化） 后就形成SQL语句执行  DLL： 存放SQL的动态链接库 并发控制： SQL语句执行过程都有并发控制以防止多用户并发访问数据引起数据不一致 恢复机制：发生故障时，能使数据库恢复到最近的一致状态或先前的某个一致状态 DBMS是操作系统之上的软件系统，是操作系统的用户,它对系统资源的调用需要请求操作系统为其服务，通过系统调用来实现    补充&ndash;事务概念    事务是DBMS的执行单位，由有限的数据库操作序列组成，满足ACID准则 ACID准则：
+ 执行的原子性不允许事务部分地完成 更新操作的保持一致性事务应使数组库从一个一致状态转到另一个一致状态。如一个帐号收支之差应等于余额，若对这个帐号只拨款，不改余额，则数据库就不一致了。（一致状态也就是数据要满足完整性约束） 彼此的隔离性若多个事务并发执行，则应像各个事务独立执行一样 作用的持久性事务对数据库的影响是持久的，即使数据库因故障受到破坏，DBMS应该也能使其恢复  4.2 DBMS的进程结构    单进程结构    一个应用程序经过DBMS编译后作为一个单独的可执行文件，以一个单独进程进行执行。DBMS core作为这个可执行文件的一个函数 多进程结构      一个应用程序进程对应一个DBMS core进程   只有一个DBMS core进程，每个应用程序进程对应一个DBMS线程   4.3 数据库访问管理    访问类型     查询一个文件的全部或大部分记录(&gt;15%) 查询某一条特定记录 查询某些记录(&lt;15%) 范围查询 记录的更新  文件管理    文件的基本类型     堆文件记录按插入顺序存放，就像堆货物一样。物理地址不一定连续，逻辑地址连续。插入容易，查找难，只能顺序搜索，删除麻烦，一般不在物理上删除，只是打删除标志，以免引起大量记录转移。 直接文件将记录某一属性（一般为主键）用散列函数映射成记录的地址。按散列键访问快，但不同散列键可能映射同一地址，且只对散列键到记录的访问有效，键映射空间固定，不变处理变长记录，用得少 索引文件 索引&#43;堆文件/簇集 在记录的某一属性（组）上建立索引，索引项由索引键的值及其对应的记录的地址货地址集组成。 提高查询效率，增加索引维护开销，付出储存空间代价    动态索引     静态索引是多分树，动态索引是平衡多分树(B-Tree),常用的是B&#43;树   B-Tree和B&#43;-Tree区别  动态散列(应该不考)    栅格结构文件(考吧)    "/>
+
+    <meta property="og:title" content="DBMS-Chp4&amp;5" />
+<meta property="og:description" content="第四章 数据库管理系统引论    4.1 DBMS的核心组件     从上而下的解释：
+ 用户写的应用程序经过接口转为基础的数据库语言（SQL等） SQL经过词法及语法分析产生语法树 之后检查用户是否有权访问语法树涉及的数据对象，若通过则继续执行，否则拒绝执行 授权检查通过后，进行语义分析与处理，对四种语言分别做不同处理（通常统称为查询处理），其中QL最复杂也最基本，存在多种存取路径选择问题（查询优化） 后就形成SQL语句执行  DLL： 存放SQL的动态链接库 并发控制： SQL语句执行过程都有并发控制以防止多用户并发访问数据引起数据不一致 恢复机制：发生故障时，能使数据库恢复到最近的一致状态或先前的某个一致状态 DBMS是操作系统之上的软件系统，是操作系统的用户,它对系统资源的调用需要请求操作系统为其服务，通过系统调用来实现    补充&ndash;事务概念    事务是DBMS的执行单位，由有限的数据库操作序列组成，满足ACID准则 ACID准则：
+ 执行的原子性不允许事务部分地完成 更新操作的保持一致性事务应使数组库从一个一致状态转到另一个一致状态。如一个帐号收支之差应等于余额，若对这个帐号只拨款，不改余额，则数据库就不一致了。（一致状态也就是数据要满足完整性约束） 彼此的隔离性若多个事务并发执行，则应像各个事务独立执行一样 作用的持久性事务对数据库的影响是持久的，即使数据库因故障受到破坏，DBMS应该也能使其恢复  4.2 DBMS的进程结构    单进程结构    一个应用程序经过DBMS编译后作为一个单独的可执行文件，以一个单独进程进行执行。DBMS core作为这个可执行文件的一个函数 多进程结构      一个应用程序进程对应一个DBMS core进程   只有一个DBMS core进程，每个应用程序进程对应一个DBMS线程   4.3 数据库访问管理    访问类型     查询一个文件的全部或大部分记录(&gt;15%) 查询某一条特定记录 查询某些记录(&lt;15%) 范围查询 记录的更新  文件管理    文件的基本类型     堆文件记录按插入顺序存放，就像堆货物一样。物理地址不一定连续，逻辑地址连续。插入容易，查找难，只能顺序搜索，删除麻烦，一般不在物理上删除，只是打删除标志，以免引起大量记录转移。 直接文件将记录某一属性（一般为主键）用散列函数映射成记录的地址。按散列键访问快，但不同散列键可能映射同一地址，且只对散列键到记录的访问有效，键映射空间固定，不变处理变长记录，用得少 索引文件 索引&#43;堆文件/簇集 在记录的某一属性（组）上建立索引，索引项由索引键的值及其对应的记录的地址货地址集组成。 提高查询效率，增加索引维护开销，付出储存空间代价    动态索引     静态索引是多分树，动态索引是平衡多分树(B-Tree),常用的是B&#43;树   B-Tree和B&#43;-Tree区别  动态散列(应该不考)    栅格结构文件(考吧)    " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://acupofair.github.io/posts/dbms/chp4_5/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-05T12:15:45+08:00" />
+<meta property="article:modified_time" content="2021-12-05T12:15:45+08:00" />
+
+
+
+    <title>
+DBMS-Chp4&amp;5 · Cup Air
+</title>
+
+    
+      <link rel="canonical" href="http://acupofair.github.io/posts/dbms/chp4_5/">
+    
+
+    <link rel="preload" href="../../../fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="../../../css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="../../../css/coder-dark.min.ccbbada2e264e4fdbf9b2181cccc2cdb289a63dc9520a1e96ac2b9a45778df29.css" integrity="sha256-zLutouJk5P2/myGBzMws2yiaY9yVIKHpasK5pFd43yk=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="../../../images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="../../../images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.89.4" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="../../../">
+      Cup Air
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="../../../about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="../../../posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="../../../tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="../../../projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="../../../contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+<section class="container post">
+  <article>
+    <header>
+      <div class="post-title">
+        <h1 class="title">
+          <a class="title-link" href="http://acupofair.github.io/posts/dbms/chp4_5/">
+            DBMS-Chp4&amp;5
+          </a>
+        </h1>
+      </div>
+      <div class="post-meta">
+        <div class="date">
+          <span class="posted-on">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <time datetime='2021-12-05T12:15:45&#43;08:00'>
+              December 5, 2021
+            </time>
+          </span>
+          <span class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            One-minute read
+          </span>
+        </div>
+
+        
+        <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="../../../categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/">数据库管理系统笔记</a></div>
+
+        <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="../../../tags/database/">database</a>
+    </span></div>
+
+
+      </div>
+    </header>
+
+    <div>
+      
+        <aside>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#第四章-数据库管理系统引论">第四章 数据库管理系统引论</a>
+      <ul>
+        <li><a href="#41-dbms的核心组件">4.1 DBMS的核心组件</a>
+          <ul>
+            <li><a href="#补充--事务概念">补充&ndash;事务概念</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-dbms的进程结构">4.2 DBMS的进程结构</a>
+          <ul>
+            <li><a href="#单进程结构">单进程结构</a></li>
+            <li><a href="#多进程结构">多进程结构</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-数据库访问管理">4.3 数据库访问管理</a>
+          <ul>
+            <li><a href="#访问类型">访问类型</a></li>
+            <li><a href="#文件管理">文件管理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+      <h1 id="第四章-数据库管理系统引论">
+  第四章 数据库管理系统引论
+  <a class="heading-link" href="#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e6%95%b0%e6%8d%ae%e5%ba%93%e7%ae%a1%e7%90%86%e7%b3%bb%e7%bb%9f%e5%bc%95%e8%ae%ba">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h2 id="41-dbms的核心组件">
+  4.1 DBMS的核心组件
+  <a class="heading-link" href="#41-dbms%e7%9a%84%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>
+
+
+<p class="md__image">
+  
+  <img src="../res/2021-12-05-12-41-46.png" alt="">
+  
+</p></p>
+<p>从上而下的解释：</p>
+<ul>
+<li>用户写的应用程序经过接口转为基础的数据库语言（SQL等）</li>
+<li>SQL经过词法及语法分析产生语法树</li>
+<li>之后检查用户是否有权访问语法树涉及的数据对象，若通过则继续执行，否则拒绝执行</li>
+<li>授权检查通过后，进行语义分析与处理，对四种语言分别做不同处理（通常统称为查询处理），其中QL最复杂也最基本，存在多种存取路径选择问题（查询优化）
+后就形成SQL语句执行
+<ul>
+<li>DLL： 存放SQL的动态链接库</li>
+<li>并发控制： SQL语句执行过程都有并发控制以防止多用户并发访问数据引起数据不一致</li>
+<li>恢复机制：发生故障时，能使数据库恢复到最近的一致状态或先前的某个一致状态</li>
+<li>DBMS是操作系统之上的软件系统，是操作系统的用户,它对系统资源的调用需要请求操作系统为其服务，通过系统调用来实现</li>
+</ul>
+</li>
+</ul>
+<h3 id="补充--事务概念">
+  补充&ndash;事务概念
+  <a class="heading-link" href="#%e8%a1%a5%e5%85%85--%e4%ba%8b%e5%8a%a1%e6%a6%82%e5%bf%b5">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>事务是DBMS的执行单位，由有限的数据库操作序列组成，满足ACID准则
+ACID准则：</p>
+<ol>
+<li>执行的原子性<!-- raw HTML omitted -->
+不允许事务部分地完成</li>
+<li>更新操作的保持一致性<!-- raw HTML omitted -->
+事务应使数组库从一个一致状态转到另一个一致状态。如一个帐号收支之差应等于余额，若对这个帐号只拨款，不改余额，则数据库就不一致了。（一致状态也就是数据要满足完整性约束）</li>
+<li>彼此的隔离性<!-- raw HTML omitted -->
+若多个事务并发执行，则应像各个事务独立执行一样</li>
+<li>作用的持久性<!-- raw HTML omitted -->
+事务对数据库的影响是持久的，即使数据库因故障受到破坏，DBMS应该也能使其恢复</li>
+</ol>
+<h2 id="42-dbms的进程结构">
+  4.2 DBMS的进程结构
+  <a class="heading-link" href="#42-dbms%e7%9a%84%e8%bf%9b%e7%a8%8b%e7%bb%93%e6%9e%84">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="单进程结构">
+  单进程结构
+  <a class="heading-link" href="#%e5%8d%95%e8%bf%9b%e7%a8%8b%e7%bb%93%e6%9e%84">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>一个应用程序经过DBMS编译后作为一个单独的可执行文件，以一个单独进程进行执行。DBMS core作为这个可执行文件的一个函数
+
+
+
+<p class="md__image">
+  
+  <img src="../res/2021-12-05-14-59-22.png" alt="">
+  
+</p></p>
+<h3 id="多进程结构">
+  多进程结构
+  <a class="heading-link" href="#%e5%a4%9a%e8%bf%9b%e7%a8%8b%e7%bb%93%e6%9e%84">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>
+<p>一个应用程序进程对应一个DBMS core进程
+
+
+
+<p class="md__image">
+  
+  <img src="../res/2021-12-05-14-59-35.png" alt="">
+  
+</p></p>
+</li>
+<li>
+<p>只有一个DBMS core进程，每个应用程序进程对应一个DBMS线程
+
+
+
+<p class="md__image">
+  
+  <img src="../res/2021-12-05-14-59-50.png" alt="">
+  
+</p></p>
+</li>
+</ul>
+<h2 id="43-数据库访问管理">
+  4.3 数据库访问管理
+  <a class="heading-link" href="#43-%e6%95%b0%e6%8d%ae%e5%ba%93%e8%ae%bf%e9%97%ae%e7%ae%a1%e7%90%86">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="访问类型">
+  访问类型
+  <a class="heading-link" href="#%e8%ae%bf%e9%97%ae%e7%b1%bb%e5%9e%8b">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>查询一个文件的全部或大部分记录(&gt;15%)</li>
+<li>查询某一条特定记录</li>
+<li>查询某些记录(&lt;15%)</li>
+<li>范围查询</li>
+<li>记录的更新</li>
+</ul>
+<h3 id="文件管理">
+  文件管理
+  <a class="heading-link" href="#%e6%96%87%e4%bb%b6%e7%ae%a1%e7%90%86">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="文件的基本类型">
+  文件的基本类型
+  <a class="heading-link" href="#%e6%96%87%e4%bb%b6%e7%9a%84%e5%9f%ba%e6%9c%ac%e7%b1%bb%e5%9e%8b">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>堆文件<!-- raw HTML omitted -->
+记录按插入顺序存放，就像堆货物一样。物理地址不一定连续，逻辑地址连续。插入容易，查找难，只能顺序搜索，删除麻烦，一般不在物理上删除，只是打删除标志，以免引起大量记录转移。</li>
+<li>直接文件<!-- raw HTML omitted -->
+将记录某一属性（一般为主键）用散列函数映射成记录的地址。按散列键访问快，但不同散列键可能映射同一地址，且只对散列键到记录的访问有效，键映射空间固定，不变处理变长记录，用得少</li>
+<li>索引文件<!-- raw HTML omitted -->
+<ul>
+<li>索引+堆文件/簇集</li>
+<li>在记录的某一属性（组）上建立索引，索引项由索引键的值及其对应的记录的地址货地址集组成。</li>
+<li>提高查询效率，增加索引维护开销，付出储存空间代价</li>
+</ul>
+</li>
+</ul>
+<h4 id="动态索引">
+  动态索引
+  <a class="heading-link" href="#%e5%8a%a8%e6%80%81%e7%b4%a2%e5%bc%95">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>静态索引是多分树，动态索引是平衡多分树(B-Tree),常用的是B+树</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>B-Tree和B+-Tree区别</li>
+</ul>
+<h4 id="动态散列应该不考">
+  动态散列(应该不考)
+  <a class="heading-link" href="#%e5%8a%a8%e6%80%81%e6%95%a3%e5%88%97%e5%ba%94%e8%af%a5%e4%b8%8d%e8%80%83">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h4 id="栅格结构文件考吧">
+  栅格结构文件(考吧)
+  <a class="heading-link" href="#%e6%a0%85%e6%a0%bc%e7%bb%93%e6%9e%84%e6%96%87%e4%bb%b6%e8%80%83%e5%90%a7">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+
+    </div>
+
+
+
+    <footer>
+      
+
+
+      <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '86b4d4ae4b906754b70d',
+    clientSecret: '3aed59c23bb112d689173dd8bb449dddcf33571d',
+    repo: 'acupofair.github.io',
+    owner: 'ACupofAir',
+    admin: ['ACupofAir'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+      
+      
+    </footer>
+  </article>
+
+  
+</section>
+
+      </div>
+
+      <script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+    </main>
+
+    
+      
+      <script src="../../../js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
