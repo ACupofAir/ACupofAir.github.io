@@ -193,7 +193,7 @@ DBMS-Chp4&amp;5 · Cup Air
                 <li><a href="#文件的基本类型">文件的基本类型</a></li>
                 <li><a href="#动态索引">动态索引</a></li>
                 <li><a href="#动态散列应该不考">动态散列(应该不考)</a></li>
-                <li><a href="#栅格结构文件考吧">栅格结构文件(考吧)</a></li>
+                <li><a href="#栅格结构文件不考吧">栅格结构文件(不考吧)</a></li>
               </ul>
             </li>
           </ul>
@@ -201,6 +201,7 @@ DBMS-Chp4&amp;5 · Cup Air
         <li><a href="#44-查询优化">4.4 查询优化</a>
           <ul>
             <li><a href="#代数优化">代数优化</a></li>
+            <li><a href="#操作优化">操作优化</a></li>
           </ul>
         </li>
       </ul>
@@ -378,9 +379,9 @@ ACID准则：</p>
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h4>
-<h4 id="栅格结构文件考吧">
-  栅格结构文件(考吧)
-  <a class="heading-link" href="#%e6%a0%85%e6%a0%bc%e7%bb%93%e6%9e%84%e6%96%87%e4%bb%b6%e8%80%83%e5%90%a7">
+<h4 id="栅格结构文件不考吧">
+  栅格结构文件(不考吧)
+  <a class="heading-link" href="#%e6%a0%85%e6%a0%bc%e7%bb%93%e6%9e%84%e6%96%87%e4%bb%b6%e4%b8%8d%e8%80%83%e5%90%a7">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h4>
@@ -393,6 +394,36 @@ ACID准则：</p>
 <h3 id="代数优化">
   代数优化
   <a class="heading-link" href="#%e4%bb%a3%e6%95%b0%e4%bc%98%e5%8c%96">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>优化原则
+<ol>
+<li>先一元操作，后二元操作</li>
+<li>优先连接小关系</li>
+</ol>
+</li>
+<li>查询树
+<ul>
+<li>叶子： 关系</li>
+<li>中间节点：一元或二元操作</li>
+<li>叶子$\rightarrow$根:操作执行的顺序</li>
+</ul>
+</li>
+<li>例子
+
+
+
+<p class="md__image">
+  
+  <img src="../res/2021-12-05-21-50-26.png" alt="">
+  
+</p></li>
+</ul>
+<h3 id="操作优化">
+  操作优化
+  <a class="heading-link" href="#%e6%93%8d%e4%bd%9c%e4%bc%98%e5%8c%96">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h3>
