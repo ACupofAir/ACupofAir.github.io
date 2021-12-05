@@ -13,12 +13,9 @@
       <pubDate>Tue, 30 Nov 2021 23:03:11 +0800</pubDate>
       
       <guid>http://acupofair.github.io/posts/vim/init/</guid>
-      <description>archlinux中vim的配置    基础配置    如果你是在一个没有桌面的环境下想有个良好的vim体验，只需简单两步：
- 拉下我的代码,curl是linux下net-tools包里的,arch下sudo pacman -S net-tools即可安装. -o参数后为拉下来的网页保存为的文件名,下面代码是将我寄存于github上的vim配置文件下下来并保存到temp.vim这个文件中,至于为什么不直接保存到~/.vimrc下,因为我没试过，and此时此刻懒得试。  1  curl https://raw.githubusercontent.com/ACupofAir/scripts/main/vimscripts/vim_next_ngui.vim -o temp.vim   当然如果你是在中国，又恰巧忘记给终端配置代理，那你可能会遇到
- 只需简单的
-1  export http_proxy=your_proxy_ip:port; export https_proxy=your_proxy_ip:port   然后把这个temp.vim文件拷贝到你的个人根目录的.vimrc  1  cp temp.vim ~/.vimrc   然后可以把temp.vim删掉了
-下面介绍一下这套基础配置带来的一些关键功能:
- 相对行号 这个在可以比较直观的显示你目前键入位置，同时这个相对行号在复制多行代码时也比较有用，自己肉眼看有时候会数错 语法高亮 默认情况下在tty中貌似不开的，得手动开 智能搜索 就是你输入全小写的，则他会匹配大小写都有的，但你输入一个大写字符，它就会变得大小写敏感 配置了一些常用快捷键 首先把配置为空格键     快捷键 功能     &amp;lt;leader&amp;gt; e 打开vim自带的文件树   &amp;lt;leader&amp;gt; nh :nohl快速取消高亮   &amp;lt;leader&amp;gt; q 不保存退出文件(因为人类的手指真的很不适合连按q和！)   &amp;lt;leader&amp;gt; rn *Ncgn,这个很体现vim的牛皮之处，*选中当前单词的所有匹配项，并将光标移到下一个匹配项，N则反向跳转到上一个匹配项，也就是你一开始按*的位置，然后cgn改变这个单词，然后下面按.</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这篇文章将介绍vim在archlinux中的配置，它包含了无gui环境无任何插件的简单配置，以及稍微复杂但不失轻便的带有插件的配置。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>
