@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="color-scheme" content="light dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
 
-    
+  
 
-    <meta name="author" content="Cup Air">
-    <meta name="description" content="
+  
+  <meta name="author" content="Cup Air">
+  <meta name="description" content="
 数据库复习专用，万恶的王帅，还我周末
 ">
-    <meta name="keywords" content="blog,developer,personal">
+  <meta name="keywords" content="blog,developer,personal">
 
-    <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DBMS-Chp4&amp;5"/>
 <meta name="twitter:description" content="
 数据库复习专用，万恶的王帅，还我周末
 "/>
 
-    <meta property="og:title" content="DBMS-Chp4&amp;5" />
+  <meta property="og:title" content="DBMS-Chp4&amp;5" />
 <meta property="og:description" content="
 数据库复习专用，万恶的王帅，还我周末
 " />
@@ -32,51 +33,64 @@
 
 
 
-    <title>
+  <title>
 DBMS-Chp4&amp;5 · Cup Air
 </title>
 
-    
-      <link rel="canonical" href="http://acupofair.github.io/posts/dbms/chp4_5/">
-    
+  
+  <link rel="canonical" href="http://acupofair.github.io/posts/dbms/chp4_5/">
+  
 
-    <link rel="preload" href="../../../fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="../../../css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="../../../css/coder-dark.min.ccbbada2e264e4fdbf9b2181cccc2cdb289a63dc9520a1e96ac2b9a45778df29.css" integrity="sha256-zLutouJk5P2/myGBzMws2yiaY9yVIKHpasK5pFd43yk=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="../../../images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../../../images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="../../../images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.89.4" />
-  </head>
+  <link rel="preload" href="../../../fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
 
   
   
-    
   
-  <body class="preload-transitions colorscheme-auto">
-    
+  <link rel="stylesheet" href="../../../css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="../../../css/coder-dark.min.ccbbada2e264e4fdbf9b2181cccc2cdb289a63dc9520a1e96ac2b9a45778df29.css" integrity="sha256-zLutouJk5P2/myGBzMws2yiaY9yVIKHpasK5pFd43yk="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+
+  
+  <link rel="icon" type="image/png" href="./images/favicon-32x32.png " sizes="32x32">
+  <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="../../../images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PXZZ7M9MGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PXZZ7M9MGE');
+</script>
+
+  <meta name="generator" content="Hugo 0.89.4" />
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
         <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
@@ -84,8 +98,8 @@ DBMS-Chp4&amp;5 · Cup Air
 </div>
 
 
-    <main class="wrapper">
-      <nav class="navigation">
+  <main class="wrapper">
+    <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="../../../">
       Cup Air
@@ -126,8 +140,8 @@ DBMS-Chp4&amp;5 · Cup Air
 </nav>
 
 
-      <div class="content">
-        
+    <div class="content">
+      
 <section class="container post">
   <article>
     <header>
@@ -148,7 +162,7 @@ DBMS-Chp4&amp;5 · Cup Air
           </span>
           <span class="reading-time">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            One-minute read
+            2-minute read
           </span>
         </div>
 
@@ -194,6 +208,7 @@ DBMS-Chp4&amp;5 · Cup Air
                 <li><a href="#动态索引">动态索引</a></li>
                 <li><a href="#动态散列应该不考">动态散列(应该不考)</a></li>
                 <li><a href="#栅格结构文件不考吧">栅格结构文件(不考吧)</a></li>
+                <li><a href="#raw-disk">Raw disk</a></li>
               </ul>
             </li>
           </ul>
@@ -201,7 +216,27 @@ DBMS-Chp4&amp;5 · Cup Air
         <li><a href="#44-查询优化">4.4 查询优化</a>
           <ul>
             <li><a href="#代数优化">代数优化</a></li>
-            <li><a href="#操作优化">操作优化</a></li>
+            <li><a href="#操作优化">操作优化</a>
+              <ul>
+                <li><a href="#选择操作优化">选择操作优化</a></li>
+                <li><a href="#投影操作优化">投影操作优化</a></li>
+                <li><a href="#集合操作优化">集合操作优化</a></li>
+                <li><a href="#连接操作优化">连接操作优化</a></li>
+                <li><a href="#组合操作优化">组合操作优化</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#45-数据库恢复">4.5 数据库恢复</a>
+          <ul>
+            <li><a href="#基础介绍">基础介绍</a></li>
+            <li><a href="#运行记录结构">运行记录结构</a></li>
+            <li><a href="#更新事务的执行与恢复">更新事务的执行与恢复</a>
+              <ul>
+                <li><a href="#两条更新事务执行时原则">两条更新事务执行时原则：</a></li>
+                <li><a href="#三种更新策略后像写入数据库的时机不同">三种更新策略（后像写入数据库的时机不同）：</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -385,6 +420,14 @@ ACID准则：</p>
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h4>
+<p>适合多属性查询</p>
+<h4 id="raw-disk">
+  Raw disk
+  <a class="heading-link" href="#raw-disk">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Can control physical blocks in OS by using raw disk</p>
 <h2 id="44-查询优化">
   4.4 查询优化
   <a class="heading-link" href="#44-%e6%9f%a5%e8%af%a2%e4%bc%98%e5%8c%96">
@@ -427,6 +470,252 @@ ACID准则：</p>
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h3>
+<blockquote>
+<p>代数优化不涉及存取路径，只能对操作次序和组合进行变换与调整;合理选择存取路径，才是优化的重点</p>
+</blockquote>
+<h4 id="选择操作优化">
+  选择操作优化
+  <a class="heading-link" href="#%e9%80%89%e6%8b%a9%e6%93%8d%e4%bd%9c%e4%bc%98%e5%8c%96">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h4 id="投影操作优化">
+  投影操作优化
+  <a class="heading-link" href="#%e6%8a%95%e5%bd%b1%e6%93%8d%e4%bd%9c%e4%bc%98%e5%8c%96">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h4 id="集合操作优化">
+  集合操作优化
+  <a class="heading-link" href="#%e9%9b%86%e5%90%88%e6%93%8d%e4%bd%9c%e4%bc%98%e5%8c%96">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h4 id="连接操作优化">
+  连接操作优化
+  <a class="heading-link" href="#%e8%bf%9e%e6%8e%a5%e6%93%8d%e4%bd%9c%e4%bc%98%e5%8c%96">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>连接操作的实现</p>
+<ul>
+<li>嵌套循环法：就一个一个拿出来比较，相同的作为结果输出，两层循环</li>
+<li>利用索引或散列寻找匹配元组法：通过内关系多次顺序扫描匹配元组</li>
+<li>排序归并法：先将R，S按属性排序，这样后面搜匹配项时就不用看前面的了
+
+
+
+<p class="md__image">
+  
+  <img src="../res/2021-12-06-01-02-14.png" alt="">
+  
+</p></li>
+<li>散列连接法：连接属性应有相同域，所以将连接属性散列到同一个文件，这样符合条件的R与S元组必然在一个桶中，然后用嵌套循环法就可以得到匹配结果</li>
+</ul>
+<p>优化策略</p>
+<ul>
+<li>俩关系已按属性排序，优先考虑排序归并法。一个以排序，另一个很小，则也可用排序归并法</li>
+<li>若两关系有一个关系在连接属性上有索引或散列，则可以另一关系为外关系，顺序扫描，并利用内关系上索引或散列寻找匹配元组</li>
+<li>若上述都不满足，且关系比较小，用嵌套循环法；否则，可用散列连接法</li>
+</ul>
+<h4 id="组合操作优化">
+  组合操作优化
+  <a class="heading-link" href="#%e7%bb%84%e5%90%88%e6%93%8d%e4%bd%9c%e4%bc%98%e5%8c%96">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h2 id="45-数据库恢复">
+  4.5 数据库恢复
+  <a class="heading-link" href="#45-%e6%95%b0%e6%8d%ae%e5%ba%93%e6%81%a2%e5%a4%8d">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<blockquote>
+<p>数据库恢复途径：</p>
+<ul>
+<li>预防：减少可能发生的失败</li>
+<li>解决：从失败中恢复</li>
+</ul>
+</blockquote>
+<h3 id="基础介绍">
+  基础介绍
+  <a class="heading-link" href="#%e5%9f%ba%e7%a1%80%e4%bb%8b%e7%bb%8d">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>
+<p>定期转储</p>
+<ul>
+<li>每隔一段时间进行一次全量备份</li>
+<li>改进：增量转储，每次全量转储后，只对改变部分进行转储</li>
+</ul>
+</li>
+<li>
+<p>backup+log</p>
+<p>log 的内容</p>
+<ul>
+<li>BI(前像)：事务更新时所涉及物理块更新前的映像；有前像可使数据库回到更新前状态，即撤销更新undo</li>
+<li>AI(后像)：事务更新时所涉及物理块更新后的映像；有后像即时更新数据丢失，仍可恢复到更新后状态，叫重做redo</li>
+<li>事务状态：两种,commit了，说明事务已成功执行；事务失败，则要消除事务对数据库影响，叫卷回
+数据库失效时，可取出最近副本，再根据运行记录
+<ul>
+<li>对未提交的事务用前像卷回，叫<strong>向后恢复</strong></li>
+<li>对已提交的事务，重做，叫<strong>向前恢复</strong>
+这样可使数据库恢复至最近的<strong>一致状态</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="运行记录结构">
+  运行记录结构
+  <a class="heading-link" href="#%e8%bf%90%e8%a1%8c%e8%ae%b0%e5%bd%95%e7%bb%93%e6%9e%84">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ol>
+<li>活动事务表（ATL）：记录所有正在执行还没有提交的事务的标识符（TID）</li>
+<li>提交事务表（CTL）：记录所有已提交的事务的标识符</li>
+<li>日志</li>
+</ol>
+<h3 id="更新事务的执行与恢复">
+  更新事务的执行与恢复
+  <a class="heading-link" href="#%e6%9b%b4%e6%96%b0%e4%ba%8b%e5%8a%a1%e7%9a%84%e6%89%a7%e8%a1%8c%e4%b8%8e%e6%81%a2%e5%a4%8d">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="两条更新事务执行时原则">
+  两条更新事务执行时原则：
+  <a class="heading-link" href="#%e4%b8%a4%e6%9d%a1%e6%9b%b4%e6%96%b0%e4%ba%8b%e5%8a%a1%e6%89%a7%e8%a1%8c%e6%97%b6%e5%8e%9f%e5%88%99">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>提交规则：后像必须在事务提交前写入非易失存储设备（数据库或运行记录的后像文件中)</li>
+<li>先记后写规则： 若后像在事务提交前写入数据库，则必须把前像先记入运行记录</li>
+</ul>
+<h4 id="三种更新策略后像写入数据库的时机不同">
+  三种更新策略（后像写入数据库的时机不同）：
+  <a class="heading-link" href="#%e4%b8%89%e7%a7%8d%e6%9b%b4%e6%96%b0%e7%ad%96%e7%95%a5%e5%90%8e%e5%83%8f%e5%86%99%e5%85%a5%e6%95%b0%e6%8d%ae%e5%ba%93%e7%9a%84%e6%97%b6%e6%9c%ba%e4%b8%8d%e5%90%8c">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>在事务提交前写入DB
+<ol>
+<li>TID$\rightarrow$ATL</li>
+<li>BI$\rightarrow$log [Log Ahead Rule]</li>
+<li>AI$\rightarrow$DB, log [Commit Rule]</li>
+<li>TID$\rightarrow$CTL</li>
+<li>rm TID from ATL</li>
+</ol>
+</li>
+</ul>
+<p>可能发生情况</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">CTL</th>
+<th style="text-align:center">ATL</th>
+<th style="text-align:left">OP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Undo, rm TID from ATL</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">rm TID from ATL</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">nothing to do</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>在事务提交后写入DB[所以根据先记后写原则，不必记入BI][现在流行]
+<ol>
+<li>TID$\rightarrow$ATL</li>
+<li>AI$\rightarrow$log [Commit Rule]</li>
+<li>TID$\rightarrow$CTL</li>
+<li>AI$\rightarrow$DB</li>
+<li>rm TID from ATL</li>
+</ol>
+</li>
+</ul>
+<p>可能发生情况</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">CTL</th>
+<th style="text-align:center">ATL</th>
+<th style="text-align:left">OP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">rm TID from ATL</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">redo, rm TID from ATL</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">nothing to do</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>在事务提交前后写入DB
+<ol>
+<li>TID$\rightarrow$ATL</li>
+<li>AI, BI$\rightarrow$log [Commit Rule]</li>
+<li>AI$\rightarrow$DB(partially done)</li>
+<li>TID$\rightarrow$CTL</li>
+<li>AI$\rightarrow$DB(completed)</li>
+<li>rm TID from ATL</li>
+</ol>
+</li>
+</ul>
+<p>可能发生情况</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">CTL</th>
+<th style="text-align:center">ATL</th>
+<th style="text-align:left">OP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">undo, rm TID from ATL</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">redo, rm TID from ATL</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">nothing to do</td>
+</tr>
+</tbody>
+</table>
     </div>
 
 
@@ -461,37 +750,53 @@ ACID准则：</p>
     </footer>
   </article>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+    integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
   
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+    integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
 </section>
 
-      </div>
+    </div>
 
-      <script type="text/javascript"
+    <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-    </main>
+  </main>
 
-    
-      
-      <script src="../../../js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
-    
+  
+  
+  <script src="../../../js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
-  </body>
+  
+</body>
 
 </html>
