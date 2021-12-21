@@ -542,7 +542,7 @@ npm start
 <li>寻找最小组进行合并</li>
 <li>计算组间间距</li>
 <li>通过间距乘以组号来定位每组位置
-由于 glg 分组的组数是遍历所有可能，而合并又需遍历，所以复杂度为$\matchcal{O}(n^2)$,而实际上经过大量实验发现在分组数过高时对图像对比度的增强已经没有太大帮助，实际上只需将分组固定为自己 20 组左右，就可以取得很好的效果，所以在固定分组数后复杂度为$\mathcal{O}(n)$,这就是 fglg 算法</li>
+由于 glg 分组的组数是遍历所有可能，而合并又需遍历，所以复杂度为 $\mathcal{O}(n^2)$ ,而实际上经过大量实验发现在分组数过高时对图像对比度的增强已经没有太大帮助，实际上只需将分组固定为自己 20 组左右，就可以取得很好的效果，所以在固定分组数后复杂度为$\mathcal{O}(n)$,这就是 fglg 算法</li>
 </ol>
 <h4 id="核心代码-1">
   核心代码
@@ -1028,7 +1028,23 @@ npm start
     </footer>
   </article>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+    integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
   
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+    integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
 </section>
 
     </div>
