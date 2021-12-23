@@ -49,8 +49,8 @@
       
     <link
       rel="stylesheet"
-      href="../../../css/coder.min.103f1c3f142a838f82d973ec7d3e748d8cfd8bf41efa620953b9954bed2828f8.css"
-      integrity="sha256-ED8cPxQqg4&#43;C2XPsfT50jYz9i/Qe&#43;mIJU7mVS&#43;0oKPg="
+      href="../../../css/coder.min.ef7af4edeb9f82436ed26d7312a1a4a812164ea0e1ec589e748ab104d5cbce6b.css"
+      integrity="sha256-73r07eufgkNu0m1zEqGkqBIWTqDh7FiedIqxBNXLzms="
       crossorigin="anonymous"
       media="screen"
     />
@@ -823,8 +823,16 @@ $$</li>
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">let</span> { PythonShell } <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;python-shell&#34;</span>);
 </code></pre></td></tr></table>
 </div>
-</div><p>下面的代码展示了如何使用 PythonShell。我们利用 PythonShell 来实例化一个对象<code>pyshell</code>,它传入了我们要调用的 python 函数文件名以及要处理的图片名,同时我们利用 javascript 中 on 事件来反馈函数执行的情况，它会将调用的 python 函数的 print 的内容以 alert 的方式提供给用户。swal 是一个 alert 的样式，在 index.html 中引入 <code>&lt;script src=&quot;https://unpkg.com/sweetalert/dist/sweetalert.min.js&quot;&gt;&lt;/script&gt;</code>即可。</p>
+</div><p>下面的代码展示了如何使用 PythonShell。我们利用 PythonShell 来实例化一个对象<code>pyshell</code>,它传入了我们要调用的 python 函数文件名以及要处理的图片名,同时我们利用 javascript 中 on 事件来反馈函数执行的情况，它会将调用的 python 函数的 print 的内容以 alert 的方式提供给用户。swal 是一个 alert 的样式，在 index.html 中引入如下代码即可</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://unpkg.com/sweetalert/dist/sweetalert.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
