@@ -41,12 +41,12 @@
 &lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;                       _                        _              
-                      | |       ___            &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;_&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;             
-  __ _   _ __    ___  | |__    &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt; _ &lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;   __   __  _   _ __ ___   
- / _&lt;span style=&#34;color:#f1fa8c&#34;&gt;`&lt;/span&gt; | | &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;__|  / __| | &amp;#39;&lt;/span&gt;_ &lt;span style=&#34;color:#f1fa8c&#34;&gt;\ &lt;/span&gt;  / _ &lt;span style=&#34;color:#f1fa8c&#34;&gt;\/\ \ \ &lt;/span&gt;/ / | | | &amp;#39;_ &lt;span style=&#34;color:#f1fa8c&#34;&gt;`&lt;/span&gt; _ &lt;span style=&#34;color:#f1fa8c&#34;&gt;\ &lt;/span&gt; 
-| &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;_| | | |    | &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;__  | | | | | &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;_&amp;gt;  &amp;lt;  &lt;span style=&#34;color:#f1fa8c&#34;&gt;\ &lt;/span&gt;V /  | | | | | | | | 
- &lt;span style=&#34;color:#f1fa8c&#34;&gt;\_&lt;/span&gt;_,_| |_|     &lt;span style=&#34;color:#f1fa8c&#34;&gt;\_&lt;/span&gt;__| |_| |_|  &lt;span style=&#34;color:#f1fa8c&#34;&gt;\_&lt;/span&gt;__/&lt;span style=&#34;color:#f1fa8c&#34;&gt;\/&lt;/span&gt;   &lt;span style=&#34;color:#f1fa8c&#34;&gt;\_&lt;/span&gt;/   |_| |_| |_| |_| 
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;                       _                        _
+                      | |       ___            &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;_&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
+  __ _   _ __    ___  | |__    &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt; _ &lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;   __   __  _   _ __ ___
+ / _&lt;span style=&#34;color:#f1fa8c&#34;&gt;`&lt;/span&gt; | | &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;__|  / __| | &amp;#39;&lt;/span&gt;_ &lt;span style=&#34;color:#f1fa8c&#34;&gt;\ &lt;/span&gt;  / _ &lt;span style=&#34;color:#f1fa8c&#34;&gt;\/\ \ \ &lt;/span&gt;/ / | | | &amp;#39;_ &lt;span style=&#34;color:#f1fa8c&#34;&gt;`&lt;/span&gt; _ &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&lt;/span&gt;| &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;_| | | |    | &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;__  | | | | | &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;_&amp;gt;  &amp;lt;  &lt;span style=&#34;color:#f1fa8c&#34;&gt;\ &lt;/span&gt;V /  | | | | | | | |
+ &lt;span style=&#34;color:#f1fa8c&#34;&gt;\_&lt;/span&gt;_,_| |_|     &lt;span style=&#34;color:#f1fa8c&#34;&gt;\_&lt;/span&gt;__| |_| |_|  &lt;span style=&#34;color:#f1fa8c&#34;&gt;\_&lt;/span&gt;__/&lt;span style=&#34;color:#f1fa8c&#34;&gt;\/&lt;/span&gt;   &lt;span style=&#34;color:#f1fa8c&#34;&gt;\_&lt;/span&gt;/   |_| |_| |_| |_|
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
@@ -167,6 +167,20 @@
   
 &lt;/p&gt;&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;📽️ Projects&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/ACupofAir/zhishe&#34;&gt;zhishe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/ACupofAir/Stoichiometric&#34;&gt;chemistry calulate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;&#34;&gt;filter-app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🌐 Contact Me&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📫 : &lt;a href=&#34;mailto:thoughts.times@gmail.com&#34;&gt;thoughts.times@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;👊 👊 👊&lt;/p&gt;
 </description>
@@ -188,12 +202,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://acupofair.github.io/projects/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/ACupofAir/zhishe&#34;&gt;zhishe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/ACupofAir/Stoichiometric&#34;&gt;chemistry calulate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; filter-app用滤波器做个图像处理软件，会使用electron前端，与python后端，javascript做连接件&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description></description>
     </item>
     
   </channel>
