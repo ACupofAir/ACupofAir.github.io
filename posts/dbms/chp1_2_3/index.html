@@ -139,7 +139,7 @@
           </span>
           <span class="reading-time">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            2-minute read
+            6-minute read
           </span>
         </div>
 
@@ -191,7 +191,12 @@
               <ul>
                 <li><a href="#基础操作完整的操作集合">基础操作：(完整的操作集合)</a></li>
                 <li><a href="#额外操作">额外操作：</a></li>
-                <li><a href="#关系演算">关系演算</a></li>
+              </ul>
+            </li>
+            <li><a href="#关系演算">关系演算</a>
+              <ul>
+                <li><a href="#元组关系演算trc">元组关系演算(TRC)</a></li>
+                <li><a href="#域关系演算drc">域关系演算(DRC)</a></li>
               </ul>
             </li>
           </ul>
@@ -199,10 +204,43 @@
         <li><a href="#24-er-数据模型实体联系数据模型">2.4 ER 数据模型(实体联系数据模型)</a>
           <ul>
             <li><a href="#er-图">ER 图</a></li>
+            <li><a href="#扩充-e-r-数据模型我赌不考">扩充 E-R 数据模型（我赌不考）</a></li>
           </ul>
         </li>
         <li><a href="#25-面向对象数据模型没细讲">2.5 面向对象数据模型（没细讲）</a></li>
         <li><a href="#其他数据模型">其他数据模型</a></li>
+        <li><a href="#31-用户接口与-sql-语言">3.1 用户接口与 SQL 语言</a></li>
+        <li><a href="#32-sql-语言概述">3.2 SQL 语言概述</a></li>
+        <li><a href="#33-sql-数据定义语言ddl上课没提">3.3 SQL 数据定义语言(DDL)[上课没提]</a></li>
+        <li><a href="#34-sql-查询语言ql">3.4 SQL 查询语言(QL)</a>
+          <ul>
+            <li><a href="#基本的-sql-查询语句">基本的 SQL 查询语句</a>
+              <ul>
+                <li><a href="#基本格式">基本格式</a></li>
+                <li><a href="#执行顺序">执行顺序</a></li>
+              </ul>
+            </li>
+            <li><a href="#sql-的高端操作">SQL 的高端操作</a></li>
+            <li><a href="#group-by-和-order-by-子句应用"><code>GROUP BY</code> 和 <code>ORDER BY</code> 子句应用</a>
+              <ul>
+                <li><a href="#group-by"><code>GROUP BY</code></a></li>
+                <li><a href="#order-by"><code>ORDER BY</code></a></li>
+                <li><a href="#cast-expression">CAST expression</a></li>
+                <li><a href="#case-expression">CASE expression</a></li>
+              </ul>
+            </li>
+            <li><a href="#子查询">子查询</a>
+              <ul>
+                <li><a href="#标量子查询scalar-sub-query">标量子查询(Scalar sub-query)</a></li>
+                <li><a href="#表表达式table-expression">表表达式(Table expression)</a></li>
+                <li><a href="#公用表表达式common-table-expression">公用表表达式(Common table expression)</a></li>
+                <li><a href="#递归查询">递归查询</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#35-数据操纵语言data-manipulation-language">3.5 数据操纵语言(Data Manipulation Language)</a></li>
+        <li><a href="#36-嵌入式sqlin-c">3.6 嵌入式SQL(in C)</a></li>
       </ul>
     </li>
   </ul>
@@ -258,9 +296,20 @@
 </h3>
 <ul>
 <li>数据：描述现实世界的符号</li>
-<li>数据模型：描述数据的一组概念和定义</li>
-<li>数据模式：对给定的数据模型的具体描述，数据模型的实例化</li>
+<li><strong>数据模型</strong>：描述数据的一组概念和定义</li>
+<li><strong>数据模式</strong>：对给定的数据模型的具体描述，数据模型的实例化</li>
 </ul>
+<div class="notice note">
+  <div class="notice-title">
+    <i class="fa fa-sticky-note" aria-hidden="true"></i>Note
+  </div>
+  <div class="notice-content"><p><strong>高频考点</strong>：</p>
+<ul>
+<li><strong>Data model</strong>: a collection of concepts and definitions for describing data.</li>
+<li><strong>Data schema</strong>: a description of a particular collection of data, using a given data model.</li>
+</ul></div>
+</div>
+
 <h3 id="三层抽象架构ansi-sparc-architecture及其对数据独立性的支持">
   三层抽象架构(ansi-sparc architecture)及其对数据独立性的支持
   <a class="heading-link" href="#%e4%b8%89%e5%b1%82%e6%8a%bd%e8%b1%a1%e6%9e%b6%e6%9e%84ansi-sparc-architecture%e5%8f%8a%e5%85%b6%e5%af%b9%e6%95%b0%e6%8d%ae%e7%8b%ac%e7%ab%8b%e6%80%a7%e7%9a%84%e6%94%af%e6%8c%81">
@@ -344,6 +393,7 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h2 id="21-层次数据模型">
   2.1 层次数据模型
   <a class="heading-link" href="#21-%e5%b1%82%e6%ac%a1%e6%95%b0%e6%8d%ae%e6%a8%a1%e5%9e%8b">
@@ -395,12 +445,14 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h2 id="22-网状数据结构不做要求">
   2.2 网状数据结构：不做要求
   <a class="heading-link" href="#22-%e7%bd%91%e7%8a%b6%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b8%8d%e5%81%9a%e8%a6%81%e6%b1%82">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
+<hr>
 <h2 id="23-关系数据模型">
   2.3 关系数据模型
   <a class="heading-link" href="#23-%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e6%a8%a1%e5%9e%8b">
@@ -472,13 +524,13 @@
   </a>
 </h4>
 <ul>
-<li>候选键： 某一属性或一组属性唯一的决定了一个元组,且<strong>其任何真子集无此性质</strong></li>
+<li>超键：在关系中能唯一标识元组的属性集(<strong>其子集也可以标识</strong>),候选键的爸爸</li>
+<li>候选键： 某一属性或一组属性唯一的决定了一个元组,且<strong>其任何真子集无此性质</strong>（不含多余属性的超键）</li>
 <li>主键：候选键中的一个</li>
 <li>全键(all key):若主键由所有属性组成，则称为全键</li>
 <li>候补键：候选键中除主键外的</li>
 <li>主属性：包含在任何一个候选键的属性</li>
 <li>非主属性：不包含在任何一个候选键的属性</li>
-<li>超键：候选键的爸爸，包含候选键的属性组</li>
 <li>外键：关系 R1 不是主键，关系 R2 是主键，则其为关系 R1 外键</li>
 </ul>
 <h4 id="最基本的三个完整性约束">
@@ -553,30 +605,84 @@
   
 </p></li>
 </ul>
-<h4 id="关系演算">
+<div class="notice tip">
+  <div class="notice-title">
+    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>Tip
+  </div>
+  <div class="notice-content">这里的关系演算有时公式会很长，一定要有大局观，看好筛选条件，连接条件再去做可以省下九成的运算量</div>
+</div>
+
+<h3 id="关系演算">
   关系演算
   <a class="heading-link" href="#%e5%85%b3%e7%b3%bb%e6%bc%94%e7%ae%97">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
+</h3>
+<blockquote>
+<p>关系代数表示关系操作，须标明关系操作的次序，注重过程,因而以关系代数为基础的数据库语言是过程语言</p>
+</blockquote>
+<blockquote>
+<p>关系演算只要说明所要得到的结果，不必标明操作过程，注重结果,以关系演算为基础的数据库语言是非过程语言</p>
+</blockquote>
+<blockquote>
+<p>共同点:They are equivalent in terms of expression. SQL language can express any query that is expressible in relational algebra/caculus.</p>
+</blockquote>
+<h4 id="元组关系演算trc">
+  元组关系演算(TRC)
+  <a class="heading-link" href="#%e5%85%83%e7%bb%84%e5%85%b3%e7%b3%bb%e6%bc%94%e7%ae%97trc">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <blockquote>
-<p>关系代数表示关系操作，须标明关系操作的次序，注重过程</p>
+<p>一般形式：$\{ t[&lt;属性表&gt;] | P(t)\}$</p>
 </blockquote>
-<blockquote>
-<p>关系演算只要说明所要得到的结果，不必标明操作过程，注重结果</p>
-</blockquote>
-<!-- raw HTML omitted -->
-<div class="notice warning">
+<p>关系模式：R(ABC), r 为 R 的一个值</p>
+<ul>
+<li>投影:$\Pi_{AB}(r) = \{ t[AB] | t\in r \}$</li>
+<li>选择:$\sigma_{F}(R) = \{t | t \in r \ AND\  F \}$</li>
+<li>并:$r \cup s= \{t | t \in r  \ OR\ t \in s\}$</li>
+<li>差:$r - s = \{t | t \in r \ AND\ \urcorner(t\in s)\}$</li>
+</ul>
+<p>设$R(ABC)$和$S(CDE)$,r,s 分别为其值</p>
+<ul>
+<li>连接:$t \Join s = \{t[ABCDE]|t[ABC] \in r \ AND\ t[CDE]\in s\}$</li>
+</ul>
+<div class="notice question">
   <div class="notice-title">
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Warning
+    <i class="fa fa-question" aria-hidden="true"></i>Question
   </div>
-  <div class="notice-content">这里需要一些例题</div>
+  <div class="notice-content"><ul>
+<li>Why$\urcorner(t\in s)$ NOT $t\notin s$</li>
+<li>好像是因为关系演算中没有$\notin$运算符</li>
+</ul></div>
 </div>
 
+<h4 id="域关系演算drc">
+  域关系演算(DRC)
+  <a class="heading-link" href="#%e5%9f%9f%e5%85%b3%e7%b3%bb%e6%bc%94%e7%ae%97drc">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p>一般形式: $\{ &lt;x_1, x_2, &hellip;,x_n&gt; | P(x_1, x_2, &hellip;.x_n, x_n+1, &hellip;x_n+m) \}$</p>
+</blockquote>
 <ul>
-<li>元组关系演算</li>
-<li>域关系演算</li>
+<li>前面部分为结果中出现的域</li>
+<li>后面部分为结果中满足每条记录满足的条件</li>
 </ul>
+<div class="notice example">
+  <div class="notice-title">
+    <i class="fa fa-file-text" aria-hidden="true"></i>Example
+  </div>
+  <div class="notice-content"><p>$$\pi_{sid, sname, age}(\sigma_{age&gt;35}(S_1)$$</p>
+<ul>
+<li>TRC:$$\{t[sid,sname,age]|t\in S_1 \wedge t.age &gt; 35\}$$</li>
+<li>DRC:$$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</li>
+<li>TRC 中用的 t.age 而不是 t[age]；DRC 则直接用域名来做运算；另外别忘了加限制集，不然查询结果无穷大</li>
+</ul></div>
+</div>
+
+<hr>
 <h2 id="24-er-数据模型实体联系数据模型">
   2.4 ER 数据模型(实体联系数据模型)
   <a class="heading-link" href="#24-er-%e6%95%b0%e6%8d%ae%e6%a8%a1%e5%9e%8b%e5%ae%9e%e4%bd%93%e8%81%94%e7%b3%bb%e6%95%b0%e6%8d%ae%e6%a8%a1%e5%9e%8b">
@@ -593,17 +699,29 @@
   </a>
 </h3>
 <ul>
-<li>矩形：实体</li>
+<li>矩形：实体；双线矩形表示弱实体</li>
 <li>菱形：关系</li>
-<li>椭圆： 属性
+<li>椭圆： 属性</li>
+<li>弧上的数字表示联系的基数比；双线弧表示该实体全参与,单线表示部分参与
 
 
 
 <p class="md__image">
   
-  <img src="../res/2021-12-23-23-54-35.png" alt="">
+  <img src="../res/2021-12-25-11-23-20.png" alt="">
   
 </p></li>
+</ul>
+<h3 id="扩充-e-r-数据模型我赌不考">
+  扩充 E-R 数据模型（我赌不考）
+  <a class="heading-link" href="#%e6%89%a9%e5%85%85-e-r-%e6%95%b0%e6%8d%ae%e6%a8%a1%e5%9e%8b%e6%88%91%e8%b5%8c%e4%b8%8d%e8%80%83">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>特殊化和普遍化：就是实体之间的继承,在弧上加$\cup$来表示</li>
+<li>聚集：把参与联系的实体组合形成新的实体</li>
+<li>范畴：超实体集并的子集</li>
 </ul>
 <h2 id="25-面向对象数据模型没细讲">
   2.5 面向对象数据模型（没细讲）
@@ -611,6 +729,7 @@
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
+<hr>
 <h2 id="其他数据模型">
   其他数据模型
   <a class="heading-link" href="#%e5%85%b6%e4%bb%96%e6%95%b0%e6%8d%ae%e6%a8%a1%e5%9e%8b">
@@ -622,7 +741,607 @@
 <li>时态数据模型</li>
 <li>空间数据模型</li>
 <li>XML 数据模型</li>
-</ul> 
+</ul>
+<hr>
+<h2 id="31-用户接口与-sql-语言">
+  3.1 用户接口与 SQL 语言
+  <a class="heading-link" href="#31-%e7%94%a8%e6%88%b7%e6%8e%a5%e5%8f%a3%e4%b8%8e-sql-%e8%af%ad%e8%a8%80">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>关系代数是一种过程语言，以此设计的数据库语言，用户不仅要说明需要什么数据，还要说明获得这些数据的过程。</li>
+<li>对用户来说，最好只说明需要什么数据，而如何获得这些数据则不必用户说明，而由系统来实现。即非过程语言。</li>
+<li>非过程关系数据库语言里最成功的应用最广的:SQL 语言</li>
+</ul>
+<hr>
+<h2 id="32-sql-语言概述">
+  3.2 SQL 语言概述
+  <a class="heading-link" href="#32-sql-%e8%af%ad%e8%a8%80%e6%a6%82%e8%bf%b0">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>SQL 指什么
+<ul>
+<li>IBM:Structured Query Language</li>
+<li>ANSI(美国国家标准协会):Standard Query Language</li>
+<li>wiki 百科，以及大部分资料都解释为第一种</li>
+</ul>
+</li>
+<li>SQL 按功能分为四大部分
+<ul>
+<li>数据定义语言(Data Definition Language):用于定义，撤销和修改数据模式</li>
+<li>查询语言(Query Language)：用于查询数据</li>
+<li>数据操纵语言(Data Manipulation Language)：用于增删改数据</li>
+<li>数据控制语言(Data Control Language)：用于数据访问控制</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="33-sql-数据定义语言ddl上课没提">
+  3.3 SQL 数据定义语言(DDL)[上课没提]
+  <a class="heading-link" href="#33-sql-%e6%95%b0%e6%8d%ae%e5%ae%9a%e4%b9%89%e8%af%ad%e8%a8%80ddl%e4%b8%8a%e8%af%be%e6%b2%a1%e6%8f%90">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>关系又称表，关系数据库的基本组成单位。</li>
+<li>表分为两类
+<ul>
+<li>基表：数据显式存在数据库中</li>
+<li>虚表（试图 view）：仅有逻辑定义，可根据其他基表或视图导出，不显式存在数据库中</li>
+</ul>
+</li>
+<li>对基表的操作
+<ul>
+<li>增加列</li>
+<li>删除基表</li>
+<li>补充定义主键</li>
+<li>撤销主键定义</li>
+<li>补充定义外键</li>
+<li>撤销外键定义</li>
+<li>定义和撤销别名</li>
+<li>索引的建立和撤销</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="34-sql-查询语言ql">
+  3.4 SQL 查询语言(QL)
+  <a class="heading-link" href="#34-sql-%e6%9f%a5%e8%af%a2%e8%af%ad%e8%a8%80ql">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="基本的-sql-查询语句">
+  基本的 SQL 查询语句
+  <a class="heading-link" href="#%e5%9f%ba%e6%9c%ac%e7%9a%84-sql-%e6%9f%a5%e8%af%a2%e8%af%ad%e5%8f%a5">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="基本格式">
+  基本格式
+  <a class="heading-link" href="#%e5%9f%ba%e6%9c%ac%e6%a0%bc%e5%bc%8f">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p>只有 SELECT 和 FROM 是必须的，别的子句可选</p>
+</blockquote>
+<ul>
+<li>SELECT 字句： 后接需要查询的项目</li>
+<li>FROM 子句： 指定了选择的数据表。FROM 子句也可以包含 JOIN 二层子句来为数据表的连接设置规则。</li>
+<li>WHERE 子句： 后接一个比较谓词以限制返回的行。WHERE 子句仅保留返回结果里使得比较谓词的值为 True 的行。</li>
+<li>GROUP BY 子句： 用于将若干含有相同值的行合并。 GROUP BY 通常与 SQL 聚合函数连用，或者用于清除数据重复的行。GROUP BY 子句要用在 WHERE 子句之后。</li>
+<li>HAVING 子句： 后接一个谓词来过滤从 GROUP BY 子句中获得的结果，由于其作用于 GROUP BY 子句之上，所以聚合函数也可以放到其谓词中。</li>
+<li>ORDER BY： 子句指明将哪个字段用作排序关键字，以及排序顺序(升序/降序)，如果无此子句，那么返回结果的顺序不能保证有序</li>
+</ul>
+<h4 id="执行顺序">
+  执行顺序
+  <a class="heading-link" href="#%e6%89%a7%e8%a1%8c%e9%a1%ba%e5%ba%8f">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">子句</th>
+<th>顺序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">SELECT</td>
+<td>5</td>
+</tr>
+<tr>
+<td style="text-align:center">FROM</td>
+<td>1</td>
+</tr>
+<tr>
+<td style="text-align:center">WHERE</td>
+<td>2</td>
+</tr>
+<tr>
+<td style="text-align:center">GROUP BY</td>
+<td>3</td>
+</tr>
+<tr>
+<td style="text-align:center">HAVING</td>
+<td>4</td>
+</tr>
+<tr>
+<td style="text-align:center">ORDER BY</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-的高端操作">
+  SQL 的高端操作
+  <a class="heading-link" href="#sql-%e7%9a%84%e9%ab%98%e7%ab%af%e6%93%8d%e4%bd%9c">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>
+<p>SELECT 后别名：可以用 <code>=</code>或<code>AS</code></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> S.age, age1<span style="color:#ff79c6">=</span>S.age<span style="color:#ff79c6">-</span><span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">2</span><span style="color:#ff79c6">*</span>S.age <span style="color:#ff79c6">AS</span> age2
+<span style="color:#ff79c6">FROM</span> Sailors S
+<span style="color:#ff79c6">WHERE</span> S.sname <span style="color:#ff79c6">LIKE</span> <span style="color:#f1fa8c">&#39;B_%B&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><code>LIKE</code>:用来模糊匹配字符串；<code>_</code>表示任一一个字符；<code>%</code>表示任意多个字符（包括 0 个）；上述表达为 B 开头与结尾长度至少为 3 的字符串</p>
+</li>
+<li>
+<p><code>UNION</code>:对来能够给目相同的查询结果进行并操作，一般在 WHERE 子句中用<code>OR</code>代替
+<div class="notice warning">
+  <div class="notice-title">
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Warning
+  </div>
+  <div class="notice-content"><ul>
+<li><code>UNION</code>操作必须去重，如果允许，在其后加<code>ALL</code>则不消除结果中的重复项</li>
+<li>多元<code>UNION</code>操作需要利用圆括号多次使用二元<code>UNION</code>来实现</li>
+</ul></div>
+</div>
+</p>
+</li>
+<li>
+<p><code>INTERSECT</code>:对来能够给目相同的查询结果进行取交集操作，一般在 WHERE 子句中用<code>AND</code>代替</p>
+</li>
+<li>
+<p>嵌套查询(Nested Queries):在 FROM,WHERE,HAVING 子句中可以包含 SQL 查询</p>
+<ul>
+<li>( NOT ) IN：前面有个主语,下例寻找定了 103 号船的水手姓名
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> S.sname
+<span style="color:#ff79c6">FROM</span> Sailors S
+<span style="color:#ff79c6">WHERE</span> S.sid <span style="color:#ff79c6">IN</span> (
+  <span style="color:#ff79c6">SELECT</span> R.sid
+  <span style="color:#ff79c6">FROM</span> Reserves R
+  <span style="color:#ff79c6">WHERE</span> R.bid<span style="color:#ff79c6">=</span><span style="color:#bd93f9">103</span>
+)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li><code>(NOT) EXISTS</code>:前面没显式主语，实际为 FROM 子句中表的主键,下例寻找定了 103 号船的水手姓名
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> S.sname
+<span style="color:#ff79c6">FROM</span> Sailors S
+<span style="color:#ff79c6">WHERE</span> <span style="color:#ff79c6">EXISTS</span> (
+  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span>
+  <span style="color:#ff79c6">FROM</span> Reserves R
+  <span style="color:#ff79c6">WHERE</span> R.bid<span style="color:#ff79c6">=</span><span style="color:#bd93f9">103</span> <span style="color:#ff79c6">AND</span> S.sid <span style="color:#ff79c6">=</span> R.sid
+)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li><code>ANY</code>和<code>ALL</code>:
+<ul>
+<li><code>ALL</code>满足范围中所有的则返回 true</li>
+<li><code>ANY</code>满足范围中任意一个则返回 true,下例寻找得分高于任何一个名叫 Horatio 的水手</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span>
+<span style="color:#ff79c6">FROM</span> Sailors S
+<span style="color:#ff79c6">WHERE</span> S.rating <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">ANY</span> (
+  <span style="color:#ff79c6">SELECT</span> S2.rating
+  <span style="color:#ff79c6">FROM</span> Sailors S2
+  <span style="color:#ff79c6">WHERE</span> S2.sname <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Horatio&#39;</span>
+)
+</code></pre></td></tr></table>
+</div>
+</div><div class="notice question">
+  <div class="notice-title">
+    <i class="fa fa-question" aria-hidden="true"></i>Question
+  </div>
+  <div class="notice-content"><pre><code>好像还有个 EVERY,只遇到一次，或许会做补充
+</code></pre></div>
+</div>
+
+<!-- raw HTML omitted -->
+</li>
+<li><code>EXECPT</code>:除操作好像</li>
+</ul>
+</li>
+<li>
+<p>Aggregate Operators(聚集函数)</p>
+<ul>
+<li><code>COUNT(*)</code>: 返回表的总条目数</li>
+<li><code>COUNT([DISTINCT] A</code>):返回[不重复的]A 条目的总数</li>
+<li><code>SUM([DISTINCT] A)</code>:返回[不重复的]各个 A 属性的和</li>
+<li><code>AVG([DISTINCT] A)</code>:返回[不重复的]各个 A 属性的平均值</li>
+<li><code>MAX(A)</code>:A 属性的最大值</li>
+<li><code>MIN(A)</code>:A 属性的最小值</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#6272a4">--得分为10的水手的平均
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">AVG</span>(S.age)
+<span style="color:#ff79c6">FROM</span> Sailors S
+<span style="color:#ff79c6">WHERE</span> S.rating<span style="color:#ff79c6">=</span><span style="color:#bd93f9">10</span>
+
+<span style="color:#6272a4">--找得分最高的水手名字
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> S.sname
+<span style="color:#ff79c6">FROM</span> Sailors S
+<span style="color:#ff79c6">WHERE</span> S.rating<span style="color:#ff79c6">=</span>(
+  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">MAX</span>(S2.rating)
+  <span style="color:#ff79c6">FROM</span> Sailors S2
+)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="group-by-和-order-by-子句应用">
+  <code>GROUP BY</code> 和 <code>ORDER BY</code> 子句应用
+  <a class="heading-link" href="#group-by-%e5%92%8c-order-by-%e5%ad%90%e5%8f%a5%e5%ba%94%e7%94%a8">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="group-by">
+  <code>GROUP BY</code>
+  <a class="heading-link" href="#group-by">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p><code>GROUP BY</code> 目的是让聚集函数作用于特定目标而非整个表</p>
+</blockquote>
+<ul>
+<li><code>GROUP BY</code>子句将表按列的值分组，列值相同的一组，若有多个列，则先按第一列分组，再按第二列分组</li>
+<li><code>HAVING</code>后为选择基本组的条件</li>
+</ul>
+<h4 id="order-by">
+  <code>ORDER BY</code>
+  <a class="heading-link" href="#order-by">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>对子句中指定的列进行排序，默认升序，<code>ASC</code>表示升序, <code>DESC</code>表示降序</li>
+<li>下例举出计算机系所开课程(成绩完整的 GRADE isn&rsquo;t NULL)的最高最低和平均成绩</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> SNO, <span style="color:#ff79c6">MAX</span>(GRADE), <span style="color:#ff79c6">MIN</span>(GRADE), <span style="color:#ff79c6">AVG</span>(GRADE)
+<span style="color:#ff79c6">FROM</span> SC
+<span style="color:#ff79c6">WHERE</span> CNO <span style="color:#ff79c6">LIKE</span> <span style="color:#f1fa8c">&#39;CS%&#39;</span>
+<span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> CNO
+<span style="color:#ff79c6">HAVING</span> CNO <span style="color:#ff79c6">NOT</span> <span style="color:#ff79c6">IN</span> (
+  <span style="color:#ff79c6">SELECT</span> CNO
+  <span style="color:#ff79c6">FROM</span> SC
+  <span style="color:#ff79c6">WHERE</span> GRADE <span style="color:#ff79c6">IS</span> <span style="color:#ff79c6">NULL</span>
+)
+<span style="color:#ff79c6">ORDER</span> <span style="color:#ff79c6">BY</span> CNO
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="cast-expression">
+  CAST expression
+  <a class="heading-link" href="#cast-expression">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p>就是一些强制类型转换，<code>CAST (NULL AS Varchar(20))</code>把 NULL 转字符串</p>
+</blockquote>
+<h4 id="case-expression">
+  CASE expression
+  <a class="heading-link" href="#case-expression">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p>PPT 上例子都是放在<code>SELECT</code>子句后，作用就和一般的<code>CASE</code>语句差不多，不考吧</p>
+</blockquote>
+<h3 id="子查询">
+  子查询
+  <a class="heading-link" href="#%e5%ad%90%e6%9f%a5%e8%af%a2">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>本节例题所用数据模型</p>
+<ul>
+<li><code>dept(deptno, deptname, location)</code></li>
+<li><code>emp(deptno, salary, bonus)</code></li>
+</ul>
+<h4 id="标量子查询scalar-sub-query">
+  标量子查询(Scalar sub-query)
+  <a class="heading-link" href="#%e6%a0%87%e9%87%8f%e5%ad%90%e6%9f%a5%e8%af%a2scalar-sub-query">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p>返回值只有一个单值，不是元组；can be used in the place where a value can occur</p>
+</blockquote>
+<p>寻找平均奖金高于平均薪水的部门的名字</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> d.deptname
+<span style="color:#ff79c6">FROM</span> dept <span style="color:#ff79c6">AS</span> d
+<span style="color:#ff79c6">WHERE</span> (
+  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">avg</span>(bonus)<span style="color:#6272a4">--这里返回的是个单值
+</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">FROM</span> emp
+  <span style="color:#ff79c6">WHERE</span> deptno <span style="color:#ff79c6">=</span> d.deptno)
+    <span style="color:#ff79c6">&gt;</span> (
+  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">avg</span>(salary)
+  <span style="color:#ff79c6">FROM</span> emp
+  <span style="color:#ff79c6">WHERE</span> deptno <span style="color:#ff79c6">=</span> d.deptno
+  )
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="表表达式table-expression">
+  表表达式(Table expression)
+  <a class="heading-link" href="#%e8%a1%a8%e8%a1%a8%e8%be%be%e5%bc%8ftable-expression">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p>返回的是一个临时表(视图);can be used in the place where a table can occur</p>
+</blockquote>
+<p>寻找总收入过两万的部门</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span>  deptno, total
+<span style="color:#ff79c6">FROM</span> (
+  <span style="color:#ff79c6">SELECT</span> deptno, <span style="color:#ff79c6">SUM</span>(salay) <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">SUM</span>(bonus) <span style="color:#ff79c6">AS</span> totalpay
+  <span style="color:#ff79c6">FROM</span> emp
+  <span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> deptno) <span style="color:#ff79c6">AS</span> payrool
+<span style="color:#ff79c6">WHERE</span> totalpay <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">20000</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="公用表表达式common-table-expression">
+  公用表表达式(Common table expression)
+  <a class="heading-link" href="#%e5%85%ac%e7%94%a8%e8%a1%a8%e8%a1%a8%e8%be%be%e5%bc%8fcommon-table-expression">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p>有一个表被用了很多次，则可使用<code>WITH</code>子句来定义它，是个临时的视图</p>
+</blockquote>
+<p>寻找有最高收入的部门</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">WITH</span> payroll(deptno, totalpay) <span style="color:#ff79c6">AS</span> (
+  <span style="color:#ff79c6">SELECT</span> deptno, <span style="color:#ff79c6">SUM</span>(salary) <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">SUM</span>(bonus)
+  <span style="color:#ff79c6">FROM</span> emp
+  <span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> deptno
+)
+<span style="color:#ff79c6">SELECT</span> deptno
+<span style="color:#ff79c6">FROM</span> payroll<span style="color:#6272a4">--这里使用一次
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">WHERE</span> totalpay <span style="color:#ff79c6">=</span> (
+  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">max</span>(totalpay)
+  <span style="color:#ff79c6">FROM</span> payroll<span style="color:#6272a4">--这里又使用一次
+</span><span style="color:#6272a4"></span>)
+
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="递归查询">
+  递归查询
+  <a class="heading-link" href="#%e9%80%92%e5%bd%92%e6%9f%a5%e8%af%a2">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<p>如果一个临时表在其定义中引用了自己，则发生递归;分为三步，初始查询，递归查询，终止查询</p>
+</blockquote>
+<p>寻找所有在 Hoover 管理下的薪水超过 100000 的员工</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">WITH</span> agents(name, salary) <span style="color:#ff79c6">AS</span>
+<span style="color:#6272a4">--Inital query
+</span><span style="color:#6272a4"></span>((<span style="color:#ff79c6">SELECT</span> name, salary
+<span style="color:#ff79c6">FROM</span> FedEmp
+<span style="color:#ff79c6">WHERE</span> manager<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;Hoover&#39;</span>)
+<span style="color:#ff79c6">UNION</span> <span style="color:#ff79c6">ALL</span>
+<span style="color:#6272a4">--Recursive query
+</span><span style="color:#6272a4"></span>(<span style="color:#ff79c6">SELECT</span> f.name, f.salary
+<span style="color:#ff79c6">FROM</span> agents <span style="color:#ff79c6">AS</span> a, FedEmp <span style="color:#ff79c6">AS</span> f
+<span style="color:#ff79c6">WHERE</span> f.manager <span style="color:#ff79c6">=</span> a.name))
+<span style="color:#6272a4">--Final query
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> name
+<span style="color:#ff79c6">FROM</span> agents
+<span style="color:#ff79c6">WHERE</span> salary<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">100000</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="notice info">
+  <div class="notice-title">
+    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>Info
+  </div>
+  <div class="notice-content"><p>这里应该还有外连接的 SQL 操作已经递归查询，但他妈的太复杂了,有心情写</p>
+<ul>
+<li>递归查询好像挺重要，稍后攻克</li>
+</ul></div>
+</div>
+
+<hr>
+<h2 id="35-数据操纵语言data-manipulation-language">
+  3.5 数据操纵语言(Data Manipulation Language)
+  <a class="heading-link" href="#35-%e6%95%b0%e6%8d%ae%e6%93%8d%e7%ba%b5%e8%af%ad%e8%a8%80data-manipulation-language">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>Insert a tuple into a table
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> EMPLOYEES <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;Smith&#39;</span>, <span style="color:#f1fa8c">&#39;John&#39;</span>, <span style="color:#f1fa8c">&#39;1980-06-10&#39;</span>, <span style="color:#f1fa8c">&#39;Los Angles&#39;</span>, <span style="color:#bd93f9">16</span>, <span style="color:#bd93f9">45000</span>)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>Delete tuples fulfill qualifications
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">DELETE</span> 
+<span style="color:#ff79c6">FROM</span> Person
+<span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Rasmussen&#39;</span> 
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>Update the attributes' value of tuples fulfill qualifications
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">UPDATE</span> Person
+<span style="color:#ff79c6">SET</span> Address <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Zhongshan23&#39;</span>, City <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Nanjing&#39;</span>
+<span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Wilson
+</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<hr>
+<h2 id="36-嵌入式sqlin-c">
+  3.6 嵌入式SQL(in C)
+  <a class="heading-link" href="#36-%e5%b5%8c%e5%85%a5%e5%bc%8fsqlin-c">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2> 
     </div>
 
     <footer>
@@ -664,9 +1383,10 @@
       {
         delimiters: [
           {left: '$$', right: '$$', display:true},
-          {left: '$', right: '$', display:false},
-          {left: '\\(', right: '\\)', display: false},
-          {left: '\\[', right: '\\]', display: true}
+          {left: '$', right: '$', display:ture}
+          // {left: '\(', right: '\)', display: false},
+          // {left: '\\[', right: '\\]', display: false},
+          // {left: '(', right: ')', display: false}
         ]
       }
     );"></script>
