@@ -65,7 +65,7 @@
         <link rel="icon" type="image/png" href="../../../images/favicon-32x32.png"
     sizes="32x32"> <link rel="icon" type="image/png" href="../../../images/favicon-16x16.png"
     sizes="16x16"> <link rel="apple-touch-icon" href="../../../images/apple-touch-icon.png"> <link
-    rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png"> <meta name="generator" content="Hugo 0.90.0" />
+    rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png"> <meta name="generator" content="Hugo 0.91.2" />
   </head>
 
      
@@ -139,7 +139,7 @@
           </span>
           <span class="reading-time">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            6-minute read
+            7-minute read
           </span>
         </div>
 
@@ -240,7 +240,17 @@
           </ul>
         </li>
         <li><a href="#35-数据操纵语言data-manipulation-language">3.5 数据操纵语言(Data Manipulation Language)</a></li>
-        <li><a href="#36-嵌入式sqlin-c">3.6 嵌入式SQL(in C)</a></li>
+        <li><a href="#36-嵌入式-sqlin-c">3.6 嵌入式 SQL(in C)</a>
+          <ul>
+            <li><a href="#嵌入式sql的说明部分">嵌入式SQL的说明部分</a></li>
+            <li><a href="#嵌入式sql的可执行语句">嵌入式SQL的可执行语句</a>
+              <ul>
+                <li><a href="#connect-语句"><code>CONNECT</code> 语句</a></li>
+                <li><a href="#嵌入的sql">嵌入的SQL</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -570,7 +580,7 @@
   </a>
 </h4>
 <ul>
-<li>连接($\Join$) : $R \Join_C S = (R\times S) $; C 是连接条件</li>
+<li>连接($\Join$) : $R \Join_C S = (R\times S)$; C 是连接条件</li>
 <li>除($\div$) : 除以自己有的，没的直接删
 
 
@@ -582,9 +592,9 @@
 </p></li>
 <li>外连接:
 <ul>
-<li>左外连接($*\Join$) :连接结果只保留左关系的所有元组</li>
+<li>左外连接($* \Join$) :连接结果只保留左关系的所有元组</li>
 <li>右外连接($\Join*$) :连接结果只保留右关系的所有元组</li>
-<li>全外连接($<em>\Join</em>$) : 保留左右两关系的所有元组
+<li>全外连接($* \Join *$) : 保留左右两关系的所有元组
 
 
 
@@ -676,8 +686,10 @@
   </div>
   <div class="notice-content"><p>$$\pi_{sid, sname, age}(\sigma_{age&gt;35}(S_1)$$</p>
 <ul>
-<li>TRC:$$\{t[sid,sname,age]|t\in S_1 \wedge t.age &gt; 35\}$$</li>
-<li>DRC:$$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</li>
+<li>TRC:
+$$\{t[sid,sname,age]|t\in S_1 \wedge t.age &gt; 35\}$$</li>
+<li>DRC:
+$$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</li>
 <li>TRC 中用的 t.age 而不是 t[age]；DRC 则直接用域名来做运算；另外别忘了加限制集，不然查询结果无穷大</li>
 </ul></div>
 </div>
@@ -883,8 +895,8 @@
   </a>
 </h3>
 <ul>
-<li>
-<p>SELECT 后别名：可以用 <code>=</code>或<code>AS</code></p>
+<li>SELECT 后别名：可以用 <code>=</code>或<code>AS</code></li>
+</ul>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -897,12 +909,10 @@
 <span style="color:#ff79c6">WHERE</span> S.sname <span style="color:#ff79c6">LIKE</span> <span style="color:#f1fa8c">&#39;B_%B&#39;</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>
-<p><code>LIKE</code>:用来模糊匹配字符串；<code>_</code>表示任一一个字符；<code>%</code>表示任意多个字符（包括 0 个）；上述表达为 B 开头与结尾长度至少为 3 的字符串</p>
-</li>
-<li>
-<p><code>UNION</code>:对来能够给目相同的查询结果进行并操作，一般在 WHERE 子句中用<code>OR</code>代替
+</div><ul>
+<li><code>LIKE</code>:用来模糊匹配字符串；<code>_</code>表示任一一个字符；<code>%</code>表示任意多个字符（包括 0 个）；上述表达为 B 开头与结尾长度至少为 3 的字符串</li>
+<li><code>UNION</code>:对来能够给目相同的查询结果进行并操作，一般在 WHERE 子句中用<code>OR</code>代替</li>
+</ul>
 <div class="notice warning">
   <div class="notice-title">
     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Warning
@@ -912,15 +922,15 @@
 <li>多元<code>UNION</code>操作需要利用圆括号多次使用二元<code>UNION</code>来实现</li>
 </ul></div>
 </div>
-</p>
-</li>
-<li>
-<p><code>INTERSECT</code>:对来能够给目相同的查询结果进行取交集操作，一般在 WHERE 子句中用<code>AND</code>代替</p>
-</li>
-<li>
-<p>嵌套查询(Nested Queries):在 FROM,WHERE,HAVING 子句中可以包含 SQL 查询</p>
+
 <ul>
-<li>( NOT ) IN：前面有个主语,下例寻找定了 103 号船的水手姓名
+<li><code>INTERSECT</code>:对来能够给目相同的查询结果进行取交集操作，一般在 WHERE 子句中用<code>AND</code>代替</li>
+<li>嵌套查询(Nested Queries):在 FROM,WHERE,HAVING 子句中可以包含 SQL 查询
+<ul>
+<li>( NOT ) IN：前面有个主语,下例寻找定了 103 号船的水手姓名</li>
+</ul>
+</li>
+</ul>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -941,8 +951,9 @@
 )
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li><code>(NOT) EXISTS</code>:前面没显式主语，实际为 FROM 子句中表的主键,下例寻找定了 103 号船的水手姓名
+</div><ul>
+<li><code>(NOT) EXISTS</code>:前面没显式主语，实际为 FROM 子句中表的主键,下例寻找定了 103 号船的水手姓名</li>
+</ul>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -963,11 +974,13 @@
 )
 </code></pre></td></tr></table>
 </div>
-</div></li>
+</div><ul>
 <li><code>ANY</code>和<code>ALL</code>:
 <ul>
 <li><code>ALL</code>满足范围中所有的则返回 true</li>
 <li><code>ANY</code>满足范围中任意一个则返回 true,下例寻找得分高于任何一个名叫 Horatio 的水手</li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -989,18 +1002,17 @@
 )
 </code></pre></td></tr></table>
 </div>
-</div><div class="notice question">
+</div><p><div class="notice question">
   <div class="notice-title">
     <i class="fa fa-question" aria-hidden="true"></i>Question
   </div>
-  <div class="notice-content"><pre><code>好像还有个 EVERY,只遇到一次，或许会做补充
-</code></pre></div>
+  <div class="notice-content">好像还有个 EVERY,只遇到一次，或许会做补充</div>
 </div>
 
-<!-- raw HTML omitted -->
-</li>
-<li><code>EXECPT</code>:除操作好像</li>
-</ul>
+<!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p><code>EXECPT</code>:除操作好像</p>
 </li>
 <li>
 <p>Aggregate Operators(聚集函数)</p>
@@ -1011,6 +1023,8 @@
 <li><code>AVG([DISTINCT] A)</code>:返回[不重复的]各个 A 属性的平均值</li>
 <li><code>MAX(A)</code>:A 属性的最大值</li>
 <li><code>MIN(A)</code>:A 属性的最小值</li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -1042,9 +1056,7 @@
 )
 </code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<h3 id="group-by-和-order-by-子句应用">
+</div><h3 id="group-by-和-order-by-子句应用">
   <code>GROUP BY</code> 和 <code>ORDER BY</code> 子句应用
   <a class="heading-link" href="#group-by-%e5%92%8c-order-by-%e5%ad%90%e5%8f%a5%e5%ba%94%e7%94%a8">
     <i class="fa fa-link" aria-hidden="true"></i>
@@ -1296,7 +1308,8 @@
   </a>
 </h2>
 <ul>
-<li>Insert a tuple into a table
+<li>Insert a tuple into a table</li>
+</ul>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -1305,8 +1318,9 @@
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> EMPLOYEES <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;Smith&#39;</span>, <span style="color:#f1fa8c">&#39;John&#39;</span>, <span style="color:#f1fa8c">&#39;1980-06-10&#39;</span>, <span style="color:#f1fa8c">&#39;Los Angles&#39;</span>, <span style="color:#bd93f9">16</span>, <span style="color:#bd93f9">45000</span>)
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>Delete tuples fulfill qualifications
+</div><ul>
+<li>Delete tuples fulfill qualifications</li>
+</ul>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -1314,13 +1328,14 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">DELETE</span> 
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">DELETE</span>
 <span style="color:#ff79c6">FROM</span> Person
-<span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Rasmussen&#39;</span> 
+<span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Rasmussen&#39;</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>Update the attributes' value of tuples fulfill qualifications
+</div><ul>
+<li>Update the attributes' value of tuples fulfill qualifications</li>
+</ul>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -1333,15 +1348,295 @@
 <span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Wilson
 </span></code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<hr>
-<h2 id="36-嵌入式sqlin-c">
-  3.6 嵌入式SQL(in C)
-  <a class="heading-link" href="#36-%e5%b5%8c%e5%85%a5%e5%bc%8fsqlin-c">
+</div><hr>
+<h2 id="36-嵌入式-sqlin-c">
+  3.6 嵌入式 SQL(in C)
+  <a class="heading-link" href="#36-%e5%b5%8c%e5%85%a5%e5%bc%8f-sqlin-c">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
-</h2> 
+</h2>
+<blockquote>
+<p>由于ISQL功能受限于数据库操作,缺少数据处理能力。这种能力宿主语言有呀，所以就把SQL嵌入到宿主语言中去。</p>
+</blockquote>
+<div class="notice note">
+  <div class="notice-title">
+    <i class="fa fa-sticky-note" aria-hidden="true"></i>Note
+  </div>
+  <div class="notice-content"><h4 id="嵌入式sql的要解决的四个问题">
+  嵌入式SQL的要解决的四个问题：
+  <a class="heading-link" href="#%e5%b5%8c%e5%85%a5%e5%bc%8fsql%e7%9a%84%e8%a6%81%e8%a7%a3%e5%86%b3%e7%9a%84%e5%9b%9b%e4%b8%aa%e9%97%ae%e9%a2%98">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>宿主语言编译器无法识别和接受SQL语言
+<ul>
+<li>用<code>EXEC SQL...;</code>来标识</li>
+</ul>
+</li>
+<li>宿主语言程序和DBMS之间信息数据传输
+<ul>
+<li>宿主变量，在SQL中加<code>:</code>标识</li>
+</ul>
+</li>
+<li>查询结果为元组集合，须逐个赋值给宿主语言中的变量
+<ul>
+<li>游标方案</li>
+</ul>
+</li>
+<li>两者数据类型不完全对应，须解决数据类型转换问题
+<ul>
+<li>就解决呗</li>
+</ul>
+</li>
+</ul></div>
+</div>
+
+<h3 id="嵌入式sql的说明部分">
+  嵌入式SQL的说明部分
+  <a class="heading-link" href="#%e5%b5%8c%e5%85%a5%e5%bc%8fsql%e7%9a%84%e8%af%b4%e6%98%8e%e9%83%a8%e5%88%86">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>
+<p>SQL语句以<code>EXEC SQL</code>开头，<code>;</code>结尾。</p>
+</li>
+<li>
+<p>数据的传送通过宿主变量</p>
+</li>
+<li>
+<p>宿主变量申明</p>
+<ul>
+<li>系统定义者:<code>SQLCA</code>(SQL Communication Area);其有个分量<code>SQLCODE</code>,它是一个整数，DBMS向应用程序报告SQL语句执行结果。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&lt;0</th>
+<th style="text-align:center">=0</th>
+<th style="text-align:center">&gt;0</th>
+<th style="text-align:center">100</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">错误未执行，负数值表示错误类型</td>
+<td style="text-align:center">无异常执行</td>
+<td style="text-align:center">执行但有异常，值表示异常类型</td>
+<td style="text-align:center">无值可取，可能没有符合条件的值也可能取完了</td>
+</tr>
+</tbody>
+</table>
+<p>使用时直接包含即可<code>EXEC SQL INCLUDE SQLCA</code></p>
+<ul>
+<li>一般的宿主变量声明,开头<code>EXEC SQL BEGIN DECLARE SECTION</code>, 结尾<code>EXEC SQL END DECLARE SECTION</code>;宿主变量可以与表的列名同名，SQL语句中使用宿主变量时前面要加<code>:</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">BEGIN</span> <span style="color:#ff79c6">DECLARE</span> SECTION
+  <span style="color:#8be9fd;font-style:italic">char</span> SNO[<span style="color:#bd93f9">7</span>];
+  <span style="color:#8be9fd;font-style:italic">char</span> CNO[<span style="color:#bd93f9">6</span>];
+  <span style="color:#8be9fd;font-style:italic">float</span> GRADE;
+  short GRADEI;
+<span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">END</span> <span style="color:#ff79c6">DECLARE</span> SECTION
+</code></pre></td></tr></table>
+</div>
+</div><div class="notice note">
+  <div class="notice-title">
+    <i class="fa fa-sticky-note" aria-hidden="true"></i>Note
+  </div>
+  <div class="notice-content"><ul>
+<li>指示变量:indicator,也是宿主变量</li>
+<li>宿主变量不能接受空缺符<code>NULL</code>,此时在其后跟一个指示变量，其值为负则前面的宿主变量为<code>NULL</code>,否则不为<code>NULL</code></li>
+<li>上例中<code>GRADEI</code>指示<code>GRADE</code></li>
+</ul></div>
+</div>
+
+<h3 id="嵌入式sql的可执行语句">
+  嵌入式SQL的可执行语句
+  <a class="heading-link" href="#%e5%b5%8c%e5%85%a5%e5%bc%8fsql%e7%9a%84%e5%8f%af%e6%89%a7%e8%a1%8c%e8%af%ad%e5%8f%a5">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>包括</p>
+<ul>
+<li>进入数据库系统的<code>CONNECT</code>语句</li>
+<li>嵌入的DDL,QL,DML,DCL</li>
+<li>控制事务结束的语句</li>
+</ul>
+</blockquote>
+<h4 id="connect-语句">
+  <code>CONNECT</code> 语句
+  <a class="heading-link" href="#connect-%e8%af%ad%e5%8f%a5">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CONNECT</span> :uid IDENTIFIED <span style="color:#ff79c6">BY</span> :pwd
+</code></pre></td></tr></table>
+</div>
+</div><p>uid与pwd为两宿主变量</p>
+<h4 id="嵌入的sql">
+  嵌入的SQL
+  <a class="heading-link" href="#%e5%b5%8c%e5%85%a5%e7%9a%84sql">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>DDL和DML：除了前面加<code>EXEC SQL</code>外与ISQL没有区别,如</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> SC(SNO, CNO, GRADE)
+  <span style="color:#ff79c6">VALUES</span>(:SNO, :CNO, :GRADE)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>QL
+<ul>
+<li>查询结果为一个数组，直接将查询结果用<code>INTO</code>子句对宿主变量进行赋值即可</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">SELECT</span> GRADE
+  <span style="color:#ff79c6">INTO</span> :GRADE, :GRADEI <span style="color:#6272a4">--由于查询结果只可能有一个直接赋值即可
+</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">FROM</span> SC
+  <span style="color:#ff79c6">WHERE</span> SNO <span style="color:#ff79c6">=</span> :GIVENSNO <span style="color:#ff79c6">AND</span> CNP <span style="color:#ff79c6">=</span> :GIVENCNO <span style="color:#6272a4">--{SNO, CNO}为主键
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>查询结果为超过一个数组新开辟一个区域，存放查询结果的区域及其相应的数据结果称为游标,使用分四步</p>
+</li>
+<li>
+<p>说明游标语句</p>
+</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">DECLARE</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">CURSOR</span> <span style="color:#ff79c6">FOR</span>
+  <span style="color:#ff79c6">SELECT</span> ...
+  <span style="color:#ff79c6">FROM</span> ...
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>打开游标语句</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">OPEN</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span>;
+</code></pre></td></tr></table>
+</div>
+</div><p>打开游标时，执行与之相关的QL,其结果存于游标中,一经打开即使查询语句中宿主变量值改变，游标值也不会变，除非关闭后重新打开</p>
+<ul>
+<li>取数语句</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">FETCH</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span> 
+  <span style="color:#ff79c6">INTO</span> :hostvar1, :hostvar2, ...;
+</code></pre></td></tr></table>
+</div>
+</div><p>当游标中数取完，<code>SQLCODE</code>将返回100</p>
+<ul>
+<li>关闭游标语句</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CLOSE</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span>;
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>一个完整的例子,宿主语言是c语言。</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">DECLARE</span> C1 <span style="color:#ff79c6">CURSOR</span> <span style="color:#ff79c6">FOR</span> <span style="color:#6272a4">--Step1：声明游标
+</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">SELECT</span> SNO, GRADE
+  <span style="color:#ff79c6">FROM</span> SC
+  <span style="color:#ff79c6">WHERE</span> CNO <span style="color:#ff79c6">=</span> :GIVENCNO;
+<span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">OPEN</span> C1;              <span style="color:#6272a4">--Step2：打开游标
+</span><span style="color:#6272a4"></span>while(<span style="color:#ff79c6">TRUE</span>)
+{
+  <span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">FETCH</span> C1 <span style="color:#ff79c6">INTO</span> :SNO, :GRADE, :GRADEI;<span style="color:#6272a4">--Step3：从游标中取数
+</span><span style="color:#6272a4"></span>
+  <span style="color:#ff79c6">if</span>(SQLCA.<span style="color:#ff79c6">SQLCODE</span><span style="color:#ff79c6">==</span><span style="color:#bd93f9">100</span>) <span style="color:#6272a4">--读完了
+</span><span style="color:#6272a4"></span>    break;
+  <span style="color:#ff79c6">if</span>(SQLCA.<span style="color:#ff79c6">SQLCODE</span><span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">0</span>)    <span style="color:#6272a4">--出错了
+</span><span style="color:#6272a4"></span>    break;
+    <span style="color:#6272a4">/*
+</span><span style="color:#6272a4">    ...处理游标中所取的数据
+</span><span style="color:#6272a4">    */</span>
+}
+<span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CLOSE</span> C1;             <span style="color:#6272a4">--Step4：关闭游标
+</span><span style="color:#6272a4"></span>
+</code></pre></td></tr></table>
+</div>
+</div> 
     </div>
 
     <footer>
@@ -1383,7 +1678,7 @@
       {
         delimiters: [
           {left: '$$', right: '$$', display:true},
-          {left: '$', right: '$', display:ture}
+          {left: '$', right: '$', display:false}
           // {left: '\(', right: '\)', display: false},
           // {left: '\\[', right: '\\]', display: false},
           // {left: '(', right: ')', display: false}
