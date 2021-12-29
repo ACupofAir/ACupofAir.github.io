@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Cup Air</title>
+    <link>http://acupofair.github.io/tags/software/</link>
+    <description>Recent content in software on Cup Air</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Dec 2021 14:11:58 +0800</lastBuildDate><atom:link href="http://acupofair.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>软件体系结构核心点复习</title>
+      <link>http://acupofair.github.io/posts/software_arch/sa_core/</link>
+      <pubDate>Wed, 29 Dec 2021 14:11:58 +0800</pubDate>
+      
+      <guid>http://acupofair.github.io/posts/software_arch/sa_core/</guid>
+      <description>&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;👨‍🦲尝试用一下午复习完一学期与乌龟，包包，平板，睡觉，以及一众大作业共存的软件体系结构课内容&lt;/li&gt;
+&lt;li&gt;👍 本文主要参考&lt;a href=&#34;https://github.com/LeiBuDao/SouthEastUniversity/blob/main/Software%20Architecture/%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0.md&#34;&gt;Run的笔记&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
