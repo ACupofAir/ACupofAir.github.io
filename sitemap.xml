@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://acupofair.github.io/tags/celebrity/</loc>
+    <lastmod>2022-01-01T00:29:05+08:00</lastmod>
+  </url><url>
+    <loc>http://acupofair.github.io/</loc>
+    <lastmod>2022-01-01T00:29:05+08:00</lastmod>
+  </url><url>
+    <loc>http://acupofair.github.io/posts/</loc>
+    <lastmod>2022-01-01T00:29:05+08:00</lastmod>
+  </url><url>
+    <loc>http://acupofair.github.io/tags/</loc>
+    <lastmod>2022-01-01T00:29:05+08:00</lastmod>
+  </url><url>
+    <loc>http://acupofair.github.io/posts/new_years/year2022/</loc>
+    <lastmod>2022-01-01T00:29:05+08:00</lastmod>
+  </url><url>
     <loc>http://acupofair.github.io/categories/</loc>
     <lastmod>2021-12-31T16:15:04+08:00</lastmod>
   </url><url>
     <loc>http://acupofair.github.io/tags/compile/</loc>
     <lastmod>2021-12-31T16:15:04+08:00</lastmod>
   </url><url>
-    <loc>http://acupofair.github.io/</loc>
-    <lastmod>2021-12-31T16:15:04+08:00</lastmod>
-  </url><url>
     <loc>http://acupofair.github.io/tags/note/</loc>
-    <lastmod>2021-12-31T16:15:04+08:00</lastmod>
-  </url><url>
-    <loc>http://acupofair.github.io/posts/</loc>
-    <lastmod>2021-12-31T16:15:04+08:00</lastmod>
-  </url><url>
-    <loc>http://acupofair.github.io/tags/</loc>
     <lastmod>2021-12-31T16:15:04+08:00</lastmod>
   </url><url>
     <loc>http://acupofair.github.io/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/</loc>
