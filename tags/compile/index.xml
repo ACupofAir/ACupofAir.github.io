@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>compile on Cup Air</title>
+    <link>http://acupofair.github.io/tags/compile/</link>
+    <description>Recent content in compile on Cup Air</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 31 Dec 2021 15:18:49 +0800</lastBuildDate><atom:link href="http://acupofair.github.io/tags/compile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编译原理：语言与文法</title>
+      <link>http://acupofair.github.io/posts/compile/lang_grammar/</link>
+      <pubDate>Fri, 31 Dec 2021 15:18:49 +0800</pubDate>
+      
+      <guid>http://acupofair.github.io/posts/compile/lang_grammar/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;🐉2021 年与龙书斗争的第一天与最后一天&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
