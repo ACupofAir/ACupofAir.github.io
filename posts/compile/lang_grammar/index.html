@@ -28,7 +28,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://acupofair.github.io/posts/compile/lang_grammar/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-12-31T15:18:49+08:00" />
-<meta property="article:modified_time" content="2021-12-31T16:15:04+08:00" />
+<meta property="article:modified_time" content="2022-01-03T01:47:53+08:00" />
 
 
 
@@ -142,7 +142,7 @@
             One-minute read
           </span>
           <span class="lastmod-time">
-            <i class="fa fa-edit"></i> 2021 Dec 31 16:15 CST
+            <i class="fa fa-edit"></i> 2022 Jan 3 01:47 CST
           </span>
         </div>
 
@@ -203,27 +203,142 @@
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h3>
-<ul>
-<li>符号：语言中不可再分的单位（一般小写字母,符号与数字）</li>
-<li>字母表：符号的<strong>非空有穷集合</strong>（大些字母）</li>
-<li>符号串(字符串)：某字母表上的符号的<strong>有穷序列</strong></li>
-</ul>
-<p>$$
-符号：a,b,c \\
-符号表：\Sigma = {a, b, c, +, -, 1, 2, &hellip;9}
-$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">符号</th>
+<th style="text-align:left">定义</th>
+<th style="text-align:left">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">符号</td>
+<td style="text-align:center">一般小写字母,符号与数字</td>
+<td style="text-align:left">语言中不可再分的单位</td>
+<td style="text-align:left">$a,b,c,+,-, 0,7,8$</td>
+</tr>
+<tr>
+<td style="text-align:center">字母表</td>
+<td style="text-align:center">大些字母</td>
+<td style="text-align:left">符号的非空有穷集合</td>
+<td style="text-align:left">$\Sigma = \{a, b, c, +, -, 1, 2, &hellip;9\}$</td>
+</tr>
+<tr>
+<td style="text-align:center">符号串(字符串)</td>
+<td style="text-align:center">用希腊小写字符表示</td>
+<td style="text-align:left">某字母表上的符号的<strong>有穷序列</strong></td>
+<td style="text-align:left">$abc, +3, &hellip;$</td>
+</tr>
+</tbody>
+</table>
 <h3 id="语句">
   语句
   <a class="heading-link" href="#%e8%af%ad%e5%8f%a5">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h3>
+<ul>
+<li>
+<p>语句：字母表上符合某种<strong>构成规则</strong>的符号串序列</p>
+<blockquote>
+<p>It is a pig.</p>
+</blockquote>
+</li>
+<li>
+<p>语言：某字母表上句子的集合</p>
+</li>
+<li>
+<p>符号串<strong>集合</strong>的积</p>
+<ul>
+<li>$ A=\{ \alpha_1, \alpha_2, &hellip;\} $, $B=\{ \beta_1, \beta_2, &hellip;\}$,两者笛卡尔积为$AB = \{ \alpha\beta  | \alpha \in A, \beta \in B \}$</li>
+</ul>
+</li>
+<li>
+<p>字符串<strong>集合</strong>的幂</p>
+<ul>
+<li>$A^0 = \{ \epsilon \}$</li>
+<li>$A^n = AA^{n-1}$</li>
+<li>if $|A| = m$, then $|A^0|=1, |A^1|=m, |A^n|=m^n$</li>
+</ul>
+</li>
+<li>
+<p>Kleene 闭包</p>
+<ul>
+<li>$A^* = A^0 \cup A^1 \cup A^2 \cup &hellip; $
+<blockquote>
+<p>$\{ a, b \}^* = \{ \epsilon, a, b, aa, ab, ba, bb, aaa, aab, aba, &hellip; \}$</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>正闭包</p>
+<ul>
+<li>$A^+ = A^1 \cup A^2 \cup &hellip;  = A^* - \{ \epsilon \}$
+<blockquote>
+<p>$\{ a, b \}^+ = \{ a, b, aa, ab, ba, bb, aaa, aab, aba, &hellip; \}$</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>一个语言一定是其字母表上闭包的子集</p>
+</li>
+</ul>
 <h2 id="文法">
   文法
   <a class="heading-link" href="#%e6%96%87%e6%b3%95">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
+<ul>
+<li>文法：表示语言构成规则的形式化方法</li>
+<li>产生式
+<ul>
+<li>$&lt;句子&gt; \rightarrow &lt;主语&gt;&lt;谓语&gt;&lt;宾语&gt; $</li>
+<li>$&lt;主语&gt; \rightarrow &lt;形容词&gt;&lt;名词&gt; $</li>
+<li>$&lt;谓语&gt; \rightarrow &lt;动词&gt;$</li>
+<li>$&lt;宾语&gt; \rightarrow &lt;形容词&gt;&lt;名词&gt; $</li>
+<li>$&lt;形容词&gt; \rightarrow young | pop$</li>
+<li>$&lt;名词&gt; \rightarrow men | music$</li>
+<li>$&lt;动词&gt; \rightarrow like$</li>
+</ul>
+</li>
+<li>产生式文法的组成
+<ul>
+<li>非终结符($V_N$)</li>
+<li>终结符($V_T$)</li>
+<li>开始符号（$S$)</li>
+<li>产生式</li>
+</ul>
+</li>
+<li>推导：由产生式推导出句子</li>
+<li>归约：由句子归约得出语法
+
+
+
+<p class="md__image">
+  
+  <img src="../res/2022-01-02-13-48-13.png" alt="">
+  
+</p></li>
+<li>句型：由语法树末端符（叶节点）从左到右连成串是文法的一个句型</li>
+<li>句子：仅含终结符的句型</li>
+<li>语言：由S推导所得的句子的集合</li>
+<li>短语：子树末端符号从左到右连成串相对于子树树根而言称为短语</li>
+<li>简单短语/直接短语：子树根经过一步推导得到的</li>
+<li><strong>句柄</strong>：句型中<strong>最左简单短语</strong>
+
+
+
+<p class="md__image">
+  
+  <img src="../res/2022-01-02-15-35-37.png" alt="">
+  
+</p></li>
+</ul>
 <hr>
 <h2 id="由文法产生语言">
   由文法产生语言
@@ -239,6 +354,7 @@ $$</p>
   </a>
 </h2>
 <hr>
+<p>&hellip;这太慢了，换个策略，直接看完ppt,然后写点重点总结</p>
     </div>
 
     <footer>
@@ -269,7 +385,24 @@ $$</p>
     </footer>
   </article>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+    integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
   
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+    integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false}
+          // {left: '\(', right: '\)', display: false},
+          // {left: '\\[', right: '\\]', display: false},
+          // {left: '(', right: ')', display: false}
+        ]
+      }
+    );"></script>
 </section>
 
 </div>
