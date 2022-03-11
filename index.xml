@@ -2330,14 +2330,13 @@ $$\{&amp;lt;sid,sname,age&amp;gt;|&amp;lt;sid,sname,age&amp;gt;\in S_1 \wedge ag
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;notice question&#34;&gt;
+&lt;/div&gt;&lt;div class=&#34;notice question&#34;&gt;
   &lt;div class=&#34;notice-title&#34;&gt;
     &lt;i class=&#34;fa fa-question&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;Question
   &lt;/div&gt;
   &lt;div class=&#34;notice-content&#34;&gt;好像还有个 EVERY,只遇到一次，或许会做补充&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;EXECPT&lt;/code&gt;:除操作好像&lt;/p&gt;
@@ -4030,7 +4029,6 @@ ACID准则：&lt;/p&gt;
   
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;操作优化&#34;&gt;
   操作优化
   &lt;a class=&#34;heading-link&#34; href=&#34;#%e6%93%8d%e4%bd%9c%e4%bc%98%e5%8c%96&#34;&gt;
