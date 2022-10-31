@@ -31,7 +31,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://acupofair.github.io/posts/dbms/chp1_2_3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-12-21T15:04:19+08:00" />
-<meta property="article:modified_time" content="2022-03-12T00:16:11+08:00" />
+<meta property="article:modified_time" content="2022-10-31T15:16:59+08:00" />
 
 
 
@@ -68,7 +68,7 @@
         <link rel="icon" type="image/png" href="../../../images/favicon-32x32.png"
     sizes="32x32"> <link rel="icon" type="image/png" href="../../../images/favicon-16x16.png"
     sizes="16x16"> <link rel="apple-touch-icon" href="../../../images/apple-touch-icon.png"> <link
-    rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png"> <meta name="generator" content="Hugo 0.89.4" />
+    rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png"> <meta name="generator" content="Hugo 0.105.0">
   </head>
 
      
@@ -145,7 +145,7 @@
             7-minute read
           </span>
           <span class="lastmod-time">
-            <i class="fa fa-edit"></i> 2022 Mar 12 00:16 CST
+            <i class="fa fa-edit"></i> 2022 Oct 31 15:16 CST
           </span>
         </div>
 
@@ -922,17 +922,17 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <ul>
 <li>SELECT 后别名：可以用 <code>=</code>或<code>AS</code></li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> S.age, age1<span style="color:#ff79c6">=</span>S.age<span style="color:#ff79c6">-</span><span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">2</span><span style="color:#ff79c6">*</span>S.age <span style="color:#ff79c6">AS</span> age2
-<span style="color:#ff79c6">FROM</span> Sailors S
-<span style="color:#ff79c6">WHERE</span> S.sname <span style="color:#ff79c6">LIKE</span> <span style="color:#f1fa8c">&#39;B_%B&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> S.age, age1<span style="color:#ff79c6">=</span>S.age<span style="color:#ff79c6">-</span><span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">2</span><span style="color:#ff79c6">*</span>S.age <span style="color:#ff79c6">AS</span> age2
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> Sailors S
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> S.sname <span style="color:#ff79c6">LIKE</span> <span style="color:#f1fa8c">&#39;B_%B&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><code>LIKE</code>:用来模糊匹配字符串；<code>_</code>表示任一一个字符；<code>%</code>表示任意多个字符（包括 0 个）；上述表达为 B 开头与结尾长度至少为 3 的字符串</li>
@@ -956,48 +956,48 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 </ul>
 </li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> S.sname
-<span style="color:#ff79c6">FROM</span> Sailors S
-<span style="color:#ff79c6">WHERE</span> S.sid <span style="color:#ff79c6">IN</span> (
-  <span style="color:#ff79c6">SELECT</span> R.sid
-  <span style="color:#ff79c6">FROM</span> Reserves R
-  <span style="color:#ff79c6">WHERE</span> R.bid<span style="color:#ff79c6">=</span><span style="color:#bd93f9">103</span>
-)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> S.sname
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> Sailors S
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> S.sid <span style="color:#ff79c6">IN</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> R.sid
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> Reserves R
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> R.bid<span style="color:#ff79c6">=</span><span style="color:#bd93f9">103</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><code>(NOT) EXISTS</code>:相关子查询，<code>EXISTS</code>后面不为空则</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> S.sname
-<span style="color:#ff79c6">FROM</span> Sailors S
-<span style="color:#ff79c6">WHERE</span> <span style="color:#ff79c6">EXISTS</span> (
-  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span>
-  <span style="color:#ff79c6">FROM</span> Reserves R
-  <span style="color:#ff79c6">WHERE</span> R.bid<span style="color:#ff79c6">=</span><span style="color:#bd93f9">103</span> <span style="color:#ff79c6">AND</span> S.sid <span style="color:#ff79c6">=</span> R.sid
-)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> S.sname
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> Sailors S
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> <span style="color:#ff79c6">EXISTS</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> Reserves R
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> R.bid<span style="color:#ff79c6">=</span><span style="color:#bd93f9">103</span> <span style="color:#ff79c6">AND</span> S.sid <span style="color:#ff79c6">=</span> R.sid
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><code>ANY</code>和<code>ALL</code>:
@@ -1007,25 +1007,25 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 </ul>
 </li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span>
-<span style="color:#ff79c6">FROM</span> Sailors S
-<span style="color:#ff79c6">WHERE</span> S.rating <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">ANY</span> (
-  <span style="color:#ff79c6">SELECT</span> S2.rating
-  <span style="color:#ff79c6">FROM</span> Sailors S2
-  <span style="color:#ff79c6">WHERE</span> S2.sname <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Horatio&#39;</span>
-)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> Sailors S
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> S.rating <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">ANY</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> S2.rating
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> Sailors S2
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> S2.sname <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Horatio&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="notice question">
   <div class="notice-title">
@@ -1050,35 +1050,35 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 </ul>
 </li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#6272a4">--得分为10的水手的平均
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">AVG</span>(S.age)
-<span style="color:#ff79c6">FROM</span> Sailors S
-<span style="color:#ff79c6">WHERE</span> S.rating<span style="color:#ff79c6">=</span><span style="color:#bd93f9">10</span>
-
-<span style="color:#6272a4">--找得分最高的水手名字
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> S.sname
-<span style="color:#ff79c6">FROM</span> Sailors S
-<span style="color:#ff79c6">WHERE</span> S.rating<span style="color:#ff79c6">=</span>(
-  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">MAX</span>(S2.rating)
-  <span style="color:#ff79c6">FROM</span> Sailors S2
-)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#6272a4">--得分为10的水手的平均
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">AVG</span>(S.age)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> Sailors S
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> S.rating<span style="color:#ff79c6">=</span><span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">--找得分最高的水手名字
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> S.sname
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> Sailors S
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> S.rating<span style="color:#ff79c6">=</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">MAX</span>(S2.rating)
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> Sailors S2
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="group-by-和-order-by-子句应用">
   <code>GROUP BY</code> 和 <code>ORDER BY</code> 子句应用
@@ -1109,31 +1109,31 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <li>对子句中指定的列进行排序，默认升序，<code>ASC</code>表示升序, <code>DESC</code>表示降序</li>
 <li>下例举出计算机系所开课程(成绩完整的 GRADE isn&rsquo;t NULL)的最高最低和平均成绩</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> SNO, <span style="color:#ff79c6">MAX</span>(GRADE), <span style="color:#ff79c6">MIN</span>(GRADE), <span style="color:#ff79c6">AVG</span>(GRADE)
-<span style="color:#ff79c6">FROM</span> SC
-<span style="color:#ff79c6">WHERE</span> CNO <span style="color:#ff79c6">LIKE</span> <span style="color:#f1fa8c">&#39;CS%&#39;</span>
-<span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> CNO
-<span style="color:#ff79c6">HAVING</span> CNO <span style="color:#ff79c6">NOT</span> <span style="color:#ff79c6">IN</span> (
-  <span style="color:#ff79c6">SELECT</span> CNO
-  <span style="color:#ff79c6">FROM</span> SC
-  <span style="color:#ff79c6">WHERE</span> GRADE <span style="color:#ff79c6">IS</span> <span style="color:#ff79c6">NULL</span>
-)
-<span style="color:#ff79c6">ORDER</span> <span style="color:#ff79c6">BY</span> CNO
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> SNO, <span style="color:#ff79c6">MAX</span>(GRADE), <span style="color:#ff79c6">MIN</span>(GRADE), <span style="color:#ff79c6">AVG</span>(GRADE)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> SC
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> CNO <span style="color:#ff79c6">LIKE</span> <span style="color:#f1fa8c">&#39;CS%&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> CNO
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">HAVING</span> CNO <span style="color:#ff79c6">NOT</span> <span style="color:#ff79c6">IN</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> CNO
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> SC
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> GRADE <span style="color:#ff79c6">IS</span> <span style="color:#ff79c6">NULL</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">ORDER</span> <span style="color:#ff79c6">BY</span> CNO
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="cast-expression">
   CAST expression
@@ -1174,33 +1174,33 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <p>返回值只有一个单值，不是元组；can be used in the place where a value can occur</p>
 </blockquote>
 <p>寻找平均奖金高于平均薪水的部门的名字</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> d.deptname
-<span style="color:#ff79c6">FROM</span> dept <span style="color:#ff79c6">AS</span> d
-<span style="color:#ff79c6">WHERE</span> (
-  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">avg</span>(bonus)<span style="color:#6272a4">--这里返回的是个单值
-</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">FROM</span> emp
-  <span style="color:#ff79c6">WHERE</span> deptno <span style="color:#ff79c6">=</span> d.deptno)
-    <span style="color:#ff79c6">&gt;</span> (
-  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">avg</span>(salary)
-  <span style="color:#ff79c6">FROM</span> emp
-  <span style="color:#ff79c6">WHERE</span> deptno <span style="color:#ff79c6">=</span> d.deptno
-  )
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> d.deptname
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> dept <span style="color:#ff79c6">AS</span> d
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">avg</span>(bonus)<span style="color:#6272a4">--这里返回的是个单值
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">FROM</span> emp
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> deptno <span style="color:#ff79c6">=</span> d.deptno)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&gt;</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">avg</span>(salary)
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> emp
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> deptno <span style="color:#ff79c6">=</span> d.deptno
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="表表达式table-expression">
   表表达式(Table expression)
@@ -1212,23 +1212,23 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <p>返回的是一个临时表(视图);can be used in the place where a table can occur</p>
 </blockquote>
 <p>寻找总收入过两万的部门</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span>  deptno, totalpay
-<span style="color:#ff79c6">FROM</span> (
-  <span style="color:#ff79c6">SELECT</span> deptno, <span style="color:#ff79c6">SUM</span>(salay) <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">SUM</span>(bonus) <span style="color:#ff79c6">AS</span> totalpay
-  <span style="color:#ff79c6">FROM</span> emp
-  <span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> deptno) <span style="color:#ff79c6">AS</span> payrool
-<span style="color:#ff79c6">WHERE</span> totalpay <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">20000</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span>  deptno, totalpay
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> deptno, <span style="color:#ff79c6">SUM</span>(salay) <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">SUM</span>(bonus) <span style="color:#ff79c6">AS</span> totalpay
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> emp
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> deptno) <span style="color:#ff79c6">AS</span> payrool
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> totalpay <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">20000</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="公用表表达式common-table-expression">
   公用表表达式(Common table expression)
@@ -1240,35 +1240,33 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <p>有一个表被用了很多次，则可使用<code>WITH</code>子句来定义它，是个临时的视图</p>
 </blockquote>
 <p>寻找有最高收入的部门</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">WITH</span> payroll(deptno, totalpay) <span style="color:#ff79c6">AS</span> (
-  <span style="color:#ff79c6">SELECT</span> deptno, <span style="color:#ff79c6">SUM</span>(salary) <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">SUM</span>(bonus)
-  <span style="color:#ff79c6">FROM</span> emp
-  <span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> deptno
-)
-<span style="color:#ff79c6">SELECT</span> deptno
-<span style="color:#ff79c6">FROM</span> payroll<span style="color:#6272a4">--这里使用一次
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">WHERE</span> totalpay <span style="color:#ff79c6">=</span> (
-  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">max</span>(totalpay)
-  <span style="color:#ff79c6">FROM</span> payroll<span style="color:#6272a4">--这里又使用一次
-</span><span style="color:#6272a4"></span>)
-
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">WITH</span> payroll(deptno, totalpay) <span style="color:#ff79c6">AS</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> deptno, <span style="color:#ff79c6">SUM</span>(salary) <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">SUM</span>(bonus)
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> emp
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> deptno
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> deptno
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> payroll<span style="color:#6272a4">--这里使用一次
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">WHERE</span> totalpay <span style="color:#ff79c6">=</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">max</span>(totalpay)
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> payroll<span style="color:#6272a4">--这里又使用一次
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="递归查询">
   递归查询
@@ -1280,39 +1278,39 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <p>如果一个临时表在其定义中引用了自己，则发生递归;分为三步，初始查询，递归查询，终止查询</p>
 </blockquote>
 <p>寻找所有在 Hoover 管理下的薪水超过 100000 的员工</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">WITH</span> agents(name, salary) <span style="color:#ff79c6">AS</span>
-<span style="color:#6272a4">--Inital query
-</span><span style="color:#6272a4"></span>((<span style="color:#ff79c6">SELECT</span> name, salary
-<span style="color:#ff79c6">FROM</span> FedEmp
-<span style="color:#ff79c6">WHERE</span> manager<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;Hoover&#39;</span>)
-<span style="color:#ff79c6">UNION</span> <span style="color:#ff79c6">ALL</span>
-<span style="color:#6272a4">--Recursive query
-</span><span style="color:#6272a4"></span>(<span style="color:#ff79c6">SELECT</span> f.name, f.salary
-<span style="color:#ff79c6">FROM</span> agents <span style="color:#ff79c6">AS</span> a, FedEmp <span style="color:#ff79c6">AS</span> f
-<span style="color:#ff79c6">WHERE</span> f.manager <span style="color:#ff79c6">=</span> a.name))
-<span style="color:#6272a4">--Final query
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> name
-<span style="color:#ff79c6">FROM</span> agents
-<span style="color:#ff79c6">WHERE</span> salary<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">100000</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">WITH</span> agents(name, salary) <span style="color:#ff79c6">AS</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">--Inital query
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>((<span style="color:#ff79c6">SELECT</span> name, salary
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> FedEmp
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> manager<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;Hoover&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">UNION</span> <span style="color:#ff79c6">ALL</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">--Recursive query
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>(<span style="color:#ff79c6">SELECT</span> f.name, f.salary
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> agents <span style="color:#ff79c6">AS</span> a, FedEmp <span style="color:#ff79c6">AS</span> f
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> f.manager <span style="color:#ff79c6">=</span> a.name))
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">--Final query
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> name
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> agents
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> salary<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">100000</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="notice info">
   <div class="notice-title">
@@ -1333,43 +1331,43 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <ul>
 <li>Insert a tuple into a table</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> EMPLOYEES <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;Smith&#39;</span>, <span style="color:#f1fa8c">&#39;John&#39;</span>, <span style="color:#f1fa8c">&#39;1980-06-10&#39;</span>, <span style="color:#f1fa8c">&#39;Los Angles&#39;</span>, <span style="color:#bd93f9">16</span>, <span style="color:#bd93f9">45000</span>)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> EMPLOYEES <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;Smith&#39;</span>, <span style="color:#f1fa8c">&#39;John&#39;</span>, <span style="color:#f1fa8c">&#39;1980-06-10&#39;</span>, <span style="color:#f1fa8c">&#39;Los Angles&#39;</span>, <span style="color:#bd93f9">16</span>, <span style="color:#bd93f9">45000</span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Delete tuples fulfill qualifications</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">DELETE</span>
-<span style="color:#ff79c6">FROM</span> Person
-<span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Rasmussen&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">DELETE</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> Person
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Rasmussen&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>Update the attributes' value of tuples fulfill qualifications</li>
+<li>Update the attributes&rsquo; value of tuples fulfill qualifications</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">UPDATE</span> Person
-<span style="color:#ff79c6">SET</span> Address <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Zhongshan23&#39;</span>, City <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Nanjing&#39;</span>
-<span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Wilson
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">UPDATE</span> Person
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SET</span> Address <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Zhongshan23&#39;</span>, City <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Nanjing&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> LastName <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Wilson
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="36-嵌入式-sqlin-c">
   3.6 嵌入式 SQL(in C)
@@ -1456,23 +1454,23 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 </ul>
 </li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">BEGIN</span> <span style="color:#ff79c6">DECLARE</span> SECTION
-  <span style="color:#8be9fd;font-style:italic">char</span> SNO[<span style="color:#bd93f9">7</span>];
-  <span style="color:#8be9fd;font-style:italic">char</span> CNO[<span style="color:#bd93f9">6</span>];
-  <span style="color:#8be9fd;font-style:italic">float</span> GRADE;
-  short GRADEI;
-<span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">END</span> <span style="color:#ff79c6">DECLARE</span> SECTION
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">BEGIN</span> <span style="color:#ff79c6">DECLARE</span> SECTION
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">char</span> SNO[<span style="color:#bd93f9">7</span>];
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">char</span> CNO[<span style="color:#bd93f9">6</span>];
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">float</span> GRADE;
+</span></span><span style="display:flex;"><span>  short GRADEI;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">END</span> <span style="color:#ff79c6">DECLARE</span> SECTION
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="notice note">
   <div class="notice-title">
@@ -1505,13 +1503,13 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h4>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CONNECT</span> :uid IDENTIFIED <span style="color:#ff79c6">BY</span> :pwd
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CONNECT</span> :uid IDENTIFIED <span style="color:#ff79c6">BY</span> :pwd
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>uid与pwd为两宿主变量</p>
 <h4 id="嵌入的sql">
@@ -1523,15 +1521,15 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <ul>
 <li>DDL和DML：除了前面加<code>EXEC SQL</code>外与ISQL没有区别,如</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> SC(SNO, CNO, GRADE)
-  <span style="color:#ff79c6">VALUES</span>(:SNO, :CNO, :GRADE)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> SC(SNO, CNO, GRADE)
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">VALUES</span>(:SNO, :CNO, :GRADE)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>QL
@@ -1540,19 +1538,19 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 </ul>
 </li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">SELECT</span> GRADE
-  <span style="color:#ff79c6">INTO</span> :GRADE, :GRADEI <span style="color:#6272a4">--由于查询结果只可能有一个直接赋值即可
-</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">FROM</span> SC
-  <span style="color:#ff79c6">WHERE</span> SNO <span style="color:#ff79c6">=</span> :GIVENSNO <span style="color:#ff79c6">AND</span> CNP <span style="color:#ff79c6">=</span> :GIVENCNO <span style="color:#6272a4">--{SNO, CNO}为主键
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">SELECT</span> GRADE
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">INTO</span> :GRADE, :GRADEI <span style="color:#6272a4">--由于查询结果只可能有一个直接赋值即可
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">FROM</span> SC
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> SNO <span style="color:#ff79c6">=</span> :GIVENSNO <span style="color:#ff79c6">AND</span> CNP <span style="color:#ff79c6">=</span> :GIVENCNO <span style="color:#6272a4">--{SNO, CNO}为主键
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -1562,111 +1560,109 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 <p>说明游标语句</p>
 </li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">DECLARE</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">CURSOR</span> <span style="color:#ff79c6">FOR</span>
-  <span style="color:#ff79c6">SELECT</span> ...
-  <span style="color:#ff79c6">FROM</span> ...
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">DECLARE</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">CURSOR</span> <span style="color:#ff79c6">FOR</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> ...
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> ...
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>打开游标语句</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">OPEN</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span>;
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">OPEN</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>打开游标时，执行与之相关的QL,其结果存于游标中,一经打开即使查询语句中宿主变量值改变，游标值也不会变，除非关闭后重新打开</p>
 <ul>
 <li>取数语句</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">FETCH</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span> 
-  <span style="color:#ff79c6">INTO</span> :hostvar1, :hostvar2, ...;
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">FETCH</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">INTO</span> :hostvar1, :hostvar2, ...;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>当游标中数取完，<code>SQLCODE</code>将返回100</p>
 <ul>
 <li>关闭游标语句</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CLOSE</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span>;
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CLOSE</span> <span style="color:#ff79c6">&lt;</span><span style="color:#ff79c6">cursor</span> name<span style="color:#ff79c6">&gt;</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>一个完整的例子,宿主语言是c语言,为了打印一张gpa3.5以上同学的名单。</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">BEGIN</span> <span style="color:#ff79c6">DECLARE</span> SECTION;
-<span style="color:#8be9fd;font-style:italic">char</span> sname[<span style="color:#bd93f9">20</span>];
-<span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">END</span> <span style="color:#ff79c6">DECLARE</span> SECTION;
-
-<span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">DECLARE</span> student<span style="color:#ff79c6">-</span><span style="color:#ff79c6">cursor</span> <span style="color:#ff79c6">CURSOR</span> <span style="color:#ff79c6">FOR</span> <span style="color:#6272a4">--Step1：声明游标
-</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">SELECT</span> S.sname
-  <span style="color:#ff79c6">FROM</span> student S
-  <span style="color:#ff79c6">WHERE</span> S.gpa<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">3</span>.<span style="color:#bd93f9">5</span>
-<span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">OPEN</span> student<span style="color:#ff79c6">-</span><span style="color:#ff79c6">cursor</span>;              <span style="color:#6272a4">--Step2：打开游标
-</span><span style="color:#6272a4"></span>while(<span style="color:#ff79c6">TRUE</span>)
-{
-  <span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">FETCH</span> student<span style="color:#ff79c6">-</span><span style="color:#ff79c6">cursor</span> <span style="color:#ff79c6">INTO</span> :sname;
-
-  <span style="color:#ff79c6">if</span>(SQLCA.<span style="color:#ff79c6">SQLCODE</span><span style="color:#ff79c6">==</span><span style="color:#bd93f9">100</span>) <span style="color:#6272a4">--读完了
-</span><span style="color:#6272a4"></span>    break;
-  <span style="color:#ff79c6">if</span>(SQLCA.<span style="color:#ff79c6">SQLCODE</span><span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">0</span>)    <span style="color:#6272a4">--出错了
-</span><span style="color:#6272a4"></span>    break;
-  <span style="color:#6272a4">/*
-</span><span style="color:#6272a4">  ...处理游标中所取的数据
-</span><span style="color:#6272a4">  */</span>
-  printf(<span style="color:#f1fa8c">&#34;%s\n&#34;</span>, sname);
-};
-<span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CLOSE</span> C1;             <span style="color:#6272a4">--Step4：关闭游标
-</span><span style="color:#6272a4"></span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">BEGIN</span> <span style="color:#ff79c6">DECLARE</span> SECTION;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">char</span> sname[<span style="color:#bd93f9">20</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">END</span> <span style="color:#ff79c6">DECLARE</span> SECTION;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">DECLARE</span> student<span style="color:#ff79c6">-</span><span style="color:#ff79c6">cursor</span> <span style="color:#ff79c6">CURSOR</span> <span style="color:#ff79c6">FOR</span> <span style="color:#6272a4">--Step1：声明游标
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">SELECT</span> S.sname
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> student S
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> S.gpa<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">3</span>.<span style="color:#bd93f9">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">OPEN</span> student<span style="color:#ff79c6">-</span><span style="color:#ff79c6">cursor</span>;              <span style="color:#6272a4">--Step2：打开游标
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>while(<span style="color:#ff79c6">TRUE</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">FETCH</span> student<span style="color:#ff79c6">-</span><span style="color:#ff79c6">cursor</span> <span style="color:#ff79c6">INTO</span> :sname;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span>(SQLCA.<span style="color:#ff79c6">SQLCODE</span><span style="color:#ff79c6">==</span><span style="color:#bd93f9">100</span>) <span style="color:#6272a4">--读完了
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    break;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span>(SQLCA.<span style="color:#ff79c6">SQLCODE</span><span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">0</span>)    <span style="color:#6272a4">--出错了
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    break;
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  ...处理游标中所取的数据
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  */</span>
+</span></span><span style="display:flex;"><span>  printf(<span style="color:#f1fa8c">&#34;%s\n&#34;</span>, sname);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">EXEC</span> <span style="color:#ff79c6">SQL</span> <span style="color:#ff79c6">CLOSE</span> C1;             <span style="color:#6272a4">--Step4：关闭游标
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -1729,7 +1725,7 @@ $$\{&lt;sid,sname,age&gt;|&lt;sid,sname,age&gt;\in S_1 \wedge age &gt; 35\}$$</l
 
       
     <script
-      src="../../../js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"
+      src="../../../js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js"
       intergrity=""
     ></script>
     <script src="../../../js/add-copy.js"></script>

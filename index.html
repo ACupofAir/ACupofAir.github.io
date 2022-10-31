@@ -59,7 +59,7 @@
     sizes="16x16"> <link rel="apple-touch-icon" href="./images/apple-touch-icon.png"> <link
     rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png"> 
     <link rel="alternate" type="application/rss+xml" href="./index.xml" title="Cup Air" />
-     <meta name="generator" content="Hugo 0.89.4" />
+     <meta name="generator" content="Hugo 0.105.0">
   </head>
 
      
@@ -115,54 +115,104 @@
       <div class="content">
   <section class="container centered">
   <div class="about">
-    
+     
+    <div class="avatar"><img src="./images/white_leaf.PNG" alt="avatar" /></div>
       
-        <div class="avatar"><img src="./images/white_leaf.PNG" alt="avatar"></div>
-      
-    
-    
     <h1>Cup Air</h1>
     
     <h2>I&#39;ll Be a Splendid Passer-by</h2>
-    
-    
+     
     <ul>
-      
+       
+      <li>
+        <a
+          href="https://github.com/ACupofAir/"
+          aria-label="Github"
+          
+          
+          
+        >
+          <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+        </a>
+      </li>
         
-          <li>
-            <a href="https://github.com/ACupofAir/" aria-label="Github"   >
-              <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-            </a>
-          </li>
+      <li>
+        <a
+          href="https://twitter.com/AirCupT/"
+          aria-label="Twitter"
+          
+          
+          
+        >
+          <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+        </a>
+      </li>
         
-      
+      <li>
+        <a
+          href="https://medium.com/@thoughts.times"
+          aria-label="Medium"
+          
+          
+          
+        >
+          <i class="fa fa-medium fa-2x" aria-hidden="true"></i>
+        </a>
+      </li>
         
-          <li>
-            <a href="https://twitter.com/AirCupT/" aria-label="Twitter"   >
-              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="https://medium.com/@thoughts.times" aria-label="Medium"   >
-              <i class="fa fa-medium fa-2x" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="https://acupofair.github.io/index.xml" aria-label="RSS" rel="alternate"  type="application/rss&#43;xml">
-              <i class="fa fa-rss fa-2x" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
+      <li>
+        <a
+          href="https://acupofair.github.io/index.xml"
+          aria-label="RSS"
+          rel="alternate"
+          
+          
+          type="application/rss&#43;xml"
+          
+        >
+          <i class="fa fa-rss fa-2x" aria-hidden="true"></i>
+        </a>
+      </li>
+       
     </ul>
     
   </div>
+
+  
+  <div
+    onclick='location.href=("posts")'
+    style="
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      width: 20vw;
+      text-align: center;
+    "
+  >
+    
+    <img src="../../images/double_down.png" />
+  </div>
+  <script>
+    function goBlog() {
+      console.log('----------------------Debug-------------------------');
+      console.log("fuck");
+      location.href = "posts";
+    }
+    function throttle(fn, delay) {
+      var previous = 0;
+      
+      return function () {
+        var _this = this;
+        var args = arguments;
+        var now = new Date();
+        if (now - previous > delay) {
+          fn.apply(_this, args);
+          previous = now;
+        }
+      };
+    }
+    document.addEventListener("mousewheel", throttle(goBlog, 1000));
+  </script>
 </section>
 
 </div>
@@ -175,7 +225,7 @@
 
       
     <script
-      src="./js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"
+      src="./js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js"
       intergrity=""
     ></script>
     <script src="./js/add-copy.js"></script>
