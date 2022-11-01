@@ -193,25 +193,65 @@
     <img src="../../images/double_down.png" />
   </div>
   <script>
-    function goBlog() {
-      console.log('----------------------Debug-------------------------');
-      console.log("fuck");
-      location.href = "posts";
-    }
-    function throttle(fn, delay) {
-      var previous = 0;
+    
+    let deltaY = 0;
+    let wheelPreTime = "";
+    let wheelNowTime = "";
+    let deltaTime = 0;
+    document.addEventListener("mousewheel", (e) => {
+      wheelNowTime = new Date().getTime();
+      console.log("now", wheelNowTime);
+      if (wheelNowTime && wheelPreTime) {
+        deltaTime = wheelNowTime - wheelPreTime;
+        console.log("delta time:", deltaTime);
+      }
+      console.log("deltaY", deltaY);
       
-      return function () {
-        var _this = this;
-        var args = arguments;
-        var now = new Date();
-        if (now - previous > delay) {
-          fn.apply(_this, args);
-          previous = now;
+      if (deltaTime > 500) {
+        deltaTime = 0;
+        deltaY = 0;
+        wheelNowTime = "";
+        wheelPreTime = "";
+      } else {
+        if (deltaY > 500) {
+          location.href = "posts";
+        } else {
+          deltaY += e.deltaY;
+          wheelPreTime = wheelNowTime;
+          console.log("pre", wheelPreTime);
         }
-      };
-    }
-    document.addEventListener("mousewheel", throttle(goBlog, 1000));
+      }
+    });
+
+    
+    let box = document.querySelector("body"); 
+    let startTime = ""; 
+    let startDistanceY = ""; 
+    let endTime = ""; 
+    let endDistanceY = ""; 
+    let moveTime = ""; 
+    let moveDistanceY = ""; 
+    box.addEventListener("touchstart", (e) => {
+      startTime = new Date().getTime();
+      startDistanceX = e.touches[0].screenX;
+      startDistanceY = e.touches[0].screenY;
+    });
+    box.addEventListener("touchend", (e) => {
+      endTime = new Date().getTime();
+      endDistanceX = e.changedTouches[0].screenX;
+      endDistanceY = e.changedTouches[0].screenY;
+      moveTime = endTime - startTime;
+      moveDistanceX = startDistanceX - endDistanceX;
+      moveDistanceY = startDistanceY - endDistanceY;
+      console.log(moveDistanceX, moveDistanceY);
+      
+      
+      if (moveDistanceY > 80 && moveTime < 500) {
+        location.href = "posts";
+      } else {
+        console.log("nothing");
+      }
+    });
   </script>
 </section>
 
