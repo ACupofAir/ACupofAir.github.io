@@ -1,0 +1,153 @@
+<section class="container centered">
+  <div class="about">
+    {{ if and (isset .Site.Params "avatarurl") (not (isset .Site.Params
+    "gravatar")) }} {{ with .Site.Params.avatarURL }}
+    <div class="avatar"><img src="{{ . | relURL }}" alt="avatar" /></div>
+    {{ end }} {{ end }} {{ with .Site.Params.gravatar }}
+    <div class="avatar">
+      <img
+        src="https://www.gravatar.com/avatar/{{md5 .}}?s=240&d=mp"
+        alt="gravatar"
+      />
+    </div>
+    {{ end }}
+    <h1>{{ .Site.Params.author }}</h1>
+    {{ if reflect.IsSlice .Site.Params.info }}
+    <h2>{{ range .Site.Params.info }}{{.}}<br />{{ end}}</h2>
+    {{ else }}
+    <h2>{{ .Site.Params.info }}</h2>
+    {{ end }} {{ with .Site.Params.social }}
+    <ul>
+      {{ range sort . "weight" }} {{ if .icon }}
+      <li>
+        <a
+          href="{{ .url | safeURL }}"
+          aria-label="{{ .name }}"
+          {{
+          if
+          .rel
+          }}rel="{{ .rel }}"
+          {{
+          end
+          }}
+          {{
+          if
+          .target
+          }}target="{{ .target }}"
+          {{
+          end
+          }}
+          {{
+          if
+          .type
+          }}type="{{ .type }}"
+          {{
+          end
+          }}
+        >
+          <i class="{{ .icon }}" aria-hidden="true"></i>
+        </a>
+      </li>
+      {{ else }}
+      <li>
+        <a
+          href="{{ .url | safeURL }}"
+          aria-label="{{ .name }}"
+          {{
+          if
+          .rel
+          }}rel="{{ .rel }}"
+          {{
+          end
+          }}
+          {{
+          if
+          .target
+          }}target="{{ .target }}"
+          {{
+          end
+          }}
+          >{{ .name }}</a
+        >
+      </li>
+      {{ end }} {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+
+  <!-- Add a scroll down to jump in to blog list page -->
+  <div
+    onclick='location.href=("posts")'
+    style="
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      width: 20vw;
+      text-align: center;
+    "
+  >
+    <!-- <img src="../../images/down_arrow.png" width="20%"> -->
+    <img src="../../images/double_down.png" />
+  </div>
+  <script>
+    //===================鼠标滚轮距离监听，大于600切换页面===========================
+    let deltaY = 0;
+    let wheelPreTime = "";
+    let wheelNowTime = "";
+    let deltaTime = 0;
+    document.addEventListener("mousewheel", (e) => {
+      wheelNowTime = new Date().getTime();
+      console.log("now", wheelNowTime);
+      if (wheelNowTime && wheelPreTime) {
+        deltaTime = wheelNowTime - wheelPreTime;
+        console.log("delta time:", deltaTime);
+      }
+      console.log("deltaY", deltaY);
+      // 超过500ms没动滚轮把deltaY, deltaTime清零
+      if (deltaTime > 500) {
+        deltaTime = 0;
+        deltaY = 0;
+        wheelNowTime = "";
+        wheelPreTime = "";
+      } else {
+        if (deltaY > 500) {
+          location.href = "posts";
+        } else {
+          deltaY += e.deltaY;
+          wheelPreTime = wheelNowTime;
+          console.log("pre", wheelPreTime);
+        }
+      }
+    });
+
+    //=================利用触屏滑动距离和时间来触发跳转界面===========================
+    let box = document.querySelector("body"); // 监听对象
+    let startTime = ""; // 触摸开始时间
+    let startDistanceY = ""; // 触摸开始Y轴位置
+    let endTime = ""; // 触摸结束时间
+    let endDistanceY = ""; // 触摸结束Y轴位置
+    let moveTime = ""; // 触摸时间
+    let moveDistanceY = ""; // 触摸移动Y轴距离
+    box.addEventListener("touchstart", (e) => {
+      startTime = new Date().getTime();
+      startDistanceX = e.touches[0].screenX;
+      startDistanceY = e.touches[0].screenY;
+    });
+    box.addEventListener("touchend", (e) => {
+      endTime = new Date().getTime();
+      endDistanceX = e.changedTouches[0].screenX;
+      endDistanceY = e.changedTouches[0].screenY;
+      moveTime = endTime - startTime;
+      moveDistanceX = startDistanceX - endDistanceX;
+      moveDistanceY = startDistanceY - endDistanceY;
+      console.log(moveDistanceX, moveDistanceY);
+      // 上滑则跳转，下滑不动
+      // 判断滑动距离超过40 且 时间小于500毫秒
+      if (moveDistanceY > 80 && moveTime < 500) {
+        location.href = "posts";
+      } else {
+        console.log("nothing");
+      }
+    });
+  </script>
+</section>

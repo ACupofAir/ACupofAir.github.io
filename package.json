@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "gitalk": "^1.7.2"
+  },
+  "scripts": {
+    "serve": "hugo server",
+    "build": "hugo"
+  }
+}

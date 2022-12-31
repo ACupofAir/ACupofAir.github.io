@@ -1,0 +1,10 @@
+<!-- For paste the image use "res/xxx.png", we have to add "../" before the url, so I did the if-else to identify the res/xxx.png and http:ip just add ![](http:id "title"), it will hook the .Title, and identify it to http-url -->
+
+
+<p class="md__image">
+  {{ if .Title }}
+  <img src="{{ .Destination  }}" alt="{{ .Text }}">
+  {{ else }}
+  <img src="../{{ .Destination }}" alt="{{ .Text }}">
+  {{ end }}
+</p>

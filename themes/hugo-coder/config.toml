@@ -1,0 +1,6 @@
+baseURL = "http://acupofair.github.io"
+
+
+[module]
+[module.hugoVersion]
+min = "0.77.0"
