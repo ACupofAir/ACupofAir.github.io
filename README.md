@@ -1,7 +1,7 @@
 # ACupofAir's Blog Source
 ## :gear: Setup
 
-- `git clone --recursive -j8 git@github.com:ACupofAir/blog-source.git`
+- `git clone git@github.com:ACupofAir/blog-source.git`
 
 ## :toolbox: Usage
 ### New Post
@@ -9,8 +9,5 @@
 * `hugo new file_name.md` will touch file_name.md in posts/file_name.md
 ### Run Preview Local
 * `hugo serve`
-
-### Generate Compiledd Html Files
-* `hugo` command will generate html files in public folder
 ### Deploy to Website
-* Just push the repo to github, I will generate CI system
+* Just push the repo to github, I have generated CI system which can auto create public htmls on github.
