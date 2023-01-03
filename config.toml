@@ -51,7 +51,6 @@ since = 2019
 # Git Commit in Footer, uncomment the line below to enable it.
 
 enableGitInfo = true
-enableGitalk = true
 
 rtl = false
 # Specify light/dark colorscheme     
@@ -102,19 +101,6 @@ category = "categories"
 series = "series"
 tag = "tags"
 
-[params.gitalk]
-admin = "ACupofAir" # Required. Github repository owner and collaborators. (Users who having write access to this repository)
-clientID = "86b4d4ae4b906754b70d" # Your client ID
-clientSecret = "3aed59c23bb112d689173dd8bb449dddcf33571d" # Your client secret
-owner = "ACupofAir" # Your GitHub ID
-repo = "acupofair.github.io" # The repo to store comments
-# id= "location.pathname" # The unique id of the page.
-
-createIssueManually = false # If it is 'false', it is auto to make a Github issue when the administrators login.
-distractionFreeMode = true # Enable hot key (cmd|ctrl + enter) submit comment.
-labels = "gitalk" # Github issue labels. If you used to use Gitment, you can change it
-pagerDirection = "last" # Comment sorting direction, available values are 'last' and 'first'.
-perPage = 15 # Pagination size, with maximum 100.
 [[params.social]]
 icon = "fa fa-github fa-2x"
 name = "Github"

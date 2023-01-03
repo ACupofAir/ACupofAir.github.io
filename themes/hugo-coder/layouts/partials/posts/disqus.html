@@ -1,3 +1,2 @@
 {{- if and (not (eq (.Site.DisqusShortname | default "") "")) (eq (.Params.disableComments | default false) false) -}}
-  <!-- {{ partial "gitalk.html" . }} -->
 {{- end -}}
