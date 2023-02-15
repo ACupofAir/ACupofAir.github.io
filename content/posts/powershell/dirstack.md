@@ -26,7 +26,7 @@ cover: "cover.png"
     ```powershell
     function Print-Hello($name)
     {
-    echo "hello, $name"
+      echo "hello, $name"
     }
     ```
 
@@ -54,9 +54,10 @@ cover: "cover.png"
 - 在模块目录下创建模块清单文件,文件名以`*.psd1`结尾
   - `New-ModuleManifest -Path directory-stack.psd1 -ModuleVersion "1.0" -Author "$your_name"`
 - 配置模块清单,详细的配置请参考[:link:微软官方文档](https://learn.microsoft.com/zh-cn/powershell/scripting/developer/module/how-to-write-a-powershell-module-manifest?view=powershell-7.3#sample-module-manifest)
-  ![](res/2023-02-15-02-32-28.png)
+  ![](res/2023-02-15-16-54-51.png)
   - `Author`: 必要的，作者名字
   - `Description`: 这个也是必要的，描述一些模块
+  - `RootModule`: 必要的，为你的模块入口文件，本例中即为`directory-stack.psm1`
   - `FunctionsToExport`：此处为系统导入模块后，可以调用模块中哪些函数
     ![](res/2023-02-15-02-33-40.png)
 
@@ -71,7 +72,6 @@ cover: "cover.png"
 ### 发布模块
 
 - `Publish-Module -Path $module_path -NuGetApiKey $your_api -Verbose`
-- 一般会报错，需要安装dotnet,一个.net的sdk,[:link:官方地址](https://dotnet.microsoft.com/en-us/download/dotnet?cid=getdotnetcorecli), 然后就成功了
-- 发布成功后，仓库中马上就可以搜到，用户也可以`Install-Module -Name directory-stack`来直接安装，会安装到powershell默认的module目录下
-![](res/2023-02-15-02-44-45.png)
-
+- 一般会报错，需要安装 dotnet,一个.net 的 sdk,[:link:官方地址](https://dotnet.microsoft.com/en-us/download/dotnet?cid=getdotnetcorecli), 然后就成功了
+- 发布成功后，仓库中马上就可以搜到，用户也可以`Install-Module -Name directory-stack`来直接安装，会安装到 powershell 默认的 module 目录下
+  ![](res/2023-02-15-02-44-45.png)
