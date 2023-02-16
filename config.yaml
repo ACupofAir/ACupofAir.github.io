@@ -1,0 +1,211 @@
+theme: hugo-theme-stack
+languageCode: en-us
+paginate: 7
+title: A Cup of Air
+
+# GA Tracking ID
+googleAnalytics:
+
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: en
+permalinks:
+#   post: /p/:slug/
+#   page: /:slug/
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.87.0"
+
+params:
+  mainSections:
+    - post
+  featuredImageField: image
+  rssFullContent: true
+  favicon: /images/favicon.svg
+
+  footer:
+    since:
+    customText:
+
+  dateFormat:
+    published: Jan 02, 2006
+    lastUpdated: Jan 02, 2006 15:04 MST
+
+  sidebar:
+    compact: false
+    emoji: 
+    subtitle: Blog with technology and life 
+    avatar:
+      enabled: true
+      local: false
+      src: /images/white_leaf.png
+
+  article:
+    math: true
+    toc: true
+    readingTime: true
+    license:
+      enabled: false
+      default: Licensed under CC BY-NC-SA 4.0
+
+  comments:
+    enabled: true
+    provider: giscus
+
+    disqusjs:
+      shortname:
+      apiUrl:
+      apiKey:
+      admin:
+      adminLabel:
+
+    utterances:
+      repo:
+      issueTerm: pathname
+      label:
+
+    remark42:
+      host:
+      site:
+      locale:
+
+    vssue:
+      platform:
+      owner:
+      repo:
+      clientId:
+      clientSecret:
+      autoCreateIssue: false
+
+    # Waline client configuration see: https://waline.js.org/en/reference/client.html
+    waline:
+      serverURL:
+      lang:
+      visitor:
+      avatar:
+      emoji:
+        - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+      requiredMeta:
+        - name
+        - email
+        - url
+      placeholder:
+      locale:
+        admin: Admin
+
+    twikoo:
+      envId:
+      region:
+      path:
+      lang:
+
+    giscus:
+      repo: "ACupofAir/ACupofAir.github.io"
+      repoID: "MDEwOlJlcG9zaXRvcnkyMjc5NzgzOTU="
+      category: "Announcements"
+      categoryID: "DIC_kwDODZasm84CTX_h"
+      mapping: "title"
+      strict: 0
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: "bottom"
+      theme: "preferred_color_scheme"
+      lang: "en"
+      crossorigin: "anonymous"
+
+    gitalk:
+      owner:
+      admin:
+      repo:
+      clientID:
+      clientSecret:
+
+    cusdis:
+      host:
+      id:
+
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 5
+      - type: categories
+        params:
+          limit: 10
+      - type: tag-cloud
+        params:
+          limit: 10
+    page:
+      - type: toc
+
+  opengraph:
+    twitter:
+      # Your Twitter username
+      site:
+
+      # Available values: summary, summary_large_image
+      card: summary_large_image
+
+  defaultImage:
+    opengraph:
+      enabled: false
+      local: false
+      src:
+
+  colorScheme:
+    # Display toggle
+    toggle: true
+
+    # Available values: auto, light, dark
+    default: auto
+
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+
+markup:
+  goldmark:
+    renderer:
+      ## Set to true if you have HTML content inside Markdown
+      unsafe: false
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4
+
+menu:
+  main: []
+
+  social:
+    - identifier: home
+      name: Home
+      url: /
+      params:
+        icon: home
+        newTab: false
+
+    - identifier: github
+      name: GitHub
+      url: https://github.com/ACupofAir
+      params:
+        icon: brand-github
+
+    - identifier: rss
+      name: RSS
+      url: https://acupofair.github.io/index.xml
+      params:
+        icon: rss
+
