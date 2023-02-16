@@ -39,8 +39,8 @@ params:
     subtitle: Blog with technology and life 
     avatar:
       enabled: true
-      local: false
-      src: /images/white_leaf.png
+      local: true
+      src: img/white_leaf.png
 
   article:
     math: true
