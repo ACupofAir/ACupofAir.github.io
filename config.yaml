@@ -35,8 +35,8 @@ params:
 
   sidebar:
     compact: false
-    emoji: 
-    subtitle: Blog with technology and life 
+    emoji:
+    subtitle: Blog with technology and life
     avatar:
       enabled: true
       local: true
@@ -168,6 +168,9 @@ params:
     content:
       enabled: true
 
+  busuanzi:
+    enable: true
+
 markup:
   goldmark:
     renderer:
@@ -208,4 +211,3 @@ menu:
       url: https://acupofair.github.io/index.xml
       params:
         icon: rss
-

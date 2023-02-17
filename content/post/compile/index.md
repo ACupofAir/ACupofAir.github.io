@@ -4,7 +4,7 @@ date: 2021-12-31T15:18:49+08:00
 tags: [compile, note]
 categories: [编译原理笔记]
 image: "cover_dragon.jpg"
-math: [true]
+math: true
 ---
 
 > 🐉2021 年与龙书斗争的第一天与最后一天

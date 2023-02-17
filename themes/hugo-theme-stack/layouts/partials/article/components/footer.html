@@ -16,4 +16,15 @@
         </span>
     </section>
     {{- end -}}
+
+
+    {{ if .Site.Params.busuanzi.enable -}}
+    <section class="article-lastmod">
+        {{ partial "helper/icon" "eye_checked" }}
+        <span id="busuanzi_container_page_pv">
+            <span id="busuanzi_value_page_pv"></span>
+        </span>
+    </section>
+    {{- end }}
+
 </footer>
