@@ -2,10 +2,9 @@
 title: "如何创建并发布一个powershell模块"
 image: "cover.png"
 date: 2023-02-15T01:07:45+08:00
-slug: tutor
 toc: true
 tags: [powershell, tutor]
-categories: [powershell]
+categories: [ShellNotes]
 description: It's a tutor about how to create a powershell module and publish it to the powershell gallery
 ---
 
