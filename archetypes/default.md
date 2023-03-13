@@ -1,8 +1,8 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "Title show in the page head"
 date: {{ .Date }}
-tags: []
-categories: []
+tags: [tag1, tag2]
+categories: [ShellNotes|PythonNotes]
 image: "cover.png"
 toc: true
 description: Here should be description of this article

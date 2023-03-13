@@ -10,18 +10,17 @@
 
 - `hugo new post/folder_name/index.md` will create file_name.md
 - `hugo new file_name.md` will touch file_name.md in posts/file_name.md
-- categories: should be the name of the folder in `content/categories`
-
+- the default temperate is `archetypes/default.md`
 ### Short Code
 
 - notice
   - notice table
-    |type|color|meaning|
-    |---|---|---|
-    |error|red|very important, must be attentioned|
-    |warning|yellow|need attention|
-    |note|blue|useful note, summary|
-    |tip|green|talented idea, fantastic note|
+    | type    | color  | meaning                             |
+    | ------- | ------ | ----------------------------------- |
+    | error   | red    | very important, must be attentioned |
+    | warning | yellow | need attention                      |
+    | note    | blue   | useful note, summary                |
+    | tip     | green  | talented idea, fantastic note       |
   - notice usage
     ```js
     {{< notice $type_name >}}
