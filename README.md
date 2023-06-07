@@ -2,7 +2,15 @@
 
 ## :gear: Setup
 
-- `git clone git@github.com:ACupofAir/blog-source.git`
+1. clone the repertory
+    ```bash
+    git clone git@github.com:ACupofAir/ACupofAir.github.io.git
+    ```
+2. install hugo-extended
+  - on ubuntu(22.04 verify)
+    ```bash
+    sudo apt install hugo
+    ```
 
 ## :toolbox: Usage
 
