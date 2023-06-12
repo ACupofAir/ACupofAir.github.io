@@ -26,3 +26,29 @@ is easy-to-read like `git diff`'s output. It is optional.
 {{</notice>}}
 
 ## `git diff` usage
+1. get the changes between the workspace and staging area
+```bash
+git diff > change.patch
+```
+
+2. get the change between an old version of your local repository and new one.
+```bash
+git diff old_commit_hash new_commit_hash > change.patch
+```
+
+3. diff for one file but not whole folder
+```bash
+git diff old_commit new_commit $file_name > change.patch
+```
+
+4. apply patches
+```bash
+git apply change.patch
+```
+
+{{<notice tip>}}
+
+`git reflog` will show a more short commit hash code which is enough for the 
+`git diff` command
+
+{{</notice>}}

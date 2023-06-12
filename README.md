@@ -15,7 +15,6 @@
 ## :toolbox: Usage
 
 ### New Post
-
 - `hugo new post/folder_name/index.md` will create file_name.md
 - `hugo new file_name.md` will touch file_name.md in posts/file_name.md
 - the default temperate is `archetypes/default.md`
