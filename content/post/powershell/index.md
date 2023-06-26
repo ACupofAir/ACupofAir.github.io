@@ -60,7 +60,7 @@ description: It's a tutor about how to create a powershell module and publish it
 
 ### 注册 powershellgallery 并配置 api
 
-- 注册/登录这个网站[:link:https://www.powershellgallery.com/](https://www.powershellgallery.com/])，后面的模块就是上传到这
+- 注册/登录这个网站[:link:https://www.powershellgallery.com/](https://www.powershellgallery.com/)，后面的模块就是上传到这
 - 配置 api
   ![](2023-02-15-02-38-11.png)
   - name: 随便取
