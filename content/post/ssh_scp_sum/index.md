@@ -23,7 +23,7 @@ vscode 的 ssh 配置可以通过命令搜索`ssh config`来打开`~/.ssh/config
   Host target-server
       HostName xx.xx.xx.xx
       User $username
-      ProxyJump target-server
+      ProxyJump target-server-gateway
 
   Host target-server-gateway
       HostName yy.yy.yy.yy
