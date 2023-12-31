@@ -3,7 +3,7 @@ title: "Year 2022 Sum"
 date: 2022-12-31T13:15:04+08:00
 tags: [sum]
 categories: ["New Year Sum"]
-image: "cover2023.jpg"
+image: "cover.jpg"
 description: "2022我的几个大事 "
 ---
 
