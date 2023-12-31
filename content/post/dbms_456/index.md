@@ -3,7 +3,7 @@ title: "DBMS-Chp4&5&6"
 date: 2021-12-05T12:15:45+08:00
 tags: [database, note]
 math: [true]
-categories: [数据库管理系统笔记]
+categories: [CourseNotes]
 image: "cover.png"
 description: "数据库复习专用，万恶的王帅，还我周末👿"
 ---

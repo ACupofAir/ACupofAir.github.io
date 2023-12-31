@@ -2,7 +2,7 @@
 title: "数字图像处理大作业"
 date: 2021-12-19T23:32:34+08:00
 tags: ["electron", "python"]
-categories: ["微实践"]
+categories: [CourseNotes]
 math: [true]
 image: "cover.png"
 description: "数字图像处理的大作业，使用 electron 作为前端框架，后端使用 python 来实现中值滤波， Kuwahara 滤波器(桑原滤波器)，灰度梯度分组技术"

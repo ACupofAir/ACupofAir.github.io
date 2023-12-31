@@ -3,7 +3,7 @@ title: "DBMS-Chp1&2&3"
 date: 2021-12-21T15:04:19+08:00
 tags: [database, note]
 math: [true]
-categories: [数据库管理系统笔记]
+categories: [CourseNotes]
 image: "cover_1_3.png"
 description: "数据库管理系统第一，二，三章笔记 "
 ---
