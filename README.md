@@ -24,6 +24,11 @@
 - `hugo new file_name.md` will touch file_name.md in posts/file_name.md
 - the default temperate is `archetypes/default.md`
 
+### Tags and Categories Used
+
+* Tags: `note`, `sum`, `database`, `python`, `compile`, `diff`, `electron`, `git`,  `life`, `linux`, `powershell`
+- Categories: `Course Notes`, `Python Tips`, `Shell Tips`, `New Years Sum`
+
 ### Short Code
 
 - notice
