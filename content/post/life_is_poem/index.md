@@ -1,7 +1,8 @@
 ---
 title: "Birthday 22"
 date: 2022-01-30T22:36:50+08:00
-tags: ['life']
+tags: [🎂]
+categories: [Life]
 image: "cover.png"
 description: "就这样22岁了。这是一个在法律上可以支撑起家庭的年纪，兄弟，我希望你真的可以。"
 ---
@@ -13,4 +14,3 @@ description: "就这样22岁了。这是一个在法律上可以支撑起家庭�
 君不见外州客
 
 长安道，一回来，一回老
-

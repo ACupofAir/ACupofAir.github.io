@@ -1,7 +1,7 @@
 ---
 title: "DBMS-Chp4&5&6"
 date: 2021-12-05T12:15:45+08:00
-tags: [database, note]
+tags: [database, 🪶]
 math: [true]
 categories: [CourseNotes]
 image: "cover.png"

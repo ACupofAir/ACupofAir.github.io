@@ -1,7 +1,7 @@
 ---
 title: "编译原理：语言与文法"
 date: 2021-12-31T15:18:49+08:00
-tags: [compile, note]
+tags: [compile, 🪶]
 categories: [CourseNotes]
 image: "cover_dragon.jpg"
 math: true

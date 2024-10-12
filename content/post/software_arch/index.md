@@ -1,7 +1,7 @@
 ---
 title: "软件体系结构核心点复习"
 date: 2021-12-29T14:11:58+08:00
-tags: [software, note]
+tags: [software, 🪶]
 categories: [CourseNotes]
 image: "cover.png"
 description: "

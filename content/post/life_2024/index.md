@@ -1,8 +1,8 @@
 ---
 title: "2024年4月到8月的旅行记录"
 date: 2024-08-22T02:40:18+08:00
-tags: [life]
-categories: [life]
+tags: ['🧳', '💗']
+categories: [Life]
 image: "cover.jpg"
 toc: true
 description: 技术随着时间淘汰，而回忆升值

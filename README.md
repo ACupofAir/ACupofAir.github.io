@@ -25,10 +25,31 @@
 - the default temperate is `archetypes/default.md`
 
 ### Tags and Categories Used
+>
+>Each blog should have one category but can have multiple tags
 
-- Tags: `note`, `sum`, `database`, `python`, `compile`, `diff`, `electron`, `git`,  `life`, `linux`, `powershell`
+#### Tags[Lowercase English]
 
-- Categories: `Course Notes`, `Python Tips`, `Shell Tips`, `New Years Sum`
+1. 🪶: notes
+2. 🧳: travel
+3. ⏳: new year
+4. 💗: love
+5. 🎂: birthday
+6. `database`
+7. `python`
+8. `compile`
+9. `diff`
+10. `electron`
+11. `git`
+12. `linux`
+13. `powershell`
+
+#### Categories[Uppercase English]
+
+1. `Course Notes`
+2. `Python Tips`
+3. `Shell Tips`
+4. `Life`
 
 ### Short Code
 

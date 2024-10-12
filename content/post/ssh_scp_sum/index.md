@@ -1,7 +1,7 @@
 ---
 title: "ssh and scp Summary"
 date: 2023-03-13T15:38:50+08:00
-tags: [ssh, vscode, note]
+tags: [ssh, vscode, 🪶]
 categories: [ShellNotes]
 image: "cover.png"
 toc: true

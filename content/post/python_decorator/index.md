@@ -1,7 +1,7 @@
 ---
 title: "Python函数装饰器的使用"
 date: 2023-02-28T14:19:07+08:00
-tags: [python, note]
+tags: [python, 🪶]
 categories: ["PythonNotes"]
 image: "cover.png"
 toc: true

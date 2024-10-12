@@ -1,13 +1,14 @@
 ---
 title: "DBMS-Chp1&2&3"
 date: 2021-12-21T15:04:19+08:00
-tags: [database, note]
+tags: [database, 🪶]
 math: [true]
 categories: [CourseNotes]
 image: "cover_1_3.png"
 description: "数据库管理系统第一，二，三章笔记 "
 ---
 # 第一章 介绍
+
 ---
 
 ## 1.1 介绍
@@ -54,7 +55,7 @@ description: "数据库管理系统第一，二，三章笔记 "
 
   ![](2021-12-23-20-50-14.png)
 
-* 数据的独立性:
+- 数据的独立性:
 
   - Applications insulated(绝缘的) from how data is structured and stored
   - Logical data independence: Protection from changes in logical structure of data
@@ -81,9 +82,10 @@ description: "数据库管理系统第一，二，三章笔记 "
   - 数据库运行，管理与维护
   - 数据库的扩充与重构
 
-
 # 第二章 数据模型
+
 ---
+
 ## 2.1 层次数据模型
 
 ### 基本概念
@@ -104,9 +106,7 @@ description: "数据库管理系统第一，二，三章笔记 "
     ![](2021-12-23-22-43-49.png)
   - 大量指针增加数据库开销，数据模式也不够直观清晰
 
-
 ## 2.2 网状数据结构：不做要求
-
 
 ## 2.3 关系数据模型
 
@@ -136,7 +136,7 @@ description: "数据库管理系统第一，二，三章笔记 "
   - $r(R) = \{ t_1, t_2, ...t_m\}$,关系 R 表示为 r,为 n 目元组的集合
   - $t = <v_1, v_2, ..., v_n> v_i \in D_i$ 每个元组表示为 t，D 是域
 
-#### 键：
+#### 键
 
 - 超键：在关系中能唯一标识元组的属性集(**其子集也可以标识**),候选键的爸爸
 - 候选键： 某一属性或一组属性唯一的决定了一个元组,且**其任何真子集无此性质**（不含多余属性的超键）
@@ -147,7 +147,7 @@ description: "数据库管理系统第一，二，三章笔记 "
 - 非主属性：不包含在任何一个候选键的属性
 - 外键：关系 R1 不是主键，关系 R2 是主键，则其为关系 R1 外键
 
-#### 最基本的三个完整性约束：
+#### 最基本的三个完整性约束
 
 - 域完整性约束：属性值得在域中
 - 实体完整性约束：一个关系内的约束，每个关系都要有一个主键，每个元组（实体）的主键值应唯一且不为 NULL
@@ -163,7 +163,7 @@ description: "数据库管理系统第一，二，三章笔记 "
 - 集合差(-): 就是集合的差，韦恩图都懂的
 - 并($\cup$) : 集合的并嘛
 
-#### 额外操作：
+#### 额外操作
 
 - 连接($\Join$) : $R \Join_C S = (R\times S)$; C 是连接条件
 - 除($\div$) : 除以自己有的，没的直接删
@@ -226,7 +226,6 @@ $$\\{<sid,sname,age>|<sid,sname,age>\in S_1 \wedge age > 35\\}$$
 - TRC 中用的 t.age 而不是 t[age]；DRC 则直接用域名来做运算；另外别忘了加限制集，不然查询结果无穷大
 {{</notice>}}
 
-
 ## 2.4 ER 数据模型(实体联系数据模型)
 
 > 是上面三种传统数据模型互相转换的中间模型
@@ -247,7 +246,6 @@ $$\\{<sid,sname,age>|<sid,sname,age>\in S_1 \wedge age > 35\\}$$
 
 ## 2.5 面向对象数据模型（没细讲）
 
-
 ## 其他数据模型
 
 - 基于逻辑的数据模型
@@ -255,15 +253,15 @@ $$\\{<sid,sname,age>|<sid,sname,age>\in S_1 \wedge age > 35\\}$$
 - 空间数据模型
 - XML 数据模型
 
-
 # 第三章 用户接口和SQL语言
+
 ---
+
 ## 3.1 用户接口与 SQL 语言
 
 - 关系代数是一种过程语言，以此设计的数据库语言，用户不仅要说明需要什么数据，还要说明获得这些数据的过程。
 - 对用户来说，最好只说明需要什么数据，而如何获得这些数据则不必用户说明，而由系统来实现。即非过程语言。
 - 非过程关系数据库语言里最成功的应用最广的:SQL 语言
-
 
 ## 3.2 SQL 语言概述
 
@@ -277,8 +275,7 @@ $$\\{<sid,sname,age>|<sid,sname,age>\in S_1 \wedge age > 35\\}$$
   - 数据操纵语言(Data Manipulation Language)：用于增删改数据
   - 数据控制语言(Data Control Language)：用于数据访问控制
 
-
-## 3.3 SQL 数据定义语言(DDL)[上课没提]
+## 3.3 SQL 数据定义语言[DDL](上课没提)
 
 - 关系又称表，关系数据库的基本组成单位。
 - 表分为两类
@@ -293,7 +290,6 @@ $$\\{<sid,sname,age>|<sid,sname,age>\in S_1 \wedge age > 35\\}$$
   - 撤销外键定义
   - 定义和撤销别名
   - 索引的建立和撤销
-
 
 ## 3.4 SQL 查询语言(QL)
 
@@ -324,22 +320,25 @@ $$\\{<sid,sname,age>|<sid,sname,age>\in S_1 \wedge age > 35\\}$$
 ### SQL 的高端操作
 
 - SELECT 后别名：可以用 `=`或`AS`
+
 ```sql
 SELECT S.age, age1=S.age-5, 2*S.age AS age2
 FROM Sailors S
 WHERE S.sname LIKE 'B_%B'
 ```
+
 - `LIKE`:用来模糊匹配字符串；`_`表示任一一个字符；`%`表示任意多个字符（包括 0 个）；上述表达为 B 开头与结尾长度至少为 3 的字符串
 - `UNION`:对来能够给目相同的查询结果进行并操作，一般在 WHERE 子句中用`OR`代替
 
 {{<notice warning>}}
-* `UNION`操作必须去重，如果允许，在其后加`ALL`则不消除结果中的重复项
-* 多元`UNION`操作需要利用圆括号多次使用二元`UNION`来实现
+- `UNION`操作必须去重，如果允许，在其后加`ALL`则不消除结果中的重复项
+- 多元`UNION`操作需要利用圆括号多次使用二元`UNION`来实现
 {{</notice>}}
 
 - `INTERSECT`:对来能够给目相同的查询结果进行取交集操作，一般在 WHERE 子句中用`AND`代替
 - 嵌套查询(Nested Queries):在 FROM,WHERE,HAVING 子句中可以包含 SQL 查询
   - \( NOT \) IN：前面有个主语,下例寻找定了 103 号船的水手姓名
+
 ```sql
 SELECT S.sname
 FROM Sailors S
@@ -349,7 +348,9 @@ WHERE S.sid IN (
   WHERE R.bid=103
 )
 ```
-  - `(NOT) EXISTS`:相关子查询，`EXISTS`后面不为空则
+
+- `(NOT) EXISTS`:相关子查询，`EXISTS`后面不为空则
+
 ```sql
 SELECT S.sname
 FROM Sailors S
@@ -359,9 +360,11 @@ WHERE EXISTS (
   WHERE R.bid=103 AND S.sid = R.sid
 )
 ```
-  - `ANY`和`ALL`:
-    - `ALL`满足范围中所有的则返回 true
-    - `ANY`满足范围中任意一个则返回 true,下例寻找得分高于任何一个名叫 Horatio 的水手
+
+- `ANY`和`ALL`:
+  - `ALL`满足范围中所有的则返回 true
+  - `ANY`满足范围中任意一个则返回 true,下例寻找得分高于任何一个名叫 Horatio 的水手
+
 ```sql
 SELECT *
 FROM Sailors S
@@ -371,10 +374,12 @@ WHERE S.rating > ANY (
   WHERE S2.sname = 'Horatio'
 )
 ```
+
 {{<notice error>}}
 好像还有个 EVERY,只遇到一次，或许会做补充
 {{</notice>}}
-  - `EXECPT`:除操作好像
+
+- `EXECPT`:除操作好像
 - Aggregate Operators(聚集函数)
 
   - `COUNT(*)`: 返回表的总条目数
@@ -526,19 +531,22 @@ WHERE salary>100000
 - 递归查询好像挺重要，稍后攻克
 {{</notice>}}
 
-
 ## 3.5 数据操纵语言(Data Manipulation Language)
 
 - Insert a tuple into a table
+
 ```sql
 INSERT INTO EMPLOYEES VALUES ('Smith', 'John', '1980-06-10', 'Los Angles', 16, 45000)
 ```
+
 - Delete tuples fulfill qualifications
+
 ```sql
 DELETE
 FROM Person
 WHERE LastName = 'Rasmussen'
 ```
+
 - Update the attributes' value of tuples fulfill qualifications
 
 ```sql
@@ -547,27 +555,30 @@ SET Address = 'Zhongshan23', City = 'Nanjing'
 WHERE LastName = 'Wilson
 ```
 
-
 ## 3.6 嵌入式 SQL(in C)
+>
 > 由于ISQL功能受限于数据库操作,缺少数据处理能力。这种能力宿主语言有呀，所以就把SQL嵌入到宿主语言中去。
 
 {{<notice note>}}
-#### 嵌入式SQL的要解决的四个问题：
+
+#### 嵌入式SQL的要解决的四个问题
+
 * 宿主语言编译器无法识别和接受SQL语言
-  * 用`EXEC SQL...;`来标识
-* 宿主语言程序和DBMS之间信息数据传输
-  * 宿主变量，在SQL中加`:`标识
-* 查询结果为元组集合，须逐个赋值给宿主语言中的变量
-  * 游标方案
-* 两者数据类型不完全对应，须解决数据类型转换问题
-  * 就解决呗
+  - 用`EXEC SQL...;`来标识
+- 宿主语言程序和DBMS之间信息数据传输
+  - 宿主变量，在SQL中加`:`标识
+- 查询结果为元组集合，须逐个赋值给宿主语言中的变量
+  - 游标方案
+- 两者数据类型不完全对应，须解决数据类型转换问题
+  - 就解决呗
 {{</notice>}}
- 
+
 ### 嵌入式SQL的说明部分
+
 * SQL语句以`EXEC SQL`开头，`;`结尾。
-* 数据的传送通过宿主变量
-* 宿主变量申明
-  * 系统定义者:`SQLCA`(SQL Communication Area);其有个分量`SQLCODE`,它是一个整数，DBMS向应用程序报告SQL语句执行结果。
+- 数据的传送通过宿主变量
+- 宿主变量申明
+  - 系统定义者:`SQLCA`(SQL Communication Area);其有个分量`SQLCODE`,它是一个整数，DBMS向应用程序报告SQL语句执行结果。
 
   |               <0               |     =0     |              >0              |                    100                     |
   | :----------------------------: | :--------: | :--------------------------: | :----------------------------------------: |
@@ -575,7 +586,8 @@ WHERE LastName = 'Wilson
 
   使用时直接包含即可`EXEC SQL INCLUDE SQLCA`
 
-  * 一般的宿主变量声明,开头`EXEC SQL BEGIN DECLARE SECTION`, 结尾`EXEC SQL END DECLARE SECTION`;宿主变量可以与表的列名同名，SQL语句中使用宿主变量时前面要加`:` 
+  - 一般的宿主变量声明,开头`EXEC SQL BEGIN DECLARE SECTION`, 结尾`EXEC SQL END DECLARE SECTION`;宿主变量可以与表的列名同名，SQL语句中使用宿主变量时前面要加`:`
+
 ```sql
 EXEC SQL BEGIN DECLARE SECTION
   char SNO[7];
@@ -584,41 +596,51 @@ EXEC SQL BEGIN DECLARE SECTION
   short GRADEI;
 EXEC SQL END DECLARE SECTION
 ```
+
 {{<notice note>}}
-* 指示变量:indicator,也是宿主变量
-* 宿主变量不能接受空缺符`NULL`,此时在其后跟一个指示变量，其值为负则前面的宿主变量为`NULL`,否则不为`NULL`
-* 上例中`GRADEI`指示`GRADE`
+- 指示变量:indicator,也是宿主变量
+- 宿主变量不能接受空缺符`NULL`,此时在其后跟一个指示变量，其值为负则前面的宿主变量为`NULL`,否则不为`NULL`
+- 上例中`GRADEI`指示`GRADE`
 {{</notice>}}
 
 ### 嵌入式SQL的可执行语句
+>
 > 包括
-> * 进入数据库系统的`CONNECT`语句
-> * 嵌入的DDL,QL,DML,DCL
-> * 控制事务结束的语句
+>
+> - 进入数据库系统的`CONNECT`语句
+> - 嵌入的DDL,QL,DML,DCL
+> - 控制事务结束的语句
 
 #### `CONNECT` 语句
+
 ```sql
 EXEC SQL CONNECT :uid IDENTIFIED BY :pwd
 ```
+
 uid与pwd为两宿主变量
 
 #### 嵌入的SQL
+
 * DDL和DML：除了前面加`EXEC SQL`外与ISQL没有区别,如
+
 ```sql
 EXEC SQL INSERT INTO SC(SNO, CNO, GRADE)
   VALUES(:SNO, :CNO, :GRADE)
 ```
+
 * QL
-  * 查询结果为一个数组，直接将查询结果用`INTO`子句对宿主变量进行赋值即可
+  - 查询结果为一个数组，直接将查询结果用`INTO`子句对宿主变量进行赋值即可
+
 ```sql
 EXEC SQL SELECT GRADE
   INTO :GRADE, :GRADEI --由于查询结果只可能有一个直接赋值即可
   FROM SC
   WHERE SNO = :GIVENSNO AND CNP = :GIVENCNO --{SNO, CNO}为主键
 ```
-  * 查询结果为超过一个数组新开辟一个区域，存放查询结果的区域及其相应的数据结果称为游标,使用分四步
 
-  * 说明游标语句
+- 查询结果为超过一个数组新开辟一个区域，存放查询结果的区域及其相应的数据结果称为游标,使用分四步
+
+- 说明游标语句
 
 ```sql
 EXEC SQL DECLARE <cursor name> CURSOR FOR
@@ -626,23 +648,31 @@ EXEC SQL DECLARE <cursor name> CURSOR FOR
   FROM ...
 ```
 
-  * 打开游标语句
+- 打开游标语句
+
 ```sql
 EXEC SQL OPEN <cursor name>;
 ```
+
   打开游标时，执行与之相关的QL,其结果存于游标中,一经打开即使查询语句中宿主变量值改变，游标值也不会变，除非关闭后重新打开
 
-  * 取数语句
+- 取数语句
+
 ```sql
 EXEC SQL FETCH <cursor name> 
   INTO :hostvar1, :hostvar2, ...;
 ```
+
   当游标中数取完，`SQLCODE`将返回100
-  * 关闭游标语句
+
+- 关闭游标语句
+
 ```sql
 EXEC SQL CLOSE <cursor name>;
 ```
+
 * 一个完整的例子,宿主语言是c语言,为了打印一张gpa3.5以上同学的名单。
+
 ```sql
 EXEC SQL BEGIN DECLARE SECTION;
 char sname[20];
