@@ -1,5 +1,5 @@
 ---
-title: "New Year Sum"
+title: "Life"
 description: "留个念想"
 image: "new_year.jpg"
 style:

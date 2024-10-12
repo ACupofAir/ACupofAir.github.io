@@ -26,19 +26,22 @@
 
 ### Tags and Categories Used
 
-* Tags: `note`, `sum`, `database`, `python`, `compile`, `diff`, `electron`, `git`,  `life`, `linux`, `powershell`
+- Tags: `note`, `sum`, `database`, `python`, `compile`, `diff`, `electron`, `git`,  `life`, `linux`, `powershell`
+
 - Categories: `Course Notes`, `Python Tips`, `Shell Tips`, `New Years Sum`
 
 ### Short Code
 
 - notice
   - notice table
+
     | type    | color  | meaning                             |
     | ------- | ------ | ----------------------------------- |
     | error   | red    | very important, must be attentioned |
     | warning | yellow | need attention                      |
     | note    | blue   | useful note, summary                |
     | tip     | green  | talented idea, fantastic note       |
+
   - notice usage
 
     ```js
@@ -49,7 +52,9 @@
 
 ### Run Preview Local
 
-- `hugo server --disableFastRender`
+```bash
+hugo server --disableFastRender
+```
 
 ### Deploy to Website
 
